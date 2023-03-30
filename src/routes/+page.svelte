@@ -1,6 +1,6 @@
 <script>
     import WrittenText from '../components/WrittenText.svelte';
-import {chapters} from '../data/verses'
+    import {chapters} from '../data/verses'
 
     let start = {
         chapter: 0,
@@ -45,6 +45,12 @@ import {chapters} from '../data/verses'
         wordIdx = 0;
     }
 
+    const jumpToChapter = (/** @type {number} */ i) => () => {
+        chapterIdx = i;
+        verseIdx = 0;
+        wordIdx = 0;
+    }
+
     let userInput = ''
 
     const normalizeLetter = (/** @type {string} */ c) => {
@@ -52,10 +58,10 @@ import {chapters} from '../data/verses'
         if ("ăâ".includes(c)) {
             c = "a";
         }
-        if (c == "țţ") {
+        if ("țţ".includes(c)) {
             c = "t";
         }
-        if (c == "șşşş") {
+        if ("șş".includes(c)) {
             c = "s";
         }
         if (c == "î") {
@@ -69,8 +75,16 @@ import {chapters} from '../data/verses'
         let c = userInput[0];
         userInput = userInput.substring(1);
 
+        let i = 0;
+        while (i < crtWord.length && !crtWord[i].match(/[a-zăâțţșşî]/i)) {
+            i++;
+        }
+        if (i == crtWord.length) {
+            nextWord();
+        }
+
         let normalizedActual = normalizeLetter(c)
-        let normalizedExpected = normalizeLetter(crtWord[0])
+        let normalizedExpected = normalizeLetter(crtWord[i])
         if (normalizedActual == normalizedExpected) {
             nextWord();
         }
@@ -78,14 +92,25 @@ import {chapters} from '../data/verses'
 </script>
 
 <h1>Romanii</h1>
-<WrittenText verses={crtChapter}></WrittenText>
-<p>{writtenText}</p>
-<p>Current verse: {crtVerse}</p>
-<p>Current word: {crtWord}</p>
-<button on:click={nextWord}>
-    Next Word
-</button>
-<button on:click={nextChapter}>
-    Next Chapter
-</button>
+<h2>Capitolul {chapterIdx+1}</h2>
+<WrittenText verses={crtChapter.slice(0, verseIdx).concat(verseIdx < crtChapter.length ? [crtVerseWords.slice(0, wordIdx).join(' ')] : [])}></WrittenText>
+<br>
 <input bind:value={userInput} on:input={checkInput}>
+<br><br>
+<button on:click={nextWord}>
+    Cuvântul următor
+</button>
+<br>
+<br>
+<h3>Alege capitolul</h3>
+<table>
+    <tr>
+    {#each chapters as chapter, i}
+        <td>
+            <button on:click={jumpToChapter(i)}>
+                {i+1}
+            </button>
+        </td>
+    {/each}
+    </tr>
+</table>

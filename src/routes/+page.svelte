@@ -47,7 +47,7 @@
 
     const jumpToChapter = (/** @type {number} */ i) => () => {
         chapterIdx = i;
-        verseIdx = 0;
+        verseIdx = start.verse - 1;
         wordIdx = 0;
     }
 

@@ -3,8 +3,8 @@
     import {chapters} from '../data/verses'
 
     let start = {
-        chapter: 0,
-        verse: 0,
+        chapter: 4,
+        verse: 1,
     }
 
     let end = {
@@ -12,14 +12,14 @@
         verse: 25,
     }
 
-    let chapterIdx = 0;
+    let chapterIdx = start.chapter-1;
     /**
 	 * @type {string[]}
 	 */
     let crtChapter = [];
     $: crtChapter = chapterIdx < chapters.length ? chapters[chapterIdx] : [];
 
-    let verseIdx = 0;
+    $: verseIdx = start.verse-1;
     let crtVerse = '';
     $: crtVerse = verseIdx < crtChapter.length ? crtChapter[verseIdx] : '';
     $: crtVerseWords = crtVerse.split(' ').filter(x => x.length > 0);
@@ -93,7 +93,7 @@
 
 <h1>Romanii</h1>
 <h2>Capitolul {chapterIdx+1}</h2>
-<WrittenText verses={crtChapter.slice(0, verseIdx).concat(verseIdx < crtChapter.length ? [crtVerseWords.slice(0, wordIdx).join(' ')] : [])}></WrittenText>
+<WrittenText startIdx={start.verse} verses={crtChapter.slice(start.verse-1, verseIdx).concat(verseIdx < crtChapter.length ? [crtVerseWords.slice(0, wordIdx).join(' ')] : [])}></WrittenText>
 <br>
 <input bind:value={userInput} on:input={checkInput}>
 <br><br>
@@ -114,3 +114,7 @@
     {/each}
     </tr>
 </table>
+<p>Începând cu versetul <input type=number bind:value={start.verse} on:input={checkInput} style="width: 50pt"></p>
+<button on:click={jumpToChapter(chapterIdx)}>
+    Resetează capitolul
+</button>

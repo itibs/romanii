@@ -3,13 +3,8 @@
     import {chapters} from '../data/verses'
 
     let start = {
-        chapter: 4,
+        chapter: 5,
         verse: 1,
-    }
-
-    let end = {
-        chapter: 4,
-        verse: 25,
     }
 
     let chapterIdx = start.chapter-1;

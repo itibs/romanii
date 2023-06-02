@@ -15,6 +15,13 @@
     $: crtChapter = chapterIdx < chapters.length ? chapters[chapterIdx] : [];
 
     $: verseIdx = start.verse-1;
+    $: if (verseIdx < 0) {
+        verseIdx = 0;
+    }
+    $: if (verseIdx >= crtChapter.length) {
+        verseIdx = crtChapter.length-1;
+    }
+
     let crtVerse = '';
     $: crtVerse = verseIdx < crtChapter.length ? crtChapter[verseIdx] : '';
     $: crtVerseWords = crtVerse.split(' ').filter(x => x.length > 0);
@@ -25,6 +32,17 @@
 
     let writtenText = '';
     $: writtenText = crtChapter.slice(0, verseIdx).map((v, i) => (i+1) + ". " + v).join("\n");
+
+    let startVerseInput = start.verse;
+    $: {
+        if (startVerseInput < 1) {
+            start.verse = 1;
+        } else if (startVerseInput > crtChapter.length) {
+            start.verse = crtChapter.length;
+        } else {
+            start.verse = startVerseInput;
+        }
+    }
 
     const nextWord = () => {
         wordIdx++;
@@ -109,7 +127,7 @@
     {/each}
     </tr>
 </table>
-<p>Începând cu versetul <input type=number bind:value={start.verse} on:input={checkInput} style="width: 50pt"></p>
+<p>Începând cu versetul <input type=number bind:value={startVerseInput} style="width: 50pt"></p>
 <button on:click={jumpToChapter(chapterIdx)}>
     Resetează capitolul
 </button>

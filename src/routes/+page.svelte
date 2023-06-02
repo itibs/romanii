@@ -18,9 +18,6 @@
     $: if (verseIdx < 0) {
         verseIdx = 0;
     }
-    $: if (verseIdx >= crtChapter.length) {
-        verseIdx = crtChapter.length-1;
-    }
 
     let crtVerse = '';
     $: crtVerse = verseIdx < crtChapter.length ? crtChapter[verseIdx] : '';

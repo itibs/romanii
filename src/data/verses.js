@@ -166,5 +166,31 @@ export const chapters = [
         "Şi ce roade aduceaţi atunci? Roade de care acum vă este ruşine, pentru că sfârşitul acestor lucruri este moartea.",
         "Dar acum, odată ce aţi fost izbăviţi de păcat şi v-aţi făcut robi ai lui Dumnezeu, aveţi ca rod sfinţirea, iar ca sfârşit: viaţa veşnică.",
         "Fiindcă plata păcatului este moartea, dar darul fără plată al lui Dumnezeu este viaţa veşnică în Isus Hristos, Domnul nostru."
+    ], [
+        "Nu ştiţi, fraţilor – căci vorbesc unor oameni care cunosc Legea – că Legea are stăpânire asupra omului câtă vreme trăieşte el?",
+        "Căci femeia măritată este legată prin Lege de bărbatul ei câtă vreme trăieşte el, dar, dacă-i moare bărbatul, este dezlegată de legea bărbatului ei.",
+        "Dacă, deci, când îi trăieşte bărbatul, ea se mărită după altul, se va chema preacurvă, dar, dacă-i moare bărbatul, este dezlegată de Lege, aşa că nu mai este preacurvă dacă se mărită după altul.",
+        "Tot astfel, fraţii mei, prin trupul lui Hristos, şi voi aţi murit în ce priveşte Legea, ca să fiţi ai Altuia, adică ai Celui ce a înviat din morţi, şi aceasta, ca să aducem rod pentru Dumnezeu.",
+        "Căci, când trăiam sub firea noastră pământească, patimile păcatelor, aţâţate de Lege, lucrau în mădularele noastre şi ne făceau să aducem roade pentru moarte.",
+        "Dar acum, am fost izbăviţi de Lege şi suntem morţi faţă de Legea aceasta, care ne ţinea robi, pentru ca să slujim lui Dumnezeu într-un duh nou, iar nu după vechea slovă.",
+        "Deci ce vom zice? Legea este ceva păcătos?Nicidecum! Dimpotrivă, păcatul nu l-am cunoscut decât prin Lege. De pildă, n-aş fi cunoscut pofta, dacă Legea nu mi-ar fi spus: „Să nu pofteşti!”",
+        "Apoi, păcatul a luat prilejul şi a făcut să se nască în mine, prin poruncă, tot felul de pofte, căci, fără Lege, păcatul este mort.",
+        "Odinioară, fiindcă eram fără Lege, trăiam, dar când a venit porunca, păcatul a înviat, şi eu am murit.",
+        "Şi porunca, ea, care trebuia să-mi dea viaţa, mi-a pricinuit moartea.",
+        "Pentru că păcatul a luat prilejul prin ea, m-a amăgit şi, prin însăşi porunca aceasta, m-a lovit cu moartea.",
+        "Aşa că Legea, negreşit, este sfântă, şi porunca este sfântă, dreaptă şi bună.",
+        "Atunci, un lucru bun mi-a dat moartea? Nicidecum. Dar păcatul, tocmai ca să iasă la iveală ca păcat, mi-a dat moartea printr-un lucru bun, pentru ca păcatul să se arate afară din cale de păcătos, prin faptul că se slujea de aceeaşi poruncă.",
+        "Ştim, în adevăr, că Legea este duhovnicească, dar eu sunt pământesc, vândut rob păcatului.",
+        "Căci nu ştiu ce fac: nu fac ce vreau, ci fac ce urăsc.",
+        "Acum, dacă fac ce nu vreau, mărturisesc prin aceasta că Legea este bună.",
+        "Şi atunci, nu mai sunt eu cel ce face lucrul acesta, ci păcatul care locuieşte în mine.",
+        "Ştiu, în adevăr, că nimic bun nu locuieşte în mine, adică în firea mea pământească, pentru că, ce-i drept, am voinţa să fac binele, dar n-am puterea să-l fac.",
+        "Căci binele, pe care vreau să-l fac, nu-l fac, ci răul, pe care nu vreau să-l fac, iată ce fac!",
+        "Şi dacă fac ce nu vreau să fac, nu mai sunt eu cel ce face lucrul acesta, ci păcatul care locuieşte în mine.",
+        "Găsesc dar în mine legea aceasta: când vreau să fac binele, răul este lipit de mine.",
+        "Fiindcă după omul dinăuntru îmi place Legea lui Dumnezeu,",
+        "dar văd în mădularele mele o altă lege, care se luptă împotriva legii primite de mintea mea şi mă ţine rob legii păcatului, care este în mădularele mele.",
+        "O, nenorocitul de mine! Cine mă va izbăvi de acest trup de moarte?…",
+        "Mulţumiri fie aduse lui Dumnezeu, prin Isus Hristos, Domnul nostru!… Astfel dar, cu mintea, eu slujesc Legii lui Dumnezeu; dar cu firea pământească, slujesc legii păcatului."
     ]
 ]

@@ -173,7 +173,7 @@ export const chapters = [
         "Tot astfel, fraţii mei, prin trupul lui Hristos, şi voi aţi murit în ce priveşte Legea, ca să fiţi ai Altuia, adică ai Celui ce a înviat din morţi, şi aceasta, ca să aducem rod pentru Dumnezeu.",
         "Căci, când trăiam sub firea noastră pământească, patimile păcatelor, aţâţate de Lege, lucrau în mădularele noastre şi ne făceau să aducem roade pentru moarte.",
         "Dar acum, am fost izbăviţi de Lege şi suntem morţi faţă de Legea aceasta, care ne ţinea robi, pentru ca să slujim lui Dumnezeu într-un duh nou, iar nu după vechea slovă.",
-        "Deci ce vom zice? Legea este ceva păcătos?Nicidecum! Dimpotrivă, păcatul nu l-am cunoscut decât prin Lege. De pildă, n-aş fi cunoscut pofta, dacă Legea nu mi-ar fi spus: „Să nu pofteşti!”",
+        "Deci ce vom zice? Legea este ceva păcătos? Nicidecum! Dimpotrivă, păcatul nu l-am cunoscut decât prin Lege. De pildă, n-aş fi cunoscut pofta, dacă Legea nu mi-ar fi spus: „Să nu pofteşti!”",
         "Apoi, păcatul a luat prilejul şi a făcut să se nască în mine, prin poruncă, tot felul de pofte, căci, fără Lege, păcatul este mort.",
         "Odinioară, fiindcă eram fără Lege, trăiam, dar când a venit porunca, păcatul a înviat, şi eu am murit.",
         "Şi porunca, ea, care trebuia să-mi dea viaţa, mi-a pricinuit moartea.",

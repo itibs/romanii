@@ -3,7 +3,7 @@
     import {chapters} from '../data/verses'
 
     let start = {
-        chapter: 7,
+        chapter: 8,
         verse: 1,
     }
 

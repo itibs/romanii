@@ -259,7 +259,7 @@ export const chapters = [
         "Astfel, El ne-a chemat nu numai dintre iudei, ci şi dintre neamuri,",
         "după cum zice în Osea: „Voi numi popor al Meu pe cel ce nu era poporul Meu şi preaiubită pe cea care nu era preaiubită.",
         "Şi acolo unde li se zicea: ‘Voi nu sunteţi poporul Meu’, vor fi numiţi fii ai Dumnezeului celui viu.”",
-        "Isaia, de altă parte, strigă cu privire la Israel:„Chiar dacă numărul fiilor lui Israel ar fi ca nisipul mării, numai rămăşiţa va fi mântuită.",
+        "Isaia, de altă parte, strigă cu privire la Israel: „Chiar dacă numărul fiilor lui Israel ar fi ca nisipul mării, numai rămăşiţa va fi mântuită.",
         "Căci Domnul va împlini pe deplin şi repede, pe pământ, cuvântul Lui.”",
         "Şi, cum zisese Isaia mai înainte: „Dacă nu ne-ar fi lăsat Domnul Savaot o sămânţă, am fi ajuns ca Sodoma şi ne-am fi asemănat cu Gomora.”",
         "Deci ce vom zice? Neamurile, care nu umblau după neprihănire, au căpătat neprihănirea, şi anume neprihănirea care se capătă prin credinţă;",

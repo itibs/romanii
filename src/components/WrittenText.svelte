@@ -4,10 +4,11 @@
 	 */
     export let verses;
     export let startIdx = 1;
+    export let showVerseNumbers = true;
 </script>
 
 <table>
     {#each verses as verse, i}
-        <tr>{i+startIdx}. {verse}</tr>
+        <tr>{#if showVerseNumbers}{i+startIdx}. {/if}{verse}</tr>
     {/each}
 </table>

@@ -1,9 +1,10 @@
 <script>
+    import VersesInput from '/src/components/VersesInput.svelte';
     import WrittenText from '/src/components/WrittenText.svelte';
     import {chapters} from '/src/data/verses'
 
     let start = {
-        chapter: 8,
+        chapter: 9,
         verse: 1,
     }
 
@@ -21,11 +22,6 @@
 
     let crtVerse = '';
     $: crtVerse = verseIdx < crtChapter.length ? crtChapter[verseIdx] : '';
-    $: crtVerseWords = crtVerse.split(' ').filter(x => x.length > 0);
-
-    let wordIdx = 0;
-    let crtWord = '';
-    $: crtWord = wordIdx < crtVerseWords.length ? crtVerseWords[wordIdx] : '';
 
     let writtenText = '';
     $: writtenText = crtChapter.slice(0, verseIdx).map((v, i) => (i+1) + ". " + v).join("\n");
@@ -41,75 +37,22 @@
         }
     }
 
-    const nextWord = () => {
-        wordIdx++;
-        if (wordIdx >= crtVerseWords.length) {
-            wordIdx = 0;
-            verseIdx++;
-        }
-    }
-
-    const nextChapter = () => {
-        chapterIdx++;
-        verseIdx = 0;
-        wordIdx = 0;
-    }
-
     const jumpToChapter = (/** @type {number} */ i) => () => {
         chapterIdx = i;
         verseIdx = start.verse - 1;
-        wordIdx = 0;
+        discoveredVerseText = '';
     }
 
-    let userInput = ''
-
-    const normalizeLetter = (/** @type {string} */ c) => {
-        c = c.toLowerCase();
-        if ("ăâ".includes(c)) {
-            c = "a";
-        }
-        if ("țţ".includes(c)) {
-            c = "t";
-        }
-        if ("șş".includes(c)) {
-            c = "s";
-        }
-        if (c == "î") {
-            c = "i";
-        }
-        return c;
-    }
-
-    const checkInput = () => {
-        if (userInput.length == 0) { return; }
-        let c = userInput[0];
-        userInput = userInput.substring(1);
-
-        let i = 0;
-        while (i < crtWord.length && !crtWord[i].match(/[a-zăâțţșşî]/i)) {
-            i++;
-        }
-        if (i == crtWord.length) {
-            nextWord();
-        }
-
-        let normalizedActual = normalizeLetter(c)
-        let normalizedExpected = normalizeLetter(crtWord[i])
-        if (normalizedActual == normalizedExpected) {
-            nextWord();
-        }
-    }
+    let discoveredVerseText = '';
 </script>
 
 <h1>Romanii</h1>
 <h2>Capitolul {chapterIdx+1}</h2>
-<WrittenText startIdx={start.verse} verses={crtChapter.slice(start.verse-1, verseIdx).concat(verseIdx < crtChapter.length ? [crtVerseWords.slice(0, wordIdx).join(' ')] : [])}></WrittenText>
+<WrittenText startIdx={start.verse} verses={crtChapter.slice(start.verse-1, verseIdx).concat(verseIdx < crtChapter.length ? [discoveredVerseText] : [])}></WrittenText>
 <br>
-<input bind:value={userInput} on:input={checkInput}>
-<br><br>
-<button on:click={nextWord}>
-    Cuvântul următor
-</button>
+{#key crtVerse}
+    <VersesInput inputText={crtVerse} fnVerseDone={() => {verseIdx++; discoveredVerseText = ''}} bind:discoveredText={discoveredVerseText}></VersesInput>
+{/key}
 <br>
 <br>
 <h3>Alege capitolul</h3>
@@ -124,7 +67,9 @@
     {/each}
     </tr>
 </table>
-<p>Începând cu versetul <input type=number bind:value={startVerseInput} style="width: 50pt"></p>
+<p>Începând cu versetul <input type=number bind:value={startVerseInput}></p>
 <button on:click={jumpToChapter(chapterIdx)}>
     Resetează capitolul
 </button>
+<br><br>
+<a href="/randomverses">Versete aleatoare</a>

@@ -267,7 +267,7 @@ export const chapters = [
         "Pentru ce? Pentru că Israel n-a căutat-o prin credinţă, ci prin fapte. Ei s-au lovit de piatra de poticnire,",
         "după cum este scris: „Iată că pun în Sion o piatră de poticnire şi o stâncă de cădere, şi cine crede în El nu va fi dat de ruşine.”",
     ], [
-        "Fraţilor, dorinţa inimii mele, şi rugăciunea mea către Dumnezeu, pentru israeliţi este să fie mântuiţi.",
+        "Fraţilor, dorinţa inimii mele, şi rugăciunea mea către Dumnezeu pentru israeliţi este să fie mântuiţi.",
         "Le mărturisesc că ei au râvnă pentru Dumnezeu, dar fără pricepere,",
         "pentru că, întrucât n-au cunoscut neprihănirea pe care o dă Dumnezeu, au căutat să-şi pună înainte o neprihănire a lor înşişi şi nu s-au supus astfel neprihănirii pe care o dă Dumnezeu.",
         "Căci Hristos este sfârşitul Legii, pentru ca oricine crede în El să poată căpăta neprihănirea.",

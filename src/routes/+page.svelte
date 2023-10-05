@@ -4,14 +4,14 @@
     import {chapters} from '/src/data/verses'
 
     let start = {
-        chapter: 9,
+        chapter: 10,
         verse: 1,
     }
 
     let chapterIdx = start.chapter-1;
     /**
-	 * @type {string[]}
-	 */
+     * @type {string[]}
+     */
     let crtChapter = [];
     $: crtChapter = chapterIdx < chapters.length ? chapters[chapterIdx] : [];
 

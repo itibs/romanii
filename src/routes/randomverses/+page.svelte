@@ -24,7 +24,7 @@
     }
 
     let start = {
-        chapter: 9,
+        chapter: 11,
         verse: 1,
     }
 
@@ -74,7 +74,9 @@
 
 <h1>Romanii - versete aleatoare</h1>
 <WrittenText verses={randomizedVerses.slice(start.verse-1, verseIdx).map((/** @type {{ idx: string; verse: string; }} */ fullVerse) => {return fullVerse.idx + '. ' + fullVerse.verse})} showVerseNumbers={false} style="color: grey"></WrittenText>
+{#if randomizedVerses[verseIdx]}
 <h2>Romani {chapterIdx+1}:{randomizedVerses[verseIdx].idx}</h2>
+{/if}
 <WrittenText startIdx={start.verse} verses={[discoveredVerseText]} showVerseNumbers={false}></WrittenText>
 <br>
 {#key crtVerse}

@@ -288,5 +288,7 @@ export const chapters = [
         "Dar întreb iarăşi: „N-a ştiut Israel lucrul acesta?” Ba da, căci Moise, cel dintâi, zice: „Vă voi întărâta la pizmă prin ceea ce nu este neam, vă voi aţâţa mânia printr-un neam fără pricepere.”",
         "Şi Isaia merge cu îndrăzneala până acolo că zice: „Am fost găsit de cei ce nu Mă căutau; M-am făcut cunoscut celor ce nu întrebau de Mine.”",
         "Pe când, despre Israel zice: „Toată ziua Mi-am întins mâinile spre un norod răzvrătit şi împotrivitor la vorbă.”",
+    ], [
+        "a s d.",
     ]
 ]

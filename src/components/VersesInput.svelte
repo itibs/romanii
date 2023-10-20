@@ -48,6 +48,8 @@
         let c = userInput[0];
         userInput = userInput.substring(1);
         
+        if (crtWord.length == 0) { return; }
+
         if (c === ' ') {
             nextWord();
         }

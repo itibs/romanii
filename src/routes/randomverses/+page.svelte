@@ -24,7 +24,7 @@
     }
 
     let start = {
-        chapter: 10,
+        chapter: 11,
         verse: 1,
     }
 

@@ -325,5 +325,27 @@ export const chapters = [
 		"Şi în adevăr, „cine a cunoscut gândul Domnului? Sau cine a fost sfetnicul Lui?",
 		"Cine I-a dat ceva întâi, ca să aibă de primit înapoi?”",
 		"Din El, prin El şi pentru El sunt toate lucrurile. A Lui să fie slava în veci! Amin."
+	], [
+		"Vă îndemn dar, fraţilor, pentru îndurarea lui Dumnezeu, să aduceţi trupurile voastre ca o jertfă vie, sfântă, plăcută lui Dumnezeu; aceasta va fi din partea voastră o slujbă duhovnicească.",
+		"Să nu vă potriviţi chipului veacului acestuia, ci să vă prefaceţi prin înnoirea minţii voastre, ca să puteţi deosebi bine voia lui Dumnezeu: cea bună, plăcută şi desăvârşită.",
+		"Prin harul care mi-a fost dat, eu spun fiecăruia dintre voi să nu aibă despre sine o părere mai înaltă decât se cuvine, ci să aibă simţiri cumpătate despre sine, potrivit cu măsura de credinţă pe care a împărţit-o Dumnezeu fiecăruia.",
+		"Căci, după cum într-un trup avem mai multe mădulare, şi mădularele n-au toate aceeaşi slujbă,",
+		"tot aşa şi noi, care suntem mulţi, alcătuim un singur trup în Hristos, dar fiecare în parte suntem mădulare unii altora.",
+		"Deoarece avem felurite daruri, după harul care ne-a fost dat, cine are darul prorociei să-l întrebuinţeze după măsura credinţei lui.",
+		"Cine este chemat la o slujbă să se ţină de slujba lui. Cine învaţă pe alţii să se ţină de învăţătură.",
+		"Cine îmbărbătează pe alţii să se ţină de îmbărbătare. Cine dă să dea cu inimă largă. Cine cârmuieşte să cârmuiască cu râvnă. Cine face milostenie s-o facă cu bucurie.",
+		"Dragostea să fie fără prefăcătorie. Fie-vă groază de rău şi lipiţi-vă tare de bine.",
+		"Iubiţi-vă unii pe alţii cu o dragoste frăţească. În cinste, fiecare să dea întâietate altuia.",
+		"În sârguinţă, fiţi fără preget. Fiţi plini de râvnă cu duhul. Slujiţi Domnului.",
+		"Bucuraţi-vă în nădejde. Fiţi răbdători în necaz. Stăruiţi în rugăciune.",
+		"Ajutaţi pe sfinţi când sunt în nevoie. Fiţi primitori de oaspeţi.",
+		"Binecuvântaţi pe cei ce vă prigonesc: binecuvântaţi şi nu blestemaţi.",
+		"Bucuraţi-vă cu cei ce se bucură; plângeţi cu cei ce plâng.",
+		"Aveţi aceleaşi simţăminte unii faţă de alţii. Nu umblaţi după lucrurile înalte, ci rămâneţi la cele smerite. Să nu vă socotiţi singuri înţelepţi.",
+		"Nu întoarceţi nimănui rău pentru rău. Urmăriţi ce este bine înaintea tuturor oamenilor.",
+		"Dacă este cu putinţă, întrucât atârnă de voi, trăiţi în pace cu toţi oamenii.",
+		"Preaiubiţilor, nu vă răzbunaţi singuri, ci lăsaţi să se răzbune mânia lui Dumnezeu, căci este scris: „Răzbunarea este a Mea; Eu voi răsplăti”, zice Domnul.",
+		"Dimpotrivă, „dacă îi este foame vrăjmaşului tău, dă-i să mănânce; dacă-i este sete, dă-i să bea; căci, dacă vei face astfel, vei grămădi cărbuni aprinşi pe capul lui.”",
+		"Nu te lăsa biruit de rău, ci biruieşte răul prin bine."
 	]
 ]

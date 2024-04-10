@@ -421,7 +421,7 @@ export const chapters = [
 		"şi astfel să ajung la voi cu bucurie, cu voia lui Dumnezeu şi să mă răcoresc puţin în mijlocul vostru.",
 		"Dumnezeul păcii să fie cu voi cu toţi! Amin.",
 	], [
-		"Vă dau în grijă pe Fivi, sora noastră, care este diaconiţă1 a Bisericii din Chencrea;",
+		"Vă dau în grijă pe Fivi, sora noastră, care este diaconiţă a Bisericii din Chencrea;",
 		"s-o primiţi în Domnul, într-un chip vrednic de sfinţi, şi s-o ajutaţi în orice ar avea trebuinţă de voi, căci şi ea s-a arătat de ajutor multora şi îndeosebi mie.",
 		"Spuneţi sănătate Priscilei şi lui Aquila, tovarăşii mei de lucru în Hristos Isus,",
 		"care şi-au pus capul în joc, ca să-mi scape viaţa. Le mulţumesc nu numai eu, dar şi toate Bisericile ieşite dintre neamuri.",

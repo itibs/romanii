@@ -443,7 +443,7 @@ export const chapters = [
 		"Dumnezeul păcii va zdrobi în curând pe Satana sub picioarele voastre. Harul Domnului nostru Isus Hristos să fie cu voi! Amin.",
 		"Timotei, tovarăşul meu de lucru, vă trimite sănătate; tot aşa şi Luciu, Iason şi Sosipater, rudele mele.",
 		"Vă trimit sănătate în Domnul eu, Terţiu, care am scris epistola aceasta.",
-		"Gaius, gazda mea şi a întregii Biserici, vă trimite sănătate. Erast, vistiernicul cetăţii, vă trimite sănătate; tot aşa şi fratele Quartus.",
+		"Gaiu, gazda mea şi a întregii Biserici, vă trimite sănătate. Erast, vistiernicul cetăţii, vă trimite sănătate; tot aşa şi fratele Cuart.",
 		"Harul Domnului nostru Isus Hristos să fie cu voi cu toţi! Amin.",
 		"Iar Aceluia care poate să vă întărească, după Evanghelia mea şi propovăduirea lui Isus Hristos – potrivit cu descoperirea tainei care a fost ţinută ascunsă timp de veacuri,",
 		"dar a fost arătată acum prin scrierile prorocilor şi, prin porunca Dumnezeului celui veşnic, a fost adusă la cunoştinţa tuturor neamurilor, ca să asculte de credinţă –",

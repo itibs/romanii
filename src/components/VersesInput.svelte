@@ -2,12 +2,12 @@
     /**
 	 * @type {string}
 	 */
-     export let inputText;
+    export let inputText;
     export let discoveredText = '';
     /**
 	 * @type {() => void}
 	 */
-     export let fnVerseDone;
+    export let fnVerseDone;
 
     $: inputWords = inputText.split(' ').filter(x => x.length > 0);
 

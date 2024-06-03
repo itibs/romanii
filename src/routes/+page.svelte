@@ -1,75 +1,22 @@
 <script>
-    import VersesInput from '/src/components/VersesInput.svelte';
-    import WrittenText from '/src/components/WrittenText.svelte';
-    import {chapters} from '/src/data/verses'
+    import SequentialTraining from '/src/components/SequentialTraining.svelte';
+    import {chapters} from '/src/data/verses';
 
+    let bookName = '1 Ioan'
     let start = {
-        chapter: 16,
-        verse: 1,
+        chapter: 1,
+        verse: 1
     }
-
-    let chapterIdx = start.chapter-1;
-    /**
-     * @type {string[]}
-     */
-    let crtChapter = [];
-    $: crtChapter = chapterIdx < chapters.length ? chapters[chapterIdx] : [];
-
-    $: verseIdx = start.verse-1;
-    $: if (verseIdx < 0) {
-        verseIdx = 0;
-    }
-
-    let crtVerse = '';
-    $: crtVerse = verseIdx < crtChapter.length ? crtChapter[verseIdx] : '';
-
-    let writtenText = '';
-    $: writtenText = crtChapter.slice(0, verseIdx).map((v, i) => (i+1) + ". " + v).join("\n");
-
-    let startVerseInput = start.verse;
-    $: {
-        if (startVerseInput < 1) {
-            start.verse = 1;
-        } else if (startVerseInput > crtChapter.length) {
-            start.verse = crtChapter.length;
-        } else {
-            start.verse = startVerseInput;
-        }
-    }
-
-    const jumpToChapter = (/** @type {number} */ i) => () => {
-        chapterIdx = i;
-        verseIdx = start.verse - 1;
-        discoveredVerseText = '';
-    }
-
-    let discoveredVerseText = '';
+    let bookEntries = Object.entries(chapters)
 </script>
 
 <h1>Romanii</h1>
-<h2>Capitolul {chapterIdx+1}</h2>
-<WrittenText startIdx={start.verse} verses={crtChapter.slice(start.verse-1, verseIdx).concat(verseIdx < crtChapter.length ? [discoveredVerseText] : [])}></WrittenText>
-<br>
-{#key crtVerse}
-    <VersesInput inputText={crtVerse} fnVerseDone={() => {verseIdx++; discoveredVerseText = ''}} bind:discoveredText={discoveredVerseText}></VersesInput>
-{/key}
-<br>
-<br>
-<h3>Alege capitolul</h3>
-<table>
-    <tr>
-    {#each chapters as chapter, i}
-        <td>
-            <button on:click={jumpToChapter(i)}>
-                {i+1}
-            </button>
-        </td>
+<label for="books">Cartea:</label>
+<select bind:value={bookName}>
+    {#each bookEntries as [name, chapter]}
+        <option value={name}>{name}</option>
     {/each}
-    </tr>
-</table>
-<p>Începând cu versetul <input type=number bind:value={startVerseInput}></p>
-<button on:click={jumpToChapter(chapterIdx)}>
-    Resetează capitolul
-</button>
+</select>
+<SequentialTraining bookName={bookName} chapters={chapters[bookName]} start={start}/>
 <br><br>
 <a href="/randomverses">Versete aleatoare</a>

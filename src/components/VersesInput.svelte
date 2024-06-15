@@ -4,10 +4,13 @@
 	 */
     export let inputText;
     export let discoveredText = '';
+    export let disableNextButton = false;
     /**
 	 * @type {() => void}
 	 */
     export let fnVerseDone;
+
+    let nextButtonDisabled = false;
 
     $: inputWords = inputText.split(' ').filter(x => x.length > 0);
 
@@ -15,6 +18,16 @@
     let crtWord = '';
     $: crtWord = wordIdx < inputWords.length ? inputWords[wordIdx] : '';
 
+    const nextWordButtonPressed = () => {
+        if (disableNextButton) {
+            nextButtonDisabled = true;
+            setTimeout(() => {
+                nextButtonDisabled = false;
+            }, 3000)
+        }
+        
+        nextWord();
+    }
     const nextWord = () => {
         wordIdx++;
         discoveredText = inputWords.slice(0, wordIdx).join(' ')
@@ -50,7 +63,7 @@
         
         if (crtWord.length == 0) { return; }
 
-        if (c === ' ') {
+        if (!disableNextButton && c === ' ') {
             nextWord();
         }
 
@@ -72,6 +85,6 @@
 
 <input bind:value={userInput} on:input={checkInput} autofocus>
 <br><br>
-<button on:click={nextWord}>
+<button on:click={nextWordButtonPressed} disabled={nextButtonDisabled}>
     Cuvântul următor
 </button>

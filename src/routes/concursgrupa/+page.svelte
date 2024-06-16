@@ -8,7 +8,7 @@
 </script>
 
 <h1>Concurs grupa liceenilor</h1>
-<label for="input">Seed</label>
+<label for="input">First</label>
 <input type="number" bind:value={first}>
 <label for="input">Nr verses</label>
 <input type="number" bind:value={nrVerses}>

@@ -7,11 +7,12 @@ export const verses = [
     { "ref": "Dan 12:2", "verse": "Mulţi din cei ce dorm în ţărâna pământului se vor scula: unii pentru viaţa veşnică şi alţii pentru ocară şi ruşine veşnică." },
     { "ref": "Mic 6:8", "verse": "Ţi s-a arătat, omule, ce este bine! Şi ce alta cere Domnul de la tine decât să faci dreptate, să iubeşti mila şi să umbli smerit cu Dumnezeul tău?" },
     { "ref": "Mat 5:45", "verse": "ca să fiţi fii ai Tatălui vostru care este în ceruri; căci El face să răsară soarele Său peste cei răi şi peste cei buni şi dă ploaie peste cei drepţi şi peste cei nedrepţi." },
-    { "ref": "Mat 7:21", "verse": "Nu oricine-Mi zice: ‘Doamne , Doamne!’ va intra în Împărăţia cerurilor, ci cel ce face voia Tatălui Meu, care este în ceruri." },
-    { "ref": "Mat 25:13", "verse": "Vegheaţi dar , căci nu ştiţi ziua, nici ceasul în care va veni Fiul omului." },
+    { "ref": "Mat 7:21", "verse": "Nu oricine-Mi zice: ‘Doamne, Doamne!’ va intra în Împărăţia cerurilor, ci cel ce face voia Tatălui Meu, care este în ceruri." },
+    { "ref": "Mat 25:13", "verse": "Vegheaţi dar, căci nu ştiţi ziua, nici ceasul în care va veni Fiul omului." },
     { "ref": "Mar 11:25", "verse": "Şi, când staţi în picioare de vă rugaţi, să iertaţi orice aveţi împotriva cuiva, pentru ca şi Tatăl vostru, care este în ceruri, să vă ierte greşelile voastre." },
     { "ref": "Luc 9:23", "verse": "Apoi a zis tuturor: „Dacă voieşte cineva să vină după Mine, să se lepede de sine, să-şi ia crucea în fiecare zi şi să Mă urmeze." },
     { "ref": "Luc 11:9", "verse": "De aceea şi Eu vă spun: Cereţi, şi vi se va da; căutaţi, şi veţi găsi; bateţi, şi vi se va deschide." },
+
     { "ref": "Luc 11:28", "verse": "Şi El a răspuns: „Ferice mai degrabă de cei ce ascultă Cuvântul lui Dumnezeu şi-L păzesc!”" },
     { "ref": "Luc 12:15", "verse": "Apoi le-a zis: „Vedeţi şi păziţi-vă de orice fel de lăcomie de bani, căci viaţa cuiva nu stă în belşugul avuţiei lui.”" },
     { "ref": "Luc 14:11", "verse": "Căci oricine se înalţă va fi smerit şi cine se smereşte va fi înălţat." },
@@ -25,6 +26,7 @@ export const verses = [
     { "ref": "1 Cor 1:28", "verse": "Şi Dumnezeu a ales lucrurile josnice ale lumii şi lucrurile dispreţuite, ba încă lucrurile care nu sunt, ca să nimicească pe cele ce sunt," },
     { "ref": "1 Cor 1:29", "verse": "pentru ca nimeni să nu se laude înaintea lui Dumnezeu." },
     { "ref": "1 Cor 4:2", "verse": "Încolo, ce se cere de la ispravnici este ca fiecare să fie găsit credincios în lucrul încredinţat lui." },
+
     { "ref": "2 Cor 5:10", "verse": "Căci toţi trebuie să ne înfăţişăm înaintea scaunului de judecată al lui Hristos, pentru ca fiecare să-şi primească răsplata după binele sau răul pe care-l va fi făcut când trăia în trup." },
     { "ref": "2 Cor 5:17", "verse": "Căci, dacă este cineva în Hristos, este o făptură1 nouă. Cele vechi s-au dus, iată că toate lucrurile s-au făcut noi." },
     { "ref": "2 Cor 5:20", "verse": "Noi dar, suntem trimişi împuterniciţi ai lui Hristos; şi, ca şi cum Dumnezeu ar îndemna prin noi, vă rugăm fierbinte, în Numele lui Hristos: Împăcaţi-vă cu Dumnezeu!" },
@@ -38,6 +40,7 @@ export const verses = [
     { "ref": "Ef 4:24", "verse": "şi să vă îmbrăcaţi în omul cel nou, făcut după chipul lui Dumnezeu, de o neprihănire şi sfinţenie pe care o dă adevărul." },
     { "ref": "Ef 6:8", "verse": "căci ştiţi că fiecare, fie rob, fie slobod, va primi răsplată de la Domnul, după binele pe care-l va fi făcut." },
     { "ref": "Filipeni 3:7", "verse": "Dar lucrurile care pentru mine erau câştiguri le-am socotit ca o pierdere din pricina lui Hristos." },
+    
     { "ref": "Filipeni 3:8", "verse": "Ba încă şi acum privesc toate aceste lucruri ca o pierdere, faţă de preţul nespus de mare al cunoaşterii lui Hristos Isus, Domnul meu. Pentru El am pierdut toate şi le socotesc ca un gunoi, ca să câştig pe Hristos" },
     { "ref": "Col 3:13", "verse": "Îngăduiţi-vă unii pe alţii şi, dacă unul are pricină să se plângă de altul, iertaţi-vă unul pe altul. Cum v-a iertat Hristos, aşa iertaţi-vă şi voi." },
     { "ref": "1 Tes 5:5", "verse": "Voi toţi sunteţi fii ai luminii şi fii ai zilei. Noi nu suntem ai nopţii, nici ai întunericului." },

@@ -11,7 +11,6 @@
     }
 
     $: if (bookName !== undefined) {
-        console.log('here')
         discoveredVerseText = ''
     }
 

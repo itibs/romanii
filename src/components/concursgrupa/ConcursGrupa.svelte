@@ -152,8 +152,10 @@
 
 {#if eligibleForScoring && !submittedScore && verseIdx == verses.length}
 	<br /><br />
+    <h3>Trimite scor</h3>
+    <label for="userName">Nume:</label>
 	<input bind:value={userName} />
-	<button on:click={() => submitScore(elapsedTime, userName, round)}>Submit score</button>
+	<button on:click={() => submitScore(elapsedTime, userName, round)}>Trimite</button>
 {/if}
 <br><br>
 <div class="timer">

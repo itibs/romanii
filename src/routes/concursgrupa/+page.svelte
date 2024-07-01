@@ -66,7 +66,7 @@
 <h2>Selectează stagiul</h2>
 <select class="dropdown" on:change={handleSelect}>
 	{#each Object.keys(stages) as stage}
-		<option value={stage} selected={stage === selectedStage}>{stage}</option>
+		<option value={stage} selected={stage === selectedStage}>{stage} ({stages[stage].description})</option>
 	{/each}
 </select>
 <br><br>
@@ -79,6 +79,9 @@ De asemenea, poți trece la următorul cuvânt doar apăsând tasta 'Space'<br>
 {/if}
 
 <ConcursGrupa verses={selectedVerses} round={selectedStage} trainingMode={trainingMode} />
+
+<br><br>
+<a href="/concursgrupa/versete">Vezi toate versetele</a>
 
 <style>
 	.scoreboards td {

@@ -99,6 +99,9 @@
 
 	function startTimer() {
 		startTime = new Date().getTime();
+        if (!trainingMode) {
+            eligibleForScoring = true;
+        }
 		elapsedTime = 0;
 		interval = setInterval(() => {
 			elapsedTime = (new Date().getTime() - startTime) / 1000;
@@ -112,9 +115,6 @@
 	}
 
     function reset() {
-        if (!trainingMode) {
-            eligibleForScoring = true;
-        }
         stopTimer();
         elapsedTime = 0;
         verseIdx = 0;

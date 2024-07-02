@@ -9,6 +9,9 @@
 	 * @type {() => void}
 	 */
     export let fnVerseDone;
+    export const reset = () => {
+        wordIdx = 0;
+    }
 
     let nextButtonDisabled = false;
 

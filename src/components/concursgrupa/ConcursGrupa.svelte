@@ -14,6 +14,8 @@
 	let submittedScore = false;
     let eligibleForScoring = false;
 
+	let resetVersesInput = () => 0;
+
 	// countdown vars
     let timerStarted = false;
 	/**
@@ -121,6 +123,7 @@
         discoveredVerseText = '';
         submittedScore = false;
         timerStarted = false;
+		resetVersesInput();
     }
 </script>
 
@@ -147,6 +150,7 @@
 		}}
 		bind:discoveredText={discoveredVerseText}
 		disableNextButton={!trainingMode}
+		bind:reset={resetVersesInput}
 	/>
 {/key}
 

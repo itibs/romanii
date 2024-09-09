@@ -464,7 +464,7 @@ export const chapters = {
             "Dacă ne mărturisim păcatele, El este credincios şi drept ca să ne ierte păcatele şi să ne curăţească de orice nelegiuire.",
             "Dacă zicem că n-am păcătuit, Îl facem mincinos şi Cuvântul Lui nu este în noi.",
         ], [
-            "Copilaşilor, vă scriu aceste lucruri ca să nu păcătuiţi. Dar, dacă cineva a păcătuit, avem la Tatăl un Mijlocitor1, pe Isus Hristos, Cel neprihănit.",
+            "Copilaşilor, vă scriu aceste lucruri ca să nu păcătuiţi. Dar, dacă cineva a păcătuit, avem la Tatăl un Mijlocitor, pe Isus Hristos, Cel neprihănit.",
             "El este jertfa de ispăşire pentru păcatele noastre; şi nu numai pentru ale noastre, ci pentru ale întregii lumi.",
             "Şi prin aceasta ştim că Îl cunoaştem: dacă păzim poruncile Lui.",
             "Cine zice: „Îl cunosc” şi nu păzeşte poruncile Lui este un mincinos şi adevărul nu este în el.",
@@ -518,6 +518,28 @@ export const chapters = {
             "Şi, orice vom cere, vom căpăta de la El, fiindcă păzim poruncile Lui şi facem ce este plăcut înaintea Lui.",
             "Şi porunca Lui este să credem în Numele Fiului Său Isus Hristos şi să ne iubim unii pe alţii, cum ne-a poruncit El.",
             "Cine păzeşte poruncile Lui rămâne în El şi El în el. Şi cunoaştem că El rămâne în noi prin Duhul pe care ni L-a dat.",
+        ], [
+            "Preaiubiţilor, să nu daţi crezare oricărui duh, ci să cercetaţi duhurile dacă sunt de la Dumnezeu; căci în lume au ieşit mulţi proroci mincinoşi.",
+            "Duhul lui Dumnezeu să-L cunoaşteţi după aceasta: Orice duh care mărturiseşte că Isus Hristos a venit în trup este de la Dumnezeu;",
+            "şi orice duh care nu mărturiseşte pe Isus nu este de la Dumnezeu, ci este duhul antihristului, de a cărui venire aţi auzit. El chiar este în lume acum.",
+            "Voi, copilaşilor, sunteţi din Dumnezeu şi i-aţi biruit, pentru că Cel ce este în voi este mai mare decât cel ce este în lume.",
+            "Ei sunt din lume; de aceea vorbesc ca din lume şi lumea îi ascultă.",
+            "Noi însă suntem din Dumnezeu; cine cunoaşte pe Dumnezeu ne ascultă; cine nu este din Dumnezeu nu ne ascultă. Prin aceasta cunoaştem duhul adevărului şi duhul rătăcirii.",
+            "Preaiubiţilor, să ne iubim unii pe alţii; căci dragostea este de la Dumnezeu. Şi oricine iubeşte este născut din Dumnezeu şi cunoaşte pe Dumnezeu.",
+            "Cine nu iubeşte n-a cunoscut pe Dumnezeu, pentru că Dumnezeu este dragoste.",
+            "Dragostea lui Dumnezeu faţă de noi s-a arătat prin faptul că Dumnezeu a trimis în lume pe singurul Său Fiu, ca noi să trăim prin El.",
+            "Şi dragostea stă nu în faptul că noi am iubit pe Dumnezeu, ci în faptul că El ne-a iubit pe noi şi a trimis pe Fiul Său ca jertfă de ispăşire pentru păcatele noastre.",
+            "Preaiubiţilor, dacă astfel ne-a iubit Dumnezeu pe noi, trebuie să ne iubim şi noi unii pe alţii.",
+            "Nimeni n-a văzut vreodată pe Dumnezeu; dacă ne iubim unii pe alţii, Dumnezeu rămâne în noi şi dragostea Lui a ajuns desăvârşită în noi.",
+            "Cunoaştem că rămânem în El şi că El rămâne în noi prin faptul că ne-a dat din Duhul Său.",
+            "Şi noi am văzut şi mărturisim că Tatăl a trimis pe Fiul ca să fie Mântuitorul lumii.",
+            "Cine va mărturisi că Isus este Fiul lui Dumnezeu, Dumnezeu rămâne în el, şi el, în Dumnezeu.",
+            "Şi noi am cunoscut şi am crezut dragostea pe care o are Dumnezeu faţă de noi. Dumnezeu este dragoste şi cine rămâne în dragoste rămâne în Dumnezeu, şi Dumnezeu rămâne în el.",
+            "Cum este El, aşa suntem şi noi în lumea aceasta, astfel se face că dragostea este desăvârşită în noi, pentru ca să avem deplină încredere în ziua judecăţii.",
+            "În dragoste nu este frică, ci dragostea desăvârşită izgoneşte frica, pentru că frica are cu ea pedeapsa; şi cine se teme n-a ajuns desăvârşit în dragoste.",
+            "Noi Îl iubim pentru că El ne-a iubit întâi.",
+            "Dacă zice cineva: „Eu iubesc pe Dumnezeu” şi urăşte pe fratele său este un mincinos, căci cine nu iubeşte pe fratele său pe care-l vede cum poate să iubească pe Dumnezeu, pe care nu-L vede?",
+            "Şi aceasta este porunca pe care o avem de la El: cine iubeşte pe Dumnezeu iubeşte şi pe fratele său.",
         ]
     ]
 }

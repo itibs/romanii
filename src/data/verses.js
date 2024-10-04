@@ -540,6 +540,28 @@ export const chapters = {
             "Noi Îl iubim pentru că El ne-a iubit întâi.",
             "Dacă zice cineva: „Eu iubesc pe Dumnezeu” şi urăşte pe fratele său este un mincinos, căci cine nu iubeşte pe fratele său pe care-l vede cum poate să iubească pe Dumnezeu, pe care nu-L vede?",
             "Şi aceasta este porunca pe care o avem de la El: cine iubeşte pe Dumnezeu iubeşte şi pe fratele său.",
+        ], [
+            "Oricine crede că Isus este Hristosul este născut din Dumnezeu şi oricine iubeşte pe Cel ce L-a născut iubeşte şi pe cel născut din El.",
+            "Cunoaştem că iubim pe copiii lui Dumnezeu prin aceea că iubim pe Dumnezeu şi păzim poruncile Lui.",
+            "Căci dragostea de Dumnezeu stă în păzirea poruncilor Lui. Şi poruncile Lui nu sunt grele,",
+            "pentru că oricine este născut din Dumnezeu biruieşte lumea; şi ceea ce câştigă biruinţă asupra lumii este credinţa noastră.",
+            "Cine este cel ce a biruit lumea dacă nu cel ce crede că Isus este Fiul lui Dumnezeu?",
+            "El, Isus Hristos, este Cel ce a venit cu apă şi cu sânge; nu numai cu apă, ci cu apă şi cu sânge; şi Duhul este Cel ce mărturiseşte despre lucrul acesta, fiindcă Duhul este adevărul.",
+            "(Căci trei sunt care mărturisesc în cer: Tatăl, Cuvântul şi Duhul Sfânt, şi aceşti trei una sunt.)",
+            "Şi trei sunt care mărturisesc pe pământ: Duhul, apa şi sângele, şi aceşti trei sunt una în mărturisirea lor.",
+            "Dacă primim mărturisirea oamenilor, mărturisirea lui Dumnezeu este mai mare; şi mărturisirea lui Dumnezeu este mărturisirea pe care a făcut-o El despre Fiul Său.",
+            "Cine crede în Fiul lui Dumnezeu are mărturisirea aceasta în el; cine nu crede pe Dumnezeu Îl face mincinos, fiindcă nu crede mărturisirea pe care a făcut-o Dumnezeu despre Fiul Său.",
+            "Şi mărturisirea este aceasta: Dumnezeu ne-a dat viaţa veşnică şi această viaţă este în Fiul Său.",
+            "Cine are pe Fiul are viaţa; cine n-are pe Fiul lui Dumnezeu n-are viaţa.",
+            "V-am scris aceste lucruri ca să ştiţi că voi, care credeţi în Numele Fiului lui Dumnezeu, aveţi viaţa veşnică.",
+            "Îndrăzneala pe care o avem la El este că, dacă cerem ceva după voia Lui, ne ascultă.",
+            "Şi, dacă ştim că ne ascultă, orice I-am cere, ştim că suntem stăpâni pe lucrurile pe care I le-am cerut.",
+            "Dacă vede cineva pe fratele său săvârşind un păcat care nu duce la moarte, să se roage şi Dumnezeu îi va da viaţa, pentru cei ce n-au săvârşit un păcat care duce la moarte. Este un păcat care duce la moarte; nu-i zic să se roage pentru păcatul acela.",
+            "Orice nelegiuire este păcat, dar este un păcat care nu duce la moarte.",
+            "Ştim că oricine este născut din Dumnezeu nu păcătuieşte, ci Cel născut din Dumnezeu îl păzeşte şi cel rău nu se atinge de el.",
+            "Ştim că suntem din Dumnezeu şi că toată lumea zace în cel rău.",
+            "Ştim că Fiul lui Dumnezeu a venit şi ne-a dat pricepere să cunoaştem pe Cel ce este adevărat. Şi noi suntem în Cel ce este adevărat, adică în Isus Hristos, Fiul Lui. El este Dumnezeul adevărat şi viaţa veşnică.",
+            "Copilaşilor, păziţi-vă de idoli. Amin."
         ]
     ]
 }

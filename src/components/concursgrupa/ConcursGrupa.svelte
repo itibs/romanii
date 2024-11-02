@@ -145,7 +145,9 @@
 	<VersesInput
 		inputText={crtVerse}
 		fnVerseDone={() => {
-			verseIdx++;
+			if (verseIdx < verses.length) {
+				verseIdx++;
+			}
 			discoveredVerseText = '';
 		}}
 		bind:discoveredText={discoveredVerseText}

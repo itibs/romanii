@@ -66,8 +66,8 @@
         
         if (crtWord.length == 0) { return; }
 
-        if (!disableNextButton && c === ' ') {
-            nextWord();
+        if (!nextButtonDisabled && c === ' ') {
+            nextWordButtonPressed();
         }
 
         let i = 0;
@@ -91,3 +91,4 @@
 <button on:click={nextWordButtonPressed} disabled={nextButtonDisabled}>
     Cuvântul următor
 </button>
+(Poți apăsa tasta SPACE pentru cuvântul următor)

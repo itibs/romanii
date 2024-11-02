@@ -5,55 +5,35 @@
 	import ConcursGrupa from '/src/components/concursgrupa/ConcursGrupa.svelte';
 	import { verses } from '/src/data/grupa_verses';
 
-	const verses2023 = verses['2023']
+	const verses2024 = verses['2024'];
 
     let trainingMode = false;
 
 	let stages = {
-		'Stagiul 1': {
-			description: 'Versetele 1-13',
+		'Versete 2024.1': {
+			description: 'Versetele 1-10',
 			first: 0,
-			nrVerses: 13
+			nrVerses: 10
 		},
-		'Stagiul 2': {
-			description: 'Versetele 14-26',
-			first: 13,
-			nrVerses: 13
-		},
-		'Stagiul 3': {
-			description: 'Versetele 27-39',
-			first: 26,
-			nrVerses: 13
-		},
-		'Stagiul 4': {
-			description: 'Versetele 40-51',
-			first: 39,
-			nrVerses: 13
-		},
-		'Stagiul suprem': {
-			description: 'Versetele 1-51',
-			first: 0,
-			nrVerses: 51
-		}
 	};
 
 	let selectedStage = Object.keys(stages)[0];
 
-	$: selectedVerses = verses2023.slice(
+	$: selectedVerses = verses2024.slice(
 		stages[selectedStage].first,
 		stages[selectedStage].first + stages[selectedStage].nrVerses
 	);
 
 	function handleSelect(event) {
 		selectedStage = event.target.value;
-		selectedVerses = verses2023.slice(
+		selectedVerses = verses2024.slice(
 			stages[selectedStage].first,
 			stages[selectedStage].first + stages[selectedStage].nrVerses
 		);
 	}
 </script>
 
-<h1>Concurs grupa liceenilor</h1>
+<h1>Training grounds grupa liceenilor</h1>
 <table class="scoreboards">
 	<tr>
 		{#each Object.entries(stages) as stage}
@@ -82,7 +62,7 @@
 <ConcursGrupa verses={selectedVerses} round={selectedStage} trainingMode={trainingMode} />
 
 <br><br>
-<a href="/concursgrupa/versete">Vezi toate versetele</a>
+<a href="/grupa/2024/versete">Vezi toate versetele</a>
 
 <style>
 	.scoreboards td {

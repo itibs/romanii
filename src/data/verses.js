@@ -563,5 +563,39 @@ export const chapters = {
             "Ştim că Fiul lui Dumnezeu a venit şi ne-a dat pricepere să cunoaştem pe Cel ce este adevărat. Şi noi suntem în Cel ce este adevărat, adică în Isus Hristos, Fiul Lui. El este Dumnezeul adevărat şi viaţa veşnică.",
             "Copilaşilor, păziţi-vă de idoli. Amin."
         ]
+    ],
+    'Filipeni': [
+        [
+            "Pavel şi Timotei, robi ai lui Isus Hristos, către toţi sfinţii în Hristos Isus care sunt în Filipi, împreună cu episcopii şi diaconii:",
+            "Har vouă şi pace de la Dumnezeu, Tatăl nostru, şi de la Domnul Isus Hristos!",
+            "Mulţumesc Dumnezeului meu pentru toată aducerea aminte pe care o păstrez despre voi.",
+            "În toate rugăciunile mele mă rog pentru voi toţi, cu bucurie,",
+            "pentru partea pe care o luaţi la Evanghelie din cea dintâi zi până acum.",
+            "Sunt încredinţat că Acela care a început în voi această bună lucrare o va isprăvi până în ziua lui Isus Hristos.",
+            "Este drept să gândesc astfel despre voi toţi, fiindcă vă port în inima mea, întrucât, atât în lanţurile mele, cât şi în apărarea şi întărirea Evangheliei, voi sunteţi toţi părtaşi aceluiaşi har.",
+            "Căci martor îmi este Dumnezeu că vă iubesc pe toţi cu o dragoste nespusă în Isus Hristos.",
+            "Şi mă rog ca dragostea voastră să crească tot mai mult în cunoştinţă şi orice pricepere,",
+            "ca să deosebiţi lucrurile alese, pentru ca să fiţi curaţi şi să nu vă poticniţi până în ziua venirii lui Hristos,",
+            "plini de roada neprihănirii, prin Isus Hristos, spre slava şi lauda lui Dumnezeu.",
+            "Vreau să ştiţi, fraţilor, că împrejurările în care mă găsesc mai degrabă au lucrat la înaintarea Evangheliei.",
+            "În adevăr, în toată curtea împărătească şi pretutindeni aiurea, toţi ştiu că sunt pus în lanţuri din pricina lui Isus Hristos.",
+            "Şi cei mai mulţi din fraţi, îmbărbătaţi de lanţurile mele, au şi mai multă îndrăzneală să vestească fără teamă Cuvântul lui Dumnezeu.",
+            "Unii, este adevărat, propovăduiesc pe Hristos din pizmă şi din duh de ceartă; dar alţii, din bunăvoinţă.",
+            "Aceştia din urmă lucrează din dragoste, ca unii care ştiu că eu sunt însărcinat cu apărarea Evangheliei;",
+            "cei dintâi, din duh de ceartă, vestesc pe Hristos nu cu gând curat, ci ca să mai adauge un necaz la lanţurile mele.",
+            "Ce ne pasă? Oricum: fie de ochii lumii, fie din toată inima, Hristos este propovăduit. Eu mă bucur de lucrul acesta şi mă voi bucura.",
+            "Căci ştiu că lucrul acesta se va întoarce spre mântuirea mea prin rugăciunile voastre şi prin ajutorul Duhului lui Isus Hristos.",
+            "Mă aştept şi nădăjduiesc cu tărie că nu voi fi dat de ruşine cu nimic, ci că acum, ca totdeauna, Hristos va fi proslăvit cu îndrăzneală în trupul meu, fie prin viaţa mea, fie prin moartea mea.",
+            "Căci, pentru mine, a trăi este Hristos şi a muri este un câştig.",
+            "Dar, dacă trebuie să mai trăiesc în trup, face să trăiesc; şi nu ştiu ce trebuie să aleg.",
+            "Sunt strâns din două părţi: aş dori să mă mut şi să fiu împreună cu Hristos, căci ar fi cu mult mai bine,",
+            "dar, pentru voi, este mai de trebuinţă să rămân în trup.",
+            "Şi sunt încredinţat şi ştiu că voi rămâne şi voi trăi cu voi toţi pentru înaintarea şi bucuria credinţei voastre,",
+            "pentru ca, prin întoarcerea mea la voi, să aveţi în mine o mare pricină de laudă în Isus Hristos.",
+            "Numai purtaţi-vă într-un chip vrednic de Evanghelia lui Hristos, pentru ca, fie că voi veni să vă văd, fie că voi rămâne departe de voi, să aud despre voi că rămâneţi tari în acelaşi duh şi că luptaţi cu un suflet pentru credinţa Evangheliei,",
+            "fără să vă lăsaţi înspăimântaţi de potrivnici; lucrul acesta este pentru ei o dovadă de pierzare şi de mântuirea voastră, şi aceasta de la Dumnezeu.",
+            "Căci cu privire la Hristos, vouă vi s-a dat harul nu numai să credeţi în El, ci să şi pătimiţi pentru El",
+            "şi să şi duceţi, cum şi faceţi, aceeaşi luptă pe care aţi văzut-o la mine şi pe care auziţi că o duc şi acum.",
+        ]
     ]
 }

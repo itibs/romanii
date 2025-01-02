@@ -9,9 +9,9 @@
 </button>
 
 
-<style>
+<!-- <style>
     /* hidden until it works on vercel as well */
     button {
         visibility: hidden;
     }
-</style>
+</style> -->

@@ -9,20 +9,30 @@
         verse: 1
     }
     let bookEntries = Object.entries(chapters)
+
+	let currentDate = new Date();
+    let currentHour = currentDate.getHours();
+	let theme = 'light-mode';
+	if (currentHour >= 22 || currentHour <= 7) {
+        theme = 'dark-mode';
+    }
 </script>
 
-<h1>Romanii</h1>
-<label for="books">Cartea:</label>
-<select bind:value={bookName}>
-    {#each bookEntries as [name, chapter]}
-        <option value={name}>{name}</option>
-    {/each}
-</select>
-<SequentialTraining bookName={bookName} chapters={chapters[bookName]} start={start}/>
-<br><br>
-<a href="/randomverses">Versete aleatoare</a>
-<br>
-<DarkThemeButton />
+<body class:dark-mode={theme==='dark-mode'}>
+	<h1>Romanii</h1>
+	<label for="books">Cartea:</label>
+	<select bind:value={bookName}>
+		{#each bookEntries as [name, chapter]}
+			<option value={name}>{name}</option>
+		{/each}
+	</select>
+	<SequentialTraining bookName={bookName} chapters={chapters[bookName]} start={start}/>
+	<br><br>
+	<a href="/randomverses">Versete aleatoare</a>
+	<br>
+	<DarkThemeButton />
+</body>
+
 
 <!-- TODO: find a way to have dark-mode styles in a single file -->
 <style>

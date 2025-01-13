@@ -2,7 +2,7 @@
     import SequentialTraining from '/src/components/SequentialTraining.svelte';
     import DarkThemeButton from '/src/components/DarkThemeButton.svelte';
     import {chapters} from '/src/data/verses';
-	import { onMount } from 'svelte';
+    import { onMount } from 'svelte';
 
     let bookName = 'Filipeni'
     let start = {
@@ -11,21 +11,21 @@
     }
     let bookEntries = Object.entries(chapters)
 
-	onMount(() => {
-		let currentDate = new Date();
-		let currentHour = currentDate.getHours();
-		if (currentHour >= 22 || currentHour <= 7) {
-			window.document.body.classList.add('dark-mode')
-		}
-	});
+    onMount(() => {
+        let currentDate = new Date();
+        let currentHour = currentDate.getHours();
+        if (currentHour >= 22 || currentHour <= 7) {
+            window.document.body.classList.add('dark-mode')
+        }
+    });
 </script>
 
 <h1>Romanii</h1>
 <label for="books">Cartea:</label>
 <select bind:value={bookName}>
-	{#each bookEntries as [name, chapter]}
-		<option value={name}>{name}</option>
-	{/each}
+    {#each bookEntries as [name, chapter]}
+        <option value={name}>{name}</option>
+    {/each}
 </select>
 <SequentialTraining bookName={bookName} chapters={chapters[bookName]} start={start}/>
 <br><br>

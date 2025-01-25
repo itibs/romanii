@@ -61,8 +61,8 @@
 
     const checkInput = () => {
         if (userInput.length == 0) { return; }
-        let c = userInput[0];
-        userInput = userInput.substring(1);
+        let c = userInput.slice(-1);
+        userInput = '';
         
         if (crtWord.length == 0) { return; }
 

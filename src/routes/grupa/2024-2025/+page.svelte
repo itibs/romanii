@@ -5,28 +5,33 @@
 	import ConcursGrupa from '/src/components/concursgrupa/ConcursGrupa.svelte';
 	import { verses } from '/src/data/grupa_verses';
 
-	const verses2024 = verses['2024'];
+	const verses2024_2025 = verses['2024-2025'];
 
     let trainingMode = false;
 
 	let stages = {
-		'Versete 2024.1': {
+		'Versete 2024-2025.1': {
 			description: 'Versetele 1-10',
 			first: 0,
 			nrVerses: 10
 		},
+		'Versete 2024-2025.2': {
+			description: 'Versetele 11-20',
+			first: 10,
+			nrVerses: 10
+		},
 	};
 
-	let selectedStage = Object.keys(stages)[0];
+	let selectedStage = Object.keys(stages)[1];
 
-	$: selectedVerses = verses2024.slice(
+	$: selectedVerses = verses2024_2025.slice(
 		stages[selectedStage].first,
 		stages[selectedStage].first + stages[selectedStage].nrVerses
 	);
 
 	function handleSelect(event) {
 		selectedStage = event.target.value;
-		selectedVerses = verses2024.slice(
+		selectedVerses = verses2024_2025.slice(
 			stages[selectedStage].first,
 			stages[selectedStage].first + stages[selectedStage].nrVerses
 		);
@@ -62,7 +67,7 @@
 <ConcursGrupa verses={selectedVerses} round={selectedStage} trainingMode={trainingMode} />
 
 <br><br>
-<a href="/grupa/2024/versete">Vezi toate versetele</a>
+<a href="/grupa/2024-2025/versete">Vezi toate versetele</a>
 
 <style>
 	.scoreboards td {

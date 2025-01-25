@@ -55,7 +55,7 @@ export const verses = {
         { "ref": "2 Pe 3:9", "verse": "Domnul nu întârzie în împlinirea făgăduinţei Lui, cum cred unii, ci are o îndelungă răbdare pentru voi şi doreşte ca niciunul să nu piară, ci toţi să vină la pocăinţă." },
         { "ref": "1 Io 4:10", "verse": "Şi dragostea stă nu în faptul că noi am iubit pe Dumnezeu, ci în faptul că El ne-a iubit pe noi şi a trimis pe Fiul Său ca jertfă de ispăşire pentru păcatele noastre." },
     ],
-    '2024': [
+    '2024-2025': [
         { "ref": "2 Cronici 15:7", "verse": "voi dar întăriţi-vă şi nu lăsaţi să vă slăbească mâinile, căci faptele voastre vor avea o răsplată." },
         { "ref": "Psalmul 34:6", "verse": "Când strigă un nenorocit, Domnul aude şi-l scapă din toate necazurile lui." },
         { "ref": "Psalmul 73:25", "verse": "Pe cine altul am eu în cer afară de Tine? Şi pe pământ nu-mi găsesc plăcerea în nimeni decât în Tine." },
@@ -66,5 +66,16 @@ export const verses = {
         { "ref": "1 Timotei 1:12", "verse": "Mulţumesc lui Hristos Isus, Domnul nostru, care m-a întărit, că m-a socotit vrednic de încredere şi m-a pus în slujba Lui" },
         { "ref": "Tit 3:5", "verse": "El ne-a mântuit nu pentru faptele făcute de noi în neprihănire, ci pentru îndurarea Lui, prin spălarea naşterii din nou şi prin înnoirea făcută de Duhul Sfânt" },
         { "ref": "1 Ioan 5:1", "verse": "Oricine crede că Isus este Hristosul este născut din Dumnezeu şi oricine iubeşte pe Cel ce L-a născut iubeşte şi pe cel născut din El." },
+
+        { "ref": "2 Cronici 16:9a", "verse": "Căci Domnul Îşi întinde privirile peste tot pământul ca să sprijine pe aceia a căror inimă este întreagă a Lui." },
+        { "ref": "Psalmul 27:4", "verse": "Un lucru cer de la Domnul şi-l doresc fierbinte: aş vrea să locuiesc toată viaţa mea în Casa Domnului, ca să privesc frumuseţea Domnului şi să mă minunez de Templul Lui." },
+        { "ref": "Psalmul 73:23", "verse": "Însă eu sunt totdeauna cu Tine, Tu m-ai apucat de mâna dreaptă;" },
+        { "ref": "Psalmul 73:24", "verse": "mă vei călăuzi cu sfatul Tău, apoi mă vei primi în slavă." },
+        { "ref": "Ioan 9:31", "verse": "Ştim că Dumnezeu n-ascultă pe păcătoşi, ci, dacă este cineva temător de Dumnezeu şi face voia Lui, pe acela îl ascultă." },
+        { "ref": "Ioan 9:39", "verse": "Apoi, Isus a zis: „Eu am venit în lumea aceasta pentru judecată: ca cei ce nu văd să vadă şi cei ce văd să ajungă orbi.”" },
+        { "ref": "Romani 1:21 ", "verse": "fiindcă, măcar că au cunoscut pe Dumnezeu, nu L-au proslăvit ca Dumnezeu, nici nu I-au mulţumit, ci s-au dedat la gândiri deşarte şi inima lor fără pricepere s-a întunecat." },
+        { "ref": "1 Timotei 6:17", "verse": "Îndeamnă pe bogaţii veacului acestuia să nu se îngâmfe şi să nu-şi pună nădejdea în nişte bogăţii nestatornice, ci în Dumnezeu, care ne dă toate lucrurile din belşug ca să ne bucurăm de ele." },
+        { "ref": "Evrei 3:15", "verse": "câtă vreme se zice: „Astăzi, dacă auziţi glasul Lui, nu vă împietriţi inimile, ca în ziua răzvrătirii.”" },
+        { "ref": "Evrei 11:26", "verse": "El socotea ocara lui Hristos ca o mai mare bogăţie decât comorile Egiptului, pentru că avea ochii pironiţi spre răsplătire." },
     ]
 }

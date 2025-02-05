@@ -627,6 +627,28 @@ export const chapters = {
             "L-am trimis dar cu atât mai în grabă, ca să-l vedeţi şi să vă bucuraţi iarăşi şi să fiu şi eu mai puţin mâhnit.",
             "Primiţi-l deci în Domnul, cu toată bucuria şi preţuiţi pe astfel de oameni.",
             "Căci pentru lucrul lui Hristos a fost el aproape de moarte şi şi-a pus viaţa în joc, ca să împlinească ce lipsea slujbei voastre pentru mine."
+        ], [
+            "Încolo, fraţii mei, bucuraţi-vă în Domnul. Mie nu-mi este greu să vă scriu mereu aceleaşi lucruri, iar vouă vă este de folos.",
+            "Păziţi-vă de câinii aceia; păziţi-vă de lucrătorii aceia răi; păziţi-vă de scrijeliţii aceia!",
+            "Căci cei tăiaţi împrejur suntem noi, care slujim lui Dumnezeu prin Duhul lui Dumnezeu, care ne lăudăm în Hristos Isus şi care nu ne punem încrederea în lucrurile pământeşti.",
+            "Măcar că eu aş avea pricină de încredere chiar în lucrurile pământeşti. Dacă altul crede că se poate încrede în lucrurile pământeşti, eu şi mai mult;",
+            "eu, care sunt tăiat împrejur a opta zi, din neamul lui Israel, din seminţia lui Beniamin, evreu din evrei; în ceea ce priveşte Legea, fariseu;",
+            "în ceea ce priveşte râvna, prigonitor al Bisericii; cu privire la neprihănirea pe care o dă Legea, fără prihană.",
+            "Dar lucrurile care pentru mine erau câştiguri le-am socotit ca o pierdere din pricina lui Hristos.",
+            "Ba încă şi acum privesc toate aceste lucruri ca o pierdere, faţă de preţul nespus de mare al cunoaşterii lui Hristos Isus, Domnul meu. Pentru El am pierdut toate şi le socotesc ca un gunoi, ca să câştig pe Hristos",
+            "şi să fiu găsit în El, nu având o neprihănire a mea, pe care mi-o dă Legea, ci aceea care se capătă prin credinţa în Hristos, neprihănirea pe care o dă Dumnezeu prin credinţă.",
+            "Şi să-L cunosc pe El şi puterea învierii Lui şi părtăşia suferinţelor Lui şi să mă fac asemenea cu moartea Lui;",
+            "ca să ajung cu orice chip, dacă voi putea, la învierea din morţi.",
+            "Nu că am şi câştigat premiul sau că am şi ajuns desăvârşit, dar alerg înainte, căutând să-l apuc, întrucât şi eu am fost apucat de Hristos Isus.",
+            "Fraţilor, eu nu cred că l-am apucat încă, dar fac un singur lucru: uitând ce este în urma mea şi aruncându-mă spre ce este înainte,",
+            "alerg spre ţintă, pentru premiul chemării cereşti a lui Dumnezeu, în Hristos Isus.",
+            "Gândul acesta dar să ne însufleţească pe toţi care suntem desăvârşiţi; şi dacă în vreo privinţă sunteţi de altă părere, Dumnezeu vă va lumina şi în această privinţă.",
+            "Dar în lucrurile în care am ajuns de aceeaşi părere, să umblăm la fel.",
+            "Urmaţi-mă pe mine, fraţilor, şi uitaţi-vă bine la cei ce se poartă după pilda pe care o aveţi în noi.",
+            "Căci v-am spus de multe ori şi vă mai spun şi acum, plângând: sunt mulţi care se poartă ca vrăjmaşi ai crucii lui Hristos.",
+            "Sfârşitul lor va fi pierzarea. Dumnezeul lor este pântecele şi slava lor este în ruşinea lor şi se gândesc la lucrurile de pe pământ.",
+            "Dar cetăţenia noastră este în ceruri, de unde şi aşteptăm ca Mântuitor pe Domnul Isus Hristos.",
+            "El va schimba trupul stării noastre smerite şi-l va face asemenea trupului slavei Sale, prin lucrarea puterii pe care o are de a-Şi supune toate lucrurile."
         ]
     ]
 }

@@ -6,7 +6,7 @@
 
     let bookName = 'Filipeni'
     let start = {
-        chapter: 2,
+        chapter: 3,
         verse: 1
     }
     let bookEntries = Object.entries(chapters)

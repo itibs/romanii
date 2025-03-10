@@ -649,6 +649,30 @@ export const chapters = {
             "Sfârşitul lor va fi pierzarea. Dumnezeul lor este pântecele şi slava lor este în ruşinea lor şi se gândesc la lucrurile de pe pământ.",
             "Dar cetăţenia noastră este în ceruri, de unde şi aşteptăm ca Mântuitor pe Domnul Isus Hristos.",
             "El va schimba trupul stării noastre smerite şi-l va face asemenea trupului slavei Sale, prin lucrarea puterii pe care o are de a-Şi supune toate lucrurile."
+        ], [
+            "De aceea, preaiubiţii şi mult doriţii mei fraţi, bucuria şi cununa mea, rămâneţi astfel tari în Domnul, preaiubiţilor!",
+            "Îndemn pe Evodia şi îndemn pe Sintichia să fie cu un gând în Domnul.",
+            "Şi pe tine, adevărat tovarăş de jug, te rog să vii în ajutorul femeilor acestora care au lucrat împreună cu mine pentru Evanghelie, cu Clement şi cu ceilalţi tovarăşi de lucru ai mei, ale căror nume sunt scrise în cartea vieţii.",
+            "Bucuraţi-vă totdeauna în Domnul! Iarăşi zic: Bucuraţi-vă!",
+            "Blândeţea voastră să fie cunoscută de toţi oamenii. Domnul este aproape.",
+            "Nu vă îngrijoraţi de nimic, ci, în orice lucru, aduceţi cererile voastre la cunoştinţa lui Dumnezeu, prin rugăciuni şi cereri, cu mulţumiri.",
+            "Şi pacea lui Dumnezeu, care întrece orice pricepere, vă va păzi inimile şi gândurile în Hristos Isus.",
+            "Încolo, fraţii mei, tot ce este adevărat, tot ce este vrednic de cinste, tot ce este drept, tot ce este curat, tot ce este vrednic de iubit, tot ce este vrednic de primit, orice faptă bună şi orice laudă, aceea să vă însufleţească.",
+            "Ce aţi învăţat, ce aţi primit şi auzit de la mine şi ce aţi văzut în mine, faceţi. Şi Dumnezeul păcii va fi cu voi.",
+            "Am avut o mare bucurie în Domnul, că, în sfârşit, aţi putut să vă înnoiţi iarăşi simţămintele voastre faţă de mine. Vă gândeaţi voi la aşa ceva, dar vă lipsea prilejul.",
+            "Nu zic lucrul acesta având în vedere nevoile mele; căci m-am deprins să fiu mulţumit cu starea în care mă găsesc.",
+            "Ştiu să trăiesc smerit şi ştiu să trăiesc în belşug. În totul şi pretutindeni m-am deprins să fiu sătul şi flămând, să fiu în belşug şi să fiu în lipsă.",
+            "Pot totul în Hristos, care mă întăreşte.",
+            "Dar bine aţi făcut că aţi luat parte la strâmtorarea mea.",
+            "Ştiţi voi înşivă, filipenilor, că, la începutul Evangheliei, când am plecat din Macedonia, nicio Biserică n-a avut legătură cu mine în ceea ce priveşte „darea” şi „primirea” afară de voi.",
+            "Căci mi-aţi trimis în Tesalonic, o dată şi chiar de două ori, ceva pentru nevoile mele.",
+            "Nu că umblu după daruri. Dimpotrivă, umblu după câştigul care prisoseşte în folosul vostru.",
+            "Am de toate şi sunt în belşug. Sunt bogat de când am primit prin Epafrodit ce mi-aţi trimis…, un miros de bună mireasmă, o jertfă bine primită şi plăcută lui Dumnezeu.",
+            "Şi Dumnezeul meu să îngrijească de toate trebuinţele voastre, după bogăţia Sa, în slavă, în Isus Hristos.",
+            "A lui Dumnezeu şi Tatăl nostru să fie slava în vecii vecilor! Amin.",
+            "Spuneţi sănătate fiecărui sfânt în Hristos Isus.Fraţii care sunt cu mine vă trimit sănătate.",
+            "Toţi sfinţii vă trimit sănătate, mai ales cei din casa Cezarului.",
+            "Harul Domnului Isus Hristos să fie cu voi cu toţi! Amin."
         ]
     ]
 }

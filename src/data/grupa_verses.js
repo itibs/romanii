@@ -77,5 +77,17 @@ export const verses = {
         { "ref": "1 Timotei 6:17", "verse": "Îndeamnă pe bogaţii veacului acestuia să nu se îngâmfe şi să nu-şi pună nădejdea în nişte bogăţii nestatornice, ci în Dumnezeu, care ne dă toate lucrurile din belşug ca să ne bucurăm de ele." },
         { "ref": "Evrei 3:15", "verse": "câtă vreme se zice: „Astăzi, dacă auziţi glasul Lui, nu vă împietriţi inimile, ca în ziua răzvrătirii.”" },
         { "ref": "Evrei 11:26", "verse": "El socotea ocara lui Hristos ca o mai mare bogăţie decât comorile Egiptului, pentru că avea ochii pironiţi spre răsplătire." },
+
+        { "ref": "Psalmii 22:22", "verse": "Voi vesti Numele Tău fraţilor mei şi Te voi lăuda în mijlocul adunării. "},
+        { "ref": "Proverbele 11:30", "verse": "Rodul celui neprihănit este un pom de viaţă, şi cel înţelept câştigă suflete."},
+        { "ref": "Ieremia 29:11", "verse": "Căci Eu ştiu gândurile pe care le am cu privire la voi’, zice Domnul, ‘gânduri de pace, şi nu de nenorocire, ca să vă dau un viitor şi o nădejde."},
+        { "ref": "Romani 5:6", "verse": "Căci, pe când eram noi încă fără putere, Hristos, la vremea cuvenită, a murit pentru cei nelegiuiţi."},
+        { "ref": "Ioan 3:17", "verse": "Dumnezeu, în adevăr, n-a trimis pe Fiul Său în lume ca să judece lumea, ci ca lumea să fie mântuită prin El."},
+        { "ref": "Ioan 4:14", "verse": "Dar oricui va bea din apa pe care i-o voi da Eu în veac nu-i va fi sete, ba încă apa pe care i-o voi da Eu se va preface în el într-un izvor de apă, care va ţâşni în viaţa veşnică.”"},
+        { "ref": "Ioan 4:23", "verse": "Dar vine ceasul, şi acum a şi venit, când închinătorii adevăraţi se vor închina Tatălui în duh şi în adevăr, fiindcă astfel de închinători doreşte şi Tatăl."},
+        { "ref": "Romani 2:1", "verse": "Aşadar, omule, oricine ai fi tu care judeci pe altul, nu te poţi dezvinovăţi, căci prin faptul că judeci pe altul, te osândeşti singur, fiindcă tu, care judeci pe altul, faci aceleaşi lucruri."},
+        { "ref": "Evrei 11:6", "verse": "Şi fără credinţă este cu neputinţă să fim plăcuţi Lui! Căci cine se apropie de Dumnezeu trebuie să creadă că El este şi că răsplăteşte pe cei ce-L caută."},
+        { "ref": "Evrei 12:1", "verse": "Şi noi dar, fiindcă suntem înconjuraţi cu un nor aşa de mare de martori, să dăm la o parte orice piedică şi păcatul care ne înfăşoară aşa de lesne şi să alergăm cu stăruinţă în alergarea care ne stă înainte."},
+        { "ref": "1 Ioan 4:4", "verse": "Voi, copilaşilor, sunteţi din Dumnezeu şi i-aţi biruit, pentru că Cel ce este în voi este mai mare decât cel ce este în lume."},
     ]
 }

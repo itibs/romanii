@@ -20,9 +20,14 @@
 			first: 10,
 			nrVerses: 10
 		},
+		'Versete 2024-2025.3': {
+			description: 'Versetele 21-31',
+			first: 20,
+			nrVerses: 11
+		},
 	};
 
-	let selectedStage = Object.keys(stages)[1];
+	let selectedStage = Object.keys(stages)[2];
 
 	$: selectedVerses = verses2024_2025.slice(
 		stages[selectedStage].first,

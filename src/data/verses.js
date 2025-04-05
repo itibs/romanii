@@ -670,7 +670,7 @@ export const chapters = {
             "Am de toate şi sunt în belşug. Sunt bogat de când am primit prin Epafrodit ce mi-aţi trimis…, un miros de bună mireasmă, o jertfă bine primită şi plăcută lui Dumnezeu.",
             "Şi Dumnezeul meu să îngrijească de toate trebuinţele voastre, după bogăţia Sa, în slavă, în Isus Hristos.",
             "A lui Dumnezeu şi Tatăl nostru să fie slava în vecii vecilor! Amin.",
-            "Spuneţi sănătate fiecărui sfânt în Hristos Isus.Fraţii care sunt cu mine vă trimit sănătate.",
+            "Spuneţi sănătate fiecărui sfânt în Hristos Isus. Fraţii care sunt cu mine vă trimit sănătate.",
             "Toţi sfinţii vă trimit sănătate, mai ales cei din casa Cezarului.",
             "Harul Domnului Isus Hristos să fie cu voi cu toţi! Amin."
         ]

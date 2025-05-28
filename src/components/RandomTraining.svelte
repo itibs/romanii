@@ -5,6 +5,11 @@
     export let bookName;
     export let chapters;
 
+    export let start = {
+        chapter: 1,
+        verse: 1,
+    }
+
     /**
 	 * @param {any[]} arr
 	 */
@@ -25,17 +30,13 @@
         return arr;
     }
 
-    let chapterIdx = 0;
-
-    let selectedChapters = chapters.filter((/** @type {any} */ _, /** @type {number} */ idx) => idx === chapterIdx)
-
+    let chapterIdx = start.chapter-1;
     /**
 	 * @type {string[]}
 	 */
     $: crtChapter = chapterIdx < chapters.length ? chapters[chapterIdx] : [];
 
     $: chapterVerses = crtChapter.map((val, idx) => {return {verse: val, idx: idx+1}});
-    $: chapterVerses = selectedChapters.
     $: randomizedVerses = shuffle(chapterVerses)
 
     $: verseIdx = start.verse-1;

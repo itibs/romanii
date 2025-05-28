@@ -89,5 +89,19 @@ export const verses = {
         { "ref": "Evrei 11:6", "verse": "Şi fără credinţă este cu neputinţă să fim plăcuţi Lui! Căci cine se apropie de Dumnezeu trebuie să creadă că El este şi că răsplăteşte pe cei ce-L caută."},
         { "ref": "Evrei 12:1", "verse": "Şi noi dar, fiindcă suntem înconjuraţi cu un nor aşa de mare de martori, să dăm la o parte orice piedică şi păcatul care ne înfăşoară aşa de lesne şi să alergăm cu stăruinţă în alergarea care ne stă înainte."},
         { "ref": "1 Ioan 4:4", "verse": "Voi, copilaşilor, sunteţi din Dumnezeu şi i-aţi biruit, pentru că Cel ce este în voi este mai mare decât cel ce este în lume."},
+
+        { "ref": "Psalmii 18:6", "verse": "Dar, în strâmtorarea mea, am chemat pe Domnul şi am strigat către Dumnezeul meu: din locaşul Lui, El mi-a auzit glasul, şi strigătul meu a ajuns până la El, până la urechile Lui. "},
+        { "ref": "Psalmii 27:14", "verse": "Nădăjduieşte în Domnul! Fii tare, îmbărbătează-ţi inima şi nădăjduieşte în Domnul! "},
+        { "ref": "Psalmii 33:9", "verse": "Căci El zice şi se face; porunceşte şi ce porunceşte ia fiinţă. "},
+        { "ref": "Psalmii 119:18", "verse": "Deschide-mi ochii, ca să văd lucrurile minunate ale Legii Tale! "},
+        { "ref": "Proverbele 22:1", "verse": "Un nume bun este mai de dorit decât o bogăţie mare şi a fi iubit preţuieşte mai mult decât argintul şi aurul. "},
+        { "ref": "Marcu 9:23", "verse": "Isus a răspuns: „Tu zici: ‘Dacă poţi.’ Toate lucrurile sunt cu putinţă celui ce crede!”"},
+        { "ref": "Luca 1:37", "verse": "Căci niciun cuvânt de la Dumnezeu nu este lipsit de putere.”"},
+        { "ref": "Faptele apostolilor 26:17 ", "verse": "Te-am ales din mijlocul norodului acestuia şi din mijlocul neamurilor, la care te trimit,"},
+        { "ref": "Faptele apostolilor 26:18", "verse": "ca să le deschizi ochii, să se întoarcă de la întuneric la lumină şi de sub puterea Satanei la Dumnezeu şi să primească, prin credinţa în Mine, iertare de păcate şi moştenirea împreună cu cei sfinţiţi.’"},
+        { "ref": "1 Tesaloniceni 5:18", "verse": "Mulţumiţi lui Dumnezeu pentru toate lucrurile, căci aceasta este voia lui Dumnezeu, în Hristos Isus, cu privire la voi."},
+        { "ref": "Evrei 12:28", "verse": "Fiindcă am primit dar o împărăţie care nu se poate clătina, să ne arătăm mulţumitori şi să aducem astfel lui Dumnezeu o închinare plăcută, cu evlavie şi cu frică,"},
+        { "ref": "1 Ioan 2:6", "verse": "Cine zice că rămâne în El trebuie să trăiască şi el cum a trăit Isus."},
+        { "ref": "1 Ioan 3:16", "verse": "Noi am cunoscut dragostea Lui prin aceea că El Şi-a dat viaţa pentru noi; şi noi deci trebuie să ne dăm viaţa pentru fraţi."},
     ]
 }

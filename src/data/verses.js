@@ -704,6 +704,33 @@ export const chapters = {
             "Dar cine îşi va adânci privirile în legea desăvârşită, care este legea slobozeniei, şi va stărui în ea, nu ca un ascultător uituc, ci ca un împlinitor cu fapta, va fi fericit în lucrarea lui.",
             "Dacă crede cineva că este religios şi nu-şi înfrânează limba, ci îşi înşală inima, religia unui astfel de om este zadarnică.",
             "Religia curată şi neîntinată înaintea lui Dumnezeu, Tatăl nostru, este să cercetăm pe orfani şi pe văduve în necazurile lor şi să ne păzim neîntinaţi de lume."
+        ], [
+            "Fraţii mei, să nu ţineţi credinţa Domnului nostru Isus Hristos, Domnul slavei, căutând la faţa omului.",
+            "Căci, de pildă, dacă intră în adunarea voastră un om cu un inel de aur şi cu o haină strălucitoare şi intră şi un sărac îmbrăcat prost",
+            "şi voi puneţi ochii pe cel ce poartă haina strălucitoare şi-i ziceţi: „Tu şezi în locul acesta bun!” şi apoi ziceţi săracului: „Tu stai acolo în picioare!” sau: „Şezi jos la picioarele mele!”,",
+            "nu faceţi voi oare o deosebire în voi înşivă şi nu vă faceţi voi judecători cu gânduri rele?",
+            "Ascultaţi, preaiubiţii mei fraţi: n-a ales Dumnezeu pe cei ce sunt săraci în ochii lumii acesteia ca să-i facă bogaţi în credinţă şi moştenitori ai Împărăţiei, pe care a făgăduit-o celor ce-L iubesc?",
+            "Şi voi înjosiţi pe cel sărac! Oare nu bogaţii vă asupresc şi vă târăsc înaintea judecătoriilor?",
+            "Nu batjocoresc ei frumosul nume pe care-l purtaţi?",
+            "Dacă împliniţi Legea împărătească, potrivit Scripturii: „Să iubeşti pe aproapele tău ca pe tine însuţi”, bine faceţi.",
+            "Dar, dacă aveţi în vedere faţa omului, faceţi un păcat şi sunteţi osândiţi de Lege ca nişte călcători de lege.",
+            "Căci cine păzeşte toată Legea şi greşeşte într-o singură poruncă se face vinovat de toate.",
+            "Căci Cel ce a zis: „Să nu preacurveşti” a zis şi: „Să nu ucizi.” Acum, dacă nu preacurveşti, dar ucizi, te faci călcător al Legii.",
+            "Să vorbiţi şi să lucraţi ca nişte oameni care au să fie judecaţi de o Lege a slobozeniei:",
+            "căci judecata este fără milă pentru cel ce n-a avut milă; dar mila biruieşte judecata.",
+            "Fraţii mei, ce-i foloseşte cuiva să spună că are credinţă, dacă n-are fapte? Poate oare credinţa aceasta să-l mântuiască?",
+            "Dacă un frate sau o soră sunt goi şi lipsiţi de hrana de toate zilele",
+            "şi unul dintre voi le zice: „Duceţi-vă în pace, încălziţi-vă şi săturaţi-vă!” fără să le dea cele trebuincioase trupului, la ce i-ar folosi?",
+            "Tot aşa şi credinţa, dacă n-are fapte, este moartă în ea însăşi.",
+            "Dar va zice cineva: „Tu ai credinţa, şi eu am faptele.” Arată-mi credinţa ta fără fapte şi eu îţi voi arăta credinţa mea din faptele mele.",
+            "Tu crezi că Dumnezeu este unul, şi bine faci, dar şi dracii cred… şi se înfioară!",
+            "Vrei dar să înţelegi, om nesocotit, că credinţa fără fapte este zadarnică?",
+            "Avraam, părintele nostru, n-a fost el socotit neprihănit prin fapte când a adus pe fiul său Isaac jertfă pe altar?",
+            "Vezi că credinţa lucra împreună cu faptele lui şi, prin fapte, credinţa a ajuns desăvârşită.",
+            "Astfel s-a împlinit Scriptura care zice: „Avraam a crezut pe Dumnezeu, şi i s-a socotit ca neprihănire” şi el a fost numit „prietenul lui Dumnezeu”.",
+            "Vedeţi dar că omul este socotit neprihănit prin fapte, şi nu numai prin credinţă.",
+            "Tot aşa, curva Rahav n-a fost socotită şi ea neprihănită prin fapte când a găzduit pe soli şi i-a scos afară pe altă cale?",
+            "După cum trupul fără duh este mort, tot aşa şi credinţa fără fapte este moartă."
         ]
     ]
 }

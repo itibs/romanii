@@ -4,6 +4,7 @@
 
     export let bookName;
     export let chapters;
+    export let useRollingSumVerseIdx;
 
     export let start = {
         chapter: 1,
@@ -12,6 +13,16 @@
 
     $: if (bookName !== undefined) {
         discoveredVerseText = ''
+    }
+
+    let rollingSumVerseIdx = 0;
+    $: if (useRollingSumVerseIdx) {
+        let sum = 0;
+        console.log(chapterIdx);
+        for (let i = 0; i < chapterIdx; i++) {
+            sum += chapters[i].length;
+        }
+        rollingSumVerseIdx = sum;
     }
 
     let chapterIdx = start.chapter-1;
@@ -50,7 +61,7 @@
 </script>
 
 <h2>{bookName} - Capitolul {chapterIdx+1}</h2>
-<WrittenText startIdx={start.verse} verses={crtChapter.slice(start.verse-1, verseIdx).concat(verseIdx < crtChapter.length ? [discoveredVerseText] : [])}></WrittenText>
+<WrittenText startIdx={rollingSumVerseIdx+start.verse} verses={crtChapter.slice(start.verse-1, verseIdx).concat(verseIdx < crtChapter.length ? [discoveredVerseText] : [])}></WrittenText>
 <br>
 {#key crtVerse}
     <VersesInput inputText={crtVerse} fnVerseDone={() => {verseIdx++; discoveredVerseText = ''}} bind:discoveredText={discoveredVerseText}></VersesInput>

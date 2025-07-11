@@ -731,6 +731,34 @@ export const chapters = {
             "Vedeţi dar că omul este socotit neprihănit prin fapte, şi nu numai prin credinţă.",
             "Tot aşa, curva Rahav n-a fost socotită şi ea neprihănită prin fapte când a găzduit pe soli şi i-a scos afară pe altă cale?",
             "După cum trupul fără duh este mort, tot aşa şi credinţa fără fapte este moartă."
+        ], [
+            "Iacov, rob al lui Dumnezeu şi al Domnului Isus Hristos, către cele douăsprezece seminţii care sunt împrăştiate: Sănătate!",
+            "Fraţii mei, să priviţi ca o mare bucurie când treceţi prin felurite încercări,",
+            "ca unii care ştiţi că încercarea credinţei voastre lucrează răbdare.",
+            "Dar răbdarea trebuie să-şi facă desăvârşit lucrarea, pentru ca să fiţi desăvârşiţi, întregi şi să nu duceţi lipsă de nimic.",
+            "Dacă vreunuia dintre voi îi lipseşte înţelepciunea, s-o ceară de la Dumnezeu, care dă tuturor cu mână largă şi fără mustrare, şi ea îi va fi dată.",
+            "Dar s-o ceară cu credinţă, fără să se îndoiască deloc, pentru că cine se îndoieşte seamănă cu valul mării, tulburat şi împins de vânt încoace şi încolo.",
+            "Un astfel de om să nu se aştepte să primească ceva de la Domnul,",
+            "căci este un om nehotărât şi nestatornic în toate căile sale.",
+            "Fratele dintr-o stare de jos să se laude cu înălţarea lui.",
+            "Bogatul, dimpotrivă, să se laude cu smerirea lui, căci va trece ca floarea ierbii.",
+            "Răsare soarele cu căldura lui arzătoare şi usucă iarba: floarea ei cade jos, şi frumuseţea înfăţişării ei piere – aşa se va veşteji bogatul în umbletele lui.",
+            "Ferice de cel ce rabdă ispita. Căci, după ce a fost găsit bun, va primi cununa vieţii pe care a făgăduit-o Dumnezeu celor ce-L iubesc.",
+            "Nimeni, când este ispitit, să nu zică: „Sunt ispitit de Dumnezeu.” Căci Dumnezeu nu poate fi ispitit ca să facă rău şi El Însuşi nu ispiteşte pe nimeni.",
+            "Ci fiecare este ispitit când este atras de pofta lui însuşi şi momit.",
+            "Apoi pofta, când a zămislit, dă naştere păcatului; şi păcatul, odată făptuit, aduce moartea.",
+            "Nu vă înşelaţi, preaiubiţii mei fraţi:",
+            "orice ni se dă bun şi orice dar desăvârşit este de sus, coborându-se de la Tatăl luminilor, în care nu este nici schimbare, nici umbră de mutare.",
+            "El, de bunăvoia Lui, ne-a născut prin Cuvântul adevărului, ca să fim un fel de pârgă a făpturilor Lui.",
+            "Ştiţi bine lucrul acesta, preaiubiţii mei fraţi! Orice om să fie grabnic la ascultare, încet la vorbire, zăbavnic la mânie,",
+            "căci mânia omului nu lucrează neprihănirea lui Dumnezeu.",
+            "De aceea lepădaţi orice necurăţie şi orice revărsare de răutate şi primiţi cu blândeţe Cuvântul sădit în voi, care vă poate mântui sufletele.",
+            "Fiţi împlinitori ai Cuvântului, nu numai ascultători, înşelându-vă singuri.",
+            "Căci, dacă ascultă cineva Cuvântul şi nu-l împlineşte cu fapta, seamănă cu un om care îşi priveşte faţa firească într-o oglindă",
+            "şi, după ce s-a privit, pleacă şi uită îndată cum era.",
+            "Dar cine îşi va adânci privirile în legea desăvârşită, care este legea slobozeniei, şi va stărui în ea, nu ca un ascultător uituc, ci ca un împlinitor cu fapta, va fi fericit în lucrarea lui.",
+            "Dacă crede cineva că este religios şi nu-şi înfrânează limba, ci îşi înşală inima, religia unui astfel de om este zadarnică.",
+            "Religia curată şi neîntinată înaintea lui Dumnezeu, Tatăl nostru, este să cercetăm pe orfani şi pe văduve în necazurile lor şi să ne păzim neîntinaţi de lume."
         ]
     ]
 }

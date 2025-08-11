@@ -750,6 +750,24 @@ export const chapters = {
             "Căci, acolo unde este pizmă şi duh de ceartă, este tulburare şi tot felul de fapte rele.",
             "Înţelepciunea care vine de sus este întâi curată, apoi paşnică, blândă, uşor de înduplecat, plină de îndurare şi de roade bune, fără părtinire, nefăţarnică.",
             "Şi roada neprihănirii este semănată în pace pentru cei ce fac pace."
+        ], [
+            "De unde vin luptele şi certurile între voi? Nu vin oare din poftele voastre, care se luptă în mădularele voastre?",
+            "Voi poftiţi şi nu aveţi; ucideţi, pizmuiţi şi nu izbutiţi să căpătaţi; vă certaţi şi vă luptaţi şi nu aveţi, pentru că nu cereţi.",
+            "Sau cereţi şi nu căpătaţi, pentru că cereţi rău, cu gând să risipiţi în plăcerile voastre.",
+            "Suflete preacurvare! Nu ştiţi că prietenia lumii este vrăjmăşie cu Dumnezeu? Aşa că cine vrea să fie prieten cu lumea se face vrăjmaş cu Dumnezeu.",
+            "Credeţi că degeaba vorbeşte Scriptura? Duhul, pe care L-a pus Dumnezeu să locuiască în noi, ne vrea cu gelozie pentru Sine.",
+            "Dar, în schimb, ne dă un har şi mai mare. De aceea zice Scriptura: „Dumnezeu stă împotriva celor mândri, dar dă har celor smeriţi.”",
+            "Supuneţi-vă dar lui Dumnezeu. Împotriviţi-vă diavolului, şi el va fugi de la voi.",
+            "Apropiaţi-vă de Dumnezeu şi El Se va apropia de voi. Curăţiţi-vă mâinile, păcătoşilor; curăţiţi-vă inima, oameni cu inima împărţită!",
+            "Simţiţi-vă ticăloşia; tânguiţi-vă şi plângeţi! Râsul vostru să se prefacă în tânguire, şi bucuria voastră, în întristare:",
+            "Smeriţi-vă înaintea Domnului şi El vă va înălţa.",
+            "Nu vă vorbiţi de rău unii pe alţii, fraţilor! Cine vorbeşte de rău pe un frate sau judecă pe fratele său vorbeşte de rău Legea sau judecă Legea. Şi, dacă judeci Legea, nu eşti împlinitor al Legii, ci judecător.",
+            "Unul singur este dătătorul şi judecătorul Legii: Acela care are putere să mântuiască şi să piardă. Dar tu cine eşti de judeci pe aproapele tău?",
+            "Ascultaţi, acum, voi care ziceţi: „Astăzi sau mâine ne vom duce în cutare cetate, vom sta acolo un an, vom face negustorie şi vom câştiga”",
+            "şi nu ştiţi ce va aduce ziua de mâine! Căci ce este viaţa voastră? Nu sunteţi decât un abur, care se arată puţintel şi apoi piere.",
+            "Voi, dimpotrivă, ar trebui să ziceţi: „Dacă va vrea Domnul, vom trăi şi vom face cutare sau cutare lucru.”",
+            "Pe când acum vă făliţi cu lăudăroşiile voastre! Orice laudă de felul acesta este rea.",
+            "Deci cine ştie să facă bine şi nu face săvârşeşte un păcat!"
         ]
     ]
 }

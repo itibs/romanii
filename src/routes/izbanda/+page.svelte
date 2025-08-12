@@ -20,7 +20,7 @@
     });
 </script>
 
-<h1>Romanii</h1>
+<h1>Izbanda</h1>
 <label for="books">Cartea:</label>
 <select bind:value={bookName}>
     {#each bookEntries as [name, chapter]}

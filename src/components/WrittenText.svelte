@@ -8,7 +8,9 @@
 </script>
 
 <table>
-    {#each verses as verse, i}
-        <tr>{#if showVerseNumbers}{i+startIdx}. {/if}{verse}</tr>
-    {/each}
+    <tbody>
+        {#each verses as verse, i}
+            <tr><td>{#if showVerseNumbers}{i+startIdx}.&nbsp;{/if}{verse}</td></tr>
+        {/each}
+    </tbody>
 </table>

@@ -87,15 +87,17 @@
 <br>
 <h3>Alege capitolul</h3>
 <table>
-    <tr>
-    {#each chapters as chapter, i}
-        <td>
-            <button on:click={jumpToChapter(i)}>
-                {i+1}
-            </button>
-        </td>
-    {/each}
-    </tr>
+    <tbody>
+        <tr>
+        {#each chapters as chapter, i}
+            <td>
+                <button on:click={jumpToChapter(i)}>
+                    {i+1}
+                </button>
+            </td>
+        {/each}
+        </tr>
+    </tbody>
 </table>
 <br>
 <br>

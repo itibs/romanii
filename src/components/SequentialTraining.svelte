@@ -70,15 +70,17 @@
 <br>
 <h3>Alege capitolul</h3>
 <table>
-    <tr>
-    {#each chapters as chapter, i}
-        <td>
-            <button on:click={jumpToChapter(i)}>
-                {i+1}
-            </button>
-        </td>
-    {/each}
-    </tr>
+    <tbody>
+        <tr>
+        {#each chapters as chapter, i}
+            <td>
+                <button on:click={jumpToChapter(i)}>
+                    {i+1}
+                </button>
+            </td>
+        {/each}
+        </tr>
+    </tbody>
 </table>
 <p>Începând cu versetul <input type=number bind:value={startVerseInput}></p>
 <button on:click={jumpToChapter(chapterIdx)}>

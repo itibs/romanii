@@ -50,14 +50,16 @@
 
 <h1>Training grounds grupa liceenilor</h1>
 <table class="scoreboards">
-	<tr>
-		{#each Object.entries(stages) as stage}
-			<td>
-				<ScoreBoard round={stage[0]} />
-			</td>
-			<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-		{/each}
-	</tr>
+	<tbody>
+		<tr>
+			{#each Object.entries(stages) as stage}
+				<td>
+					<ScoreBoard round={stage[0]} />
+				</td>
+				<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			{/each}
+		</tr>
+	</tbody>
 </table>
 
 <h2>Selectează stagiul</h2>

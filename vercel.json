@@ -1,0 +1,6 @@
+{
+  "framework": "sveltekit",
+  "buildCommand": "npm ci && npm run build",
+  "installCommand": "npm ci",
+  "nodeVersion": "22.x"
+}

@@ -768,6 +768,27 @@ export const chapters = {
             "Voi, dimpotrivă, ar trebui să ziceţi: „Dacă va vrea Domnul, vom trăi şi vom face cutare sau cutare lucru.”",
             "Pe când acum vă făliţi cu lăudăroşiile voastre! Orice laudă de felul acesta este rea.",
             "Deci cine ştie să facă bine şi nu face săvârşeşte un păcat!"
+        ], [
+            "Ascultaţi acum voi, bogaţilor! Plângeţi şi tânguiţi-vă din pricina nenorocirilor care au să vină peste voi.",
+            "Bogăţiile voastre au putrezit şi hainele voastre sunt roase de molii.",
+            "Aurul şi argintul vostru au ruginit; şi rugina lor va fi o dovadă împotriva voastră: ca focul are să vă mănânce carnea! V-aţi strâns comori în zilele din urmă!",
+            "Iată că plata lucrătorilor care v-au secerat câmpiile şi pe care le-aţi oprit-o prin înşelăciune strigă! Şi strigătele secerătorilor au ajuns la urechile Domnului oştirilor.",
+            "Aţi trăit pe pământ în plăceri şi în desfătări. V-aţi săturat inimile chiar într-o zi de măcel.",
+            "Aţi osândit, aţi omorât pe cel neprihănit, care nu vi se împotrivea!",
+            "Fiţi dar îndelung răbdători, fraţilor, până la venirea Domnului. Iată că plugarul aşteaptă roada scumpă a pământului, şi o aşteaptă cu răbdare până primeşte ploaie timpurie şi târzie.",
+            "Fiţi şi voi îndelung răbdători, întăriţi-vă inimile, căci venirea Domnului este aproape.",
+            "Nu vă plângeţi unii împotriva altora, fraţilor, ca să nu fiţi judecaţi; iată că Judecătorul este chiar la uşă.",
+            "Fraţii mei, luaţi ca pildă de suferinţă şi de răbdare pe prorocii care au vorbit în Numele Domnului.",
+            "Iată, noi numim fericiţi pe cei ce au răbdat. Aţi auzit vorbindu-se despre răbdarea lui Iov şi aţi văzut ce sfârşit i-a dat Domnul şi cum Domnul este plin de milă şi de îndurare.",
+            "Mai presus de toate, fraţii mei, să nu vă juraţi nici pe cer, nici pe pământ, nici cu vreun altfel de jurământ. Ci „da” al vostru să fie „da” şi „nu” să fie „nu”, ca să nu cădeţi sub judecată.",
+            "Este vreunul printre voi în suferinţă? Să se roage! Este vreunul cu inimă bună? Să cânte cântări de laudă!",
+            "Este vreunul printre voi bolnav? Să cheme pe prezbiterii1 Bisericii şi să se roage pentru el, după ce-l vor unge cu untdelemn în Numele Domnului.",
+            "Rugăciunea făcută cu credinţă va mântui pe cel bolnav şi Domnul îl va însănătoşi şi, dacă a făcut păcate, îi vor fi iertate.",
+            "Mărturisiţi-vă unii altora păcatele şi rugaţi-vă unii pentru alţii, ca să fiţi vindecaţi. Mare putere are rugăciunea fierbinte a celui neprihănit.",
+            "Ilie era un om supus aceloraşi slăbiciuni ca şi noi şi s-a rugat cu stăruinţă să nu plouă şi n-a plouat deloc în ţară trei ani şi şase luni.",
+            "Apoi s-a rugat din nou şi cerul a dat ploaie şi pământul şi-a dat rodul.",
+            "Fraţilor, dacă s-a rătăcit vreunul dintre voi de la adevăr şi-l întoarce un altul,",
+            "să ştiţi că cine întoarce pe un păcătos de la rătăcirea căii lui va mântui un suflet de la moarte şi va acoperi o sumedenie de păcate."
         ]
     ]
 }

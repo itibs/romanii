@@ -103,5 +103,19 @@ export const verses = {
         { "ref": "Evrei 12:28", "verse": "Fiindcă am primit dar o împărăţie care nu se poate clătina, să ne arătăm mulţumitori şi să aducem astfel lui Dumnezeu o închinare plăcută, cu evlavie şi cu frică,"},
         { "ref": "1 Ioan 2:6", "verse": "Cine zice că rămâne în El trebuie să trăiască şi el cum a trăit Isus."},
         { "ref": "1 Ioan 3:16", "verse": "Noi am cunoscut dragostea Lui prin aceea că El Şi-a dat viaţa pentru noi; şi noi deci trebuie să ne dăm viaţa pentru fraţi."},
+    ],
+    '2025-2026': [
+        { "ref": "Exod 15:11", "verse": "Cine este ca Tine între dumnezei, Doamne? Cine este ca Tine minunat în sfințenie, bogat în fapte de laudă, și făcător de minuni?" },
+        { "ref": "Psalmul 95:1", "verse": "Veniți să cântăm cu veselie Domnului, și să strigăm de bucurie către Stânca mîntuirii noastre." },
+        { "ref": "Psalmul 95:2", "verse": "Să mergem înaintea Lui cu laude, să facem să răsune cântece în cinstea Lui!" },
+        { "ref": "Psalmul 143:8", "verse": "Fă-mă să aud dis-de-dimineață bunătatea Ta, căci mă încred în Tine. Arată-mi calea pe care trebuie să umblu, căci la Tine îmi înalț sufletul." },
+        { "ref": "Psalmul 145:15", "verse": "Ochii tuturor nădăjduiesc în Tine, și Tu le dai hrana la vreme." },
+        { "ref": "Psalmul 145:16", "verse": "Îți deschizi mâna, și saturi după dorință tot ce are viață." },
+        { "ref": "Isaia 41:10", "verse": "Nu te teme, căci Eu sunt cu tine; nu te uita cu îngrijorare, căci Eu sunt Dumnezeul tău; Eu te întăresc, tot Eu îți vin în ajutor. Eu te sprijinesc cu dreapta Mea biruitoare." },
+        { "ref": "1 Corinteni 5:7", "verse": "Măturați aluatul cel vechi, ca să fiți o plămădeală nouă, cum și sunteți, fără aluat; căci Hristos, Paștele noastre, a fost jertfit." },
+        { "ref": "1 Corinteni 10:13", "verse": "Nu v-a ajuns nicio ispită, care să nu fi fost potrivită cu puterea omenească. Și Dumnezeu, care este credincios, nu va îngădui să fiți ispitiți peste puterile voastre; ci, împreună cu ispita, a pregătit și mijlocul să ieșiți din ea, ca s-o puteți răbda." },
+        { "ref": "Efeseni 4:31", "verse": "Orice amărăciune, orice iuțime, orice mînie, orice strigare, orice clevetire și orice fel de răutate să piară din mijlocul vostru." },
+        { "ref": "Evrei 12:15", "verse": "Luați seama bine ca nimeni să nu se abată de la harul lui Dumnezeu, pentruca nu cumva să dea lăstari vreo rădăcină de amărăciune, să vă aducă turburare, și mulți să fie întinați de ea." },
+        { "ref": "1 Ioan 2:2", "verse": "El este jertfa de ispășire pentru păcatele noastre; și nu numai pentru ale noastre, ci pentru ale întregii lumi." },
     ]
 }

@@ -3,9 +3,9 @@
 	import DarkThemeButton from '/src/components/DarkThemeButton.svelte';
 	import { chapters } from '/src/data/verses';
 
-	let bookName = 'Iacov';
+	let bookName = 'Evrei';
 	let start = {
-		chapter: 5,
+		chapter: 1,
 		verse: 1
 	};
 	let bookEntries = Object.entries(chapters);

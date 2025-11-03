@@ -4,9 +4,9 @@
     import {chapters} from '/src/data/verses';
     import { onMount } from 'svelte';
 
-    let bookName = 'Iacov'
+    let bookName = 'Evrei'
     let start = {
-        chapter: 5,
+        chapter: 1,
         verse: 1
     }
     let bookEntries = Object.entries(chapters)

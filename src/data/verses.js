@@ -790,5 +790,23 @@ export const chapters = {
             "Fraţilor, dacă s-a rătăcit vreunul dintre voi de la adevăr şi-l întoarce un altul,",
             "să ştiţi că cine întoarce pe un păcătos de la rătăcirea căii lui va mântui un suflet de la moarte şi va acoperi o sumedenie de păcate."
         ]
+    ],
+    'Evrei': [
+        [
+            "După ce a vorbit în vechime părinţilor noştri prin proroci, în multe rânduri şi în multe chipuri, Dumnezeu,",
+            "la sfârşitul acestor zile, ne-a vorbit prin Fiul, pe care L-a pus moştenitor al tuturor lucrurilor şi prin care a făcut şi veacurile.",
+            "El, care este oglindirea slavei Lui şi întipărirea Fiinţei Lui şi care ţine toate lucrurile cu Cuvântul puterii Lui, a făcut curăţirea păcatelor şi a şezut la dreapta Măririi, în locurile preaînalte,",
+            "ajungând cu atât mai presus de îngeri, cu cât a moştenit un Nume mult mai minunat decât al lor.",
+            "Căci căruia dintre îngeri a zis El vreodată: \"Tu eşti Fiul Meu, astăzi Te-am născut\"? Şi iarăşi: \"Eu Îi voi fi Tată, şi El Îmi va fi Fiu\"?",
+            "Şi, când duce iarăşi în lume pe Cel Întâi Născut, zice: \"Toţi îngerii lui Dumnezeu să I se închine!\"",
+            "Şi despre îngeri zice: \"Din vânturi face îngeri ai Lui, şi dintr-o flacără de foc, slujitori ai Lui\";",
+            "pe când Fiului I-a zis: \"Scaunul Tău de domnie, Dumnezeule, este în veci de veci; toiagul domniei Tale este un toiag de dreptate.",
+            "Tu ai iubit neprihănirea şi ai urât nelegiuirea, de aceea, Dumnezeule, Dumnezeul Tău Te-a uns cu un untdelemn de bucurie mai presus decât pe tovarăşii Tăi.\"",
+            "Şi iarăşi: \"La început, Tu, Doamne, ai întemeiat pământul şi cerurile sunt lucrarea mâinilor Tale.",
+            "Ele vor pieri, dar Tu rămâi; toate se vor învechi ca o haină;",
+            "le vei face sul ca pe o manta şi vor fi schimbate, dar Tu eşti acelaşi şi anii Tăi nu se vor sfârşi.\"",
+            "Şi căruia din îngeri i-a zis El vreodată: \"Şezi la dreapta Mea până voi pune pe vrăjmaşii Tăi aşternut al picioarelor Tale\"?",
+            "Nu sunt oare toţi duhuri slujitoare trimise să îndeplinească o slujbă pentru cei ce vor moşteni mântuirea?"
+        ]
     ]
 }

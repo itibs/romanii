@@ -807,6 +807,25 @@ export const chapters = {
             "le vei face sul ca pe o manta şi vor fi schimbate, dar Tu eşti acelaşi şi anii Tăi nu se vor sfârşi.\"",
             "Şi căruia din îngeri i-a zis El vreodată: \"Şezi la dreapta Mea până voi pune pe vrăjmaşii Tăi aşternut al picioarelor Tale\"?",
             "Nu sunt oare toţi duhuri slujitoare trimise să îndeplinească o slujbă pentru cei ce vor moşteni mântuirea?"
+        ], [
+            "De aceea, cu atât mai mult trebuie să ne ţinem de lucrurile pe care le-am auzit, ca să nu fim depărtaţi de ele.",
+            "Căci, dacă Cuvântul vestit prin îngeri s-a dovedit nezguduit şi dacă orice abatere şi orice neascultare şi-a primit o dreaptă răsplătire,",
+            "cum vom scăpa noi dacă stăm nepăsători faţă de o mântuire aşa de mare, care, după ce a fost vestită întâi de Domnul, ne-a fost adeverită de cei ce au auzit-o,",
+            "în timp ce Dumnezeu întărea mărturia lor cu semne, puteri şi felurite minuni şi cu darurile Duhului Sfânt, împărţite după voia Sa!",
+            "În adevăr, nu unor îngeri a supus El lumea viitoare despre care vorbim.",
+            "Ba încă, cineva a făcut undeva următoarea mărturisire: \"Ce este omul ca să-Ţi aduci aminte de el sau fiul omului ca să-l cercetezi?",
+            "L-ai făcut pentru puţină vreme mai prejos de îngeri, l-ai încununat cu slavă şi cu cinste, l-ai pus peste lucrările mâinilor Tale,",
+            "toate le-ai supus sub picioarele lui. \"În adevăr, dacă i-a supus toate, nu i-a lăsat nimic nesupus. Totuşi, acum, încă nu vedem că toate îi sunt supuse.",
+            "Dar pe Acela care a fost făcut pentru \"puţină vreme mai prejos decât îngerii\", adică pe Isus, Îl vedem \"încununat cu slavă şi cu cinste\" din pricina morţii pe care a suferit-o, pentru ca, prin harul lui Dumnezeu, El să guste moartea pentru toţi.",
+            "Se cuvenea, în adevăr, ca Acela pentru care şi prin care sunt toate şi care voia să ducă pe mulţi fii la slavă să desăvârşească, prin suferinţe, pe Căpetenia mântuirii lor.",
+            "Căci Cel ce sfinţeşte şi cei ce sunt sfinţiţi sunt dintr-unul. De aceea, Lui nu-I este ruşine să-i numească fraţi,",
+            "când zice: \"Voi vesti Numele Tău fraţilor Mei; Îţi voi cânta lauda în mijlocul adunării.\"",
+            "Şi iarăşi: \"Îmi voi pune încrederea în El.\" Şi în alt loc: \"Iată-Mă, Eu şi copiii pe care Mi i-a dat Dumnezeu!\"",
+            "Astfel dar, deoarece copiii sunt părtaşi sângelui şi cărnii, tot aşa şi El Însuşi a fost deopotrivă părtaş la ele, pentru ca, prin moarte, să nimicească pe cel ce are puterea morţii, adică pe diavolul,",
+            "şi să izbăvească pe toţi aceia care, prin frica morţii, erau supuşi robiei toată viaţa lor.",
+            "Căci, negreşit, nu în ajutorul îngerilor vine El, ci în ajutorul seminţei lui Avraam.",
+            "Prin urmare, a trebuit să Se asemene fraţilor Săi în toate lucrurile, ca să poată fi, în ceea ce priveşte legăturile cu Dumnezeu, un mare preot milos şi vrednic de încredere, ca să facă ispăşire pentru păcatele norodului.",
+            "Şi prin faptul că El Însuşi a fost ispitit în ceea ce a suferit, poate să vină în ajutorul celor ce sunt ispitiţi."
         ]
     ]
 }

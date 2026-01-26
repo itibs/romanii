@@ -815,7 +815,7 @@ export const chapters = {
             "În adevăr, nu unor îngeri a supus El lumea viitoare despre care vorbim.",
             "Ba încă, cineva a făcut undeva următoarea mărturisire: \"Ce este omul ca să-Ţi aduci aminte de el sau fiul omului ca să-l cercetezi?",
             "L-ai făcut pentru puţină vreme mai prejos de îngeri, l-ai încununat cu slavă şi cu cinste, l-ai pus peste lucrările mâinilor Tale,",
-            "toate le-ai supus sub picioarele lui. \"În adevăr, dacă i-a supus toate, nu i-a lăsat nimic nesupus. Totuşi, acum, încă nu vedem că toate îi sunt supuse.",
+            "toate le-ai supus sub picioarele lui.\" În adevăr, dacă i-a supus toate, nu i-a lăsat nimic nesupus. Totuşi, acum, încă nu vedem că toate îi sunt supuse.",
             "Dar pe Acela care a fost făcut pentru \"puţină vreme mai prejos decât îngerii\", adică pe Isus, Îl vedem \"încununat cu slavă şi cu cinste\" din pricina morţii pe care a suferit-o, pentru ca, prin harul lui Dumnezeu, El să guste moartea pentru toţi.",
             "Se cuvenea, în adevăr, ca Acela pentru care şi prin care sunt toate şi care voia să ducă pe mulţi fii la slavă să desăvârşească, prin suferinţe, pe Căpetenia mântuirii lor.",
             "Căci Cel ce sfinţeşte şi cei ce sunt sfinţiţi sunt dintr-unul. De aceea, Lui nu-I este ruşine să-i numească fraţi,",
@@ -826,6 +826,26 @@ export const chapters = {
             "Căci, negreşit, nu în ajutorul îngerilor vine El, ci în ajutorul seminţei lui Avraam.",
             "Prin urmare, a trebuit să Se asemene fraţilor Săi în toate lucrurile, ca să poată fi, în ceea ce priveşte legăturile cu Dumnezeu, un mare preot milos şi vrednic de încredere, ca să facă ispăşire pentru păcatele norodului.",
             "Şi prin faptul că El Însuşi a fost ispitit în ceea ce a suferit, poate să vină în ajutorul celor ce sunt ispitiţi."
+        ], [
+            "De aceea, fraţi sfinţi, care aveţi parte de chemarea cerească, aţintiţi-vă privirile la Apostolul şi Marele Preot al mărturisirii noastre, adică Isus,",
+            "care a fost credincios Celui ce L-a rânduit, cum şi Moise a fost \"credincios în toată casa lui Dumnezeu\".",
+            "Căci El a fost găsit vrednic să aibă o slavă cu atât mai mare decât a lui Moise, cu cât cel ce a zidit o casă are mai multă cinste decât casa însăşi.",
+            "Orice casă este zidită de cineva, dar Cel ce a zidit toate lucrurile este Dumnezeu.",
+            "Cât despre Moise, el a fost \"credincios în toată casa lui Dumnezeu\", ca slugă, ca să mărturisească despre lucrurile care aveau să fie vestite mai târziu.",
+            "Dar Hristos este credincios ca Fiu, peste casa lui Dumnezeu. Şi casa Lui suntem noi, dacă păstrăm până la sfârşit încrederea nezguduită şi nădejdea cu care ne lăudăm.",
+            "De aceea, cum zice Duhul Sfânt: \"Astăzi, dacă auziţi glasul Lui,",
+            "nu vă împietriţi inimile ca în ziua răzvrătirii, ca în ziua ispitirii în pustie,",
+            "unde părinţii voştri M-au ispitit şi M-au pus la încercare şi au văzut lucrările Mele patruzeci de ani!",
+            "De aceea M-am dezgustat de neamul acesta şi am zis: 'Ei totdeauna se rătăcesc în inima lor. N-au cunoscut căile Mele!'",
+            "Am jurat dar în mânia Mea că nu vor intra în odihna Mea!\"",
+            "Luaţi seama dar, fraţilor, ca niciunul dintre voi să n-aibă o inimă rea şi necredincioasă, care să vă despartă de Dumnezeul cel viu.",
+            "Ci îndemnaţi-vă unii pe alţii în fiecare zi, câtă vreme se zice: \"Astăzi\", pentru ca niciunul din voi să nu se împietrească prin înşelăciunea păcatului.",
+            "Căci ne-am făcut părtaşi ai lui Hristos dacă păstrăm până la sfârşit încrederea nezguduită de la început,",
+            "câtă vreme se zice: \"Astăzi, dacă auziţi glasul Lui, nu vă împietriţi inimile, ca în ziua răzvrătirii.\"",
+            "Cine au fost, în adevăr, cei ce s-au răzvrătit după ce auziseră? N-au fost oare toţi aceia care ieşiseră din Egipt prin Moise?",
+            "Şi cine au fost aceia de care S-a dezgustat El patruzeci de ani? N-au fost oare cei ce păcătuiseră şi ale căror trupuri moarte au căzut în pustie?",
+            "Şi cui S-a jurat El că n-au să intre în odihna Lui? Nu S-a jurat oare celor ce nu ascultaseră?",
+            "Vedem dar că n-au putut să intre din pricina necredinţei lor."
         ]
     ]
 }

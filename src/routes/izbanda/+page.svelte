@@ -4,7 +4,7 @@
     import {chapters} from '/src/data/verses_izbanda';
     import { onMount } from 'svelte';
 
-    let bookName = 'Evrei'
+    let bookName = 'Iacov'
     let start = {
         chapter: 1,
         verse: 1

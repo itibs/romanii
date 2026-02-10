@@ -846,6 +846,23 @@ export const chapters = {
             "Şi cine au fost aceia de care S-a dezgustat El patruzeci de ani? N-au fost oare cei ce păcătuiseră şi ale căror trupuri moarte au căzut în pustie?",
             "Şi cui S-a jurat El că n-au să intre în odihna Lui? Nu S-a jurat oare celor ce nu ascultaseră?",
             "Vedem dar că n-au putut să intre din pricina necredinţei lor."
+        ], [
+            "Să luăm dar bine seama ca, atâta vreme cât rămâne în picioare făgăduinţa intrării în odihna Lui, niciunul din voi să nu se pomenească venit prea târziu.",
+            "Căci şi nouă ni s-a adus o veste bună ca şi lor, dar lor cuvântul care le-a fost propovăduit nu le-a ajutat la nimic, pentru că n-a găsit credinţă la cei ce l-au auzit.",
+            "Pe când noi, fiindcă am crezut, intrăm în „odihna” despre care a vorbit El când a zis: „Am jurat în mânia Mea că nu vor intra în odihna Mea!” Măcar că lucrările Lui fuseseră isprăvite încă de la întemeierea lumii.",
+            "Căci într-un loc a vorbit astfel despre ziua a şaptea: „Dumnezeu S-a odihnit în ziua a şaptea de toate lucrările Lui.”",
+            "Şi aici este zis iarăşi: „Nu vor intra în odihna Mea!”",
+            "Deci, fiindcă rămâne ca să intre unii în odihna aceasta şi pentru că aceia cărora li s-a vestit întâi vestea bună n-au intrat în ea din pricina neascultării lor,",
+            "El hotărăşte din nou o zi: „Astăzi”, zicând, în David, după atâta vreme, cum s-a spus mai sus: „Astăzi, dacă auziţi glasul Lui, nu vă împietriţi inimile!”",
+            "Căci, dacă le-ar fi dat Iosua odihna, n-ar mai vorbi Dumnezeu după aceea de o altă zi.",
+            "Rămâne dar o odihnă ca cea de Sabat pentru poporul lui Dumnezeu.",
+            "Fiindcă cine intră în odihna Lui se odihneşte şi el de lucrările lui, cum S-a odihnit Dumnezeu de lucrările Sale.",
+            "Să ne grăbim dar să intrăm în odihna aceasta, pentru ca nimeni să nu cadă în aceeaşi pildă de neascultare.",
+            "Căci Cuvântul lui Dumnezeu este viu şi lucrător, mai tăietor decât orice sabie cu două tăişuri: pătrunde până acolo că desparte sufletul şi duhul, încheieturile şi măduva, judecă simţirile şi gândurile inimii.",
+            "Nicio făptură nu este ascunsă de El, ci totul este gol şi descoperit înaintea ochilor Aceluia cu care avem a face.",
+            "Astfel, fiindcă avem un Mare Preot însemnat, care a străbătut cerurile, pe Isus, Fiul lui Dumnezeu, să rămânem tari în mărturisirea noastră.",
+            "Căci n-avem un Mare Preot care să n-aibă milă de slăbiciunile noastre, ci unul care în toate lucrurile a fost ispitit ca şi noi, dar fără păcat.",
+            "Să ne apropiem dar cu deplină încredere de scaunul harului ca să căpătăm îndurare şi să găsim har, pentru ca să fim ajutaţi la vreme de nevoie."
         ]
     ]
 }

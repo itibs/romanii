@@ -117,5 +117,28 @@ export const verses = {
         { "ref": "Efeseni 4:31", "verse": "Orice amărăciune, orice iuțime, orice mînie, orice strigare, orice clevetire și orice fel de răutate să piară din mijlocul vostru." },
         { "ref": "Evrei 12:15", "verse": "Luați seama bine ca nimeni să nu se abată de la harul lui Dumnezeu, pentruca nu cumva să dea lăstari vreo rădăcină de amărăciune, să vă aducă turburare, și mulți să fie întinați de ea." },
         { "ref": "1 Ioan 2:2", "verse": "El este jertfa de ispășire pentru păcatele noastre; și nu numai pentru ale noastre, ci pentru ale întregii lumi." },
+
+        { "ref": "Proverbe 15:1", "verse": "Un răspuns blând potolește mânia, dar o vorbă aspră ațâță mânia." },
+        { "ref": "Psalmul 19:7", "verse": "Legea Domnului este desăvârșită, și înviorează sufletul; mărturia Domnului este adevărată și dă înțelepciune celui neștiutor." },
+        { "ref": "Psalmul 19:8", "verse": "Orânduirile Domnului sunt fără prihană, și veselesc inima; poruncile Domnului sunt curate și luminează ochii." },
+        { "ref": "Psalmul 27:4", "verse": "Un lucru cer de la Domnul, și-l doresc fierbinte: aș vrea să locuiesc toată viața mea în Casa Domnului, ca să privesc frumusețea Domnului, și să mă minunez de Templul Lui." },
+        { "ref": "Isaia 42:8", "verse": "Eu sunt Domnul, acesta este Numele Meu; și slava Mea n-o voi da altuia, nici cinstea mea idolilor." },
+        { "ref": "Galateni 5:13", "verse": "Fraților, voi ați fost chemați la slobozenie. Numai, nu faceți din slobozenie o pricină ca să trăiți pentru firea pământească, ci slujiți-vă unii altora în dragoste." },
+        { "ref": "1 Corinteni 15:33", "verse": "Nu vă înșelați: „Tovărășiile rele strică obiceiurile bune\"." },
+        { "ref": "2 Timotei 2:22", "verse": "Fugi de poftele tinereții, și urmărește neprihănirea, credința, dragostea, pacea, împreună cu cei ce cheamă pe Domnul dintr-o inimă curată." },
+        { "ref": "2 Timotei 2:24", "verse": "Și robul Domnului nu trebuie să se certe; ci să fie blând cu toți, în stare să învețe pe toți, plin de îngăduință răbdătoare." },
+        { "ref": "1 Ioan 2:15", "verse": "Nu iubiți lumea, nici lucrurile din lume. Dacă iubește cineva lumea, dragostea Tatălui nu este în El." },
+
+        { "ref": "Exod 23:2", "verse": "Să nu te iei după mulţime ca să faci rău; şi la judecată să nu mărturiseşti trecând de partea celor mulţi, ca să abaţi dreptatea." },
+        { "ref": "Psalmii 32:8", "verse": "Eu – zice Domnul – te voi învăţa şi-ţi voi arăta calea pe care trebuie să o urmezi, te voi sfătui şi voi avea privirea îndreptată asupra ta." },
+        { "ref": "Psalmii 143:10", "verse": "Învaţă-mă să fac voia Ta, căci Tu eşti Dumnezeul meu. Duhul Tău cel bun să mă călăuzească pe calea cea dreaptă!" },
+        { "ref": "Proverbe 16:18", "verse": "Mândria merge înaintea pieirii, şi trufia merge înaintea căderii." },
+        { "ref": "1 Corinteni 10:10", "verse": "Să nu cârtiţi, cum au cârtit unii din ei, care au fost nimiciţi de Nimicitorul." },
+        { "ref": "1 Corinteni 10:11", "verse": "Aceste lucruri li s-au întâmplat ca să ne slujească drept pilde şi au fost scrise pentru învăţătura noastră, peste care au venit sfârşiturile veacurilor." },
+        { "ref": "Galateni 1:10", "verse": "Caut eu oare, în clipa aceasta, să capăt bunăvoinţa oamenilor sau bunăvoinţa lui Dumnezeu? Sau caut să plac oamenilor? Dacă aş mai căuta să plac oamenilor, n-aş fi robul lui Hristos." },
+        { "ref": "1 Tesaloniceni 5:18", "verse": "Mulţumiţi lui Dumnezeu pentru toate lucrurile; căci aceasta este voia lui Dumnezeu, în Hristos Isus, cu privire la voi." },
+        { "ref": "Evrei 13:17", "verse": "Ascultaţi de mai-marii voştri şi fiţi-le supuşi, căci ei priveghează asupra sufletelor voastre ca unii care au să dea socoteală de ele, pentru ca să poată face lucrul acesta cu bucurie, nu suspinând, căci aşa ceva nu v-ar fi de niciun folos." },
+        { "ref": "Iacov 4:6b", "verse": "De aceea zice Scriptura: „Dumnezeu stă împotriva celor mândri, dar dă har celor smeriţi.\"" },
+        { "ref": "Iacov 4:10", "verse": "Smeriţi-vă înaintea Domnului, şi El vă va înălţa." },
     ]
 }

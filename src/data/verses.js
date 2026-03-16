@@ -863,6 +863,21 @@ export const chapters = {
             "Astfel, fiindcă avem un Mare Preot însemnat, care a străbătut cerurile, pe Isus, Fiul lui Dumnezeu, să rămânem tari în mărturisirea noastră.",
             "Căci n-avem un Mare Preot care să n-aibă milă de slăbiciunile noastre, ci unul care în toate lucrurile a fost ispitit ca şi noi, dar fără păcat.",
             "Să ne apropiem dar cu deplină încredere de scaunul harului ca să căpătăm îndurare şi să găsim har, pentru ca să fim ajutaţi la vreme de nevoie."
+        ], [
+            "În adevăr, orice mare preot luat din mijlocul oamenilor este pus pentru oameni în lucrurile privitoare la Dumnezeu, ca să aducă daruri şi jertfe pentru păcate.",
+            "El poate fi îngăduitor cu cei neştiutori şi rătăciţi, fiindcă şi el este cuprins de slăbiciune.",
+            "Şi, din pricina acestei slăbiciuni, trebuie să aducă jertfe atât pentru păcatele lui, cât şi pentru ale norodului.",
+            "Nimeni nu-şi ia cinstea aceasta singur, ci o ia dacă este chemat de Dumnezeu, cum a fost Aaron.",
+            "Tot aşa şi Hristos, nu Şi-a luat singur slava de a fi Mare Preot, ci o are de la Cel ce I-a zis: \"Tu eşti Fiul Meu, astăzi Te-am născut.\"",
+            "Şi, cum zice iarăşi într-alt loc: \"Tu eşti preot în veac, după rânduiala lui Melhisedec.\"",
+            "El este Acela care, în zilele vieţii Sale pământeşti, aducând rugăciuni şi cereri cu strigăte mari şi cu lacrimi către Cel ce putea să-L izbăvească de la moarte şi fiind ascultat din pricina evlaviei Lui,",
+            "măcar că era Fiu, a învăţat să asculte prin lucrurile pe care le-a suferit.",
+            "Şi, după ce a fost făcut desăvârşit, S-a făcut pentru toţi cei ce-L ascultă urzitorul unei mântuiri veşnice,",
+            "căci a fost numit de Dumnezeu Mare Preot \"după rânduiala lui Melhisedec\".",
+            "Asupra celor de mai sus, avem multe de zis şi lucruri grele de tâlcuit, fiindcă v-aţi făcut greoi la pricepere.",
+            "În adevăr, voi, care de mult trebuia să fiţi învăţători, aveţi iarăşi trebuinţă de cineva să vă înveţe cele dintâi adevăruri ale cuvintelor lui Dumnezeu şi aţi ajuns să aveţi nevoie de lapte, nu de hrană tare.",
+            "Şi oricine nu se hrăneşte decât cu lapte nu este obişnuit cu cuvântul despre neprihănire, căci este un prunc.",
+            "Dar hrana tare este pentru oamenii mari, pentru aceia a căror judecată s-a deprins, prin întrebuinţare, să deosebească binele şi răul."
         ]
     ]
 }

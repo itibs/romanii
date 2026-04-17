@@ -878,6 +878,27 @@ export const chapters = {
             "În adevăr, voi, care de mult trebuia să fiţi învăţători, aveţi iarăşi trebuinţă de cineva să vă înveţe cele dintâi adevăruri ale cuvintelor lui Dumnezeu şi aţi ajuns să aveţi nevoie de lapte, nu de hrană tare.",
             "Şi oricine nu se hrăneşte decât cu lapte nu este obişnuit cu cuvântul despre neprihănire, căci este un prunc.",
             "Dar hrana tare este pentru oamenii mari, pentru aceia a căror judecată s-a deprins, prin întrebuinţare, să deosebească binele şi răul."
+        ], [
+            "De aceea, să lăsăm adevărurile începătoare ale lui Hristos şi să mergem spre cele desăvârşite, fără să mai punem din nou temelia pocăinţei de faptele moarte şi a credinţei în Dumnezeu,",
+            "învăţătura despre botezuri, despre punerea mâinilor, despre învierea morţilor şi despre judecata veşnică.",
+            "Şi vom face lucrul acesta, dacă va voi Dumnezeu.",
+            "Căci cei ce au fost luminaţi odată şi au gustat darul ceresc şi s-au făcut părtaşi Duhului Sfânt",
+            "şi au gustat Cuvântul cel bun al lui Dumnezeu şi puterile veacului viitor,",
+            "şi care totuşi au căzut, este cu neputinţă să fie înnoiţi iarăşi şi aduşi la pocăinţă, fiindcă ei răstignesc din nou, pentru ei, pe Fiul lui Dumnezeu şi-L dau să fie batjocorit.",
+            "Când un pământ este adăpat de ploaia care cade adesea pe el şi rodeşte o iarbă folositoare celor pentru care este lucrat, capătă binecuvântare de la Dumnezeu.",
+            "Dar, dacă aduce spini şi mărăcini, este lepădat şi aproape să fie blestemat şi sfârşeşte prin a i se pune foc.",
+            "Măcar că vorbim astfel, preaiubiţilor, totuşi de la voi aşteptăm lucruri mai bune şi care însoţesc mântuirea.",
+            "Căci Dumnezeu nu este nedrept ca să uite osteneala voastră şi dragostea pe care aţi arătat-o pentru Numele Lui, voi, care aţi ajutorat şi ajutoraţi pe sfinţi.",
+            "Dorim însă ca fiecare din voi să arate aceeaşi râvnă, ca să păstreze până la sfârşit o deplină nădejde,",
+            "aşa încât să nu vă leneviţi, ci să călcaţi pe urmele celor ce, prin credinţă şi răbdare, moştenesc făgăduinţele.",
+            "Dumnezeu, când a dat lui Avraam făgăduinţa, fiindcă nu putea să Se jure pe unul mai mare decât El, S-a jurat pe Sine Însuşi",
+            "şi a zis: „Cu adevărat te voi binecuvânta şi îţi voi înmulţi foarte mult sămânţa.”",
+            "Şi astfel, fiindcă a aşteptat cu răbdare, a dobândit făgăduinţa.",
+            "Oamenii, ce-i drept, obişnuiesc să jure pe cineva mai mare; jurământul este o chezăşie care pune capăt oricărei neînţelegeri dintre ei.",
+            "De aceea şi Dumnezeu, fiindcă voia să dovedească cu mai multă tărie moştenitorilor făgăduinţei nestrămutarea hotărârii Lui, a venit cu un jurământ,",
+            "pentru ca, prin două lucruri care nu se pot schimba şi în care este cu neputinţă ca Dumnezeu să mintă, să găsim o puternică îmbărbătare noi, a căror scăpare a fost să apucăm nădejdea care ne era pusă înainte,",
+            "pe care o avem ca o ancoră a sufletului; o nădejde tare şi neclintită, care pătrunde dincolo de perdeaua dinăuntrul Templului,",
+            "unde Isus a intrat pentru noi ca înainte-mergător, când a fost făcut „Mare Preot în veac, după rânduiala lui Melhisedec”."
         ]
     ]
 }

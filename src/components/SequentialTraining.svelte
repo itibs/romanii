@@ -9,6 +9,7 @@
     export let competitiveMode = false;
     export let round = '';
     export let competitionResetSignal = 0;
+    export let hasProgress = false;
 
     export let start = {
         chapter: 1,
@@ -89,6 +90,8 @@
     $: if (!competitiveMode) {
         eligibleForScoring = false;
     }
+
+    $: hasProgress = verseIdx !== start.verse - 1 || discoveredVerseText.length > 0;
 
     $: if (!timerStarted && competitiveMode && discoveredVerseText.length > 0) {
         timerStarted = true;

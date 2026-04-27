@@ -14,6 +14,7 @@
     let exitedCompetitiveMode = false;
     let competitionResetSignal = 0;
     let chapterIdx = start.chapter - 1;
+    let hasChapterProgress = false;
 
     $: selectedRound = `homepage:${bookName}:${chapterIdx + 1}`;
     $: selectedChapterTitle = `${bookName} ${chapterIdx + 1}`;
@@ -22,6 +23,7 @@
         if (competitiveMode) {
             if (
                 exitedCompetitiveMode &&
+                hasChapterProgress &&
                 !confirm('Progresul se va reseta deoarece modul competitiv poate începe doar de la versetul 1. Continui?')
             ) {
                 competitiveMode = false;
@@ -57,6 +59,7 @@
     chapters={chapters[bookName]}
     start={start}
     bind:chapterIdx
+    bind:hasProgress={hasChapterProgress}
     competitiveMode={competitiveMode}
     competitionResetSignal={competitionResetSignal}
     round={selectedRound}

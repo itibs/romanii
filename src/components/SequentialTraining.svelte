@@ -15,10 +15,6 @@
         verse: 1,
     }
 
-    $: if (bookName !== undefined) {
-        resetChapter();
-    }
-
     let rollingSumVerseIdx = 0;
     $: if (useRollingSumVerseIdx) {
         let sum = 0;
@@ -29,6 +25,14 @@
     }
 
     export let chapterIdx = start.chapter-1;
+    let previousBookName = '';
+    $: if (bookName !== previousBookName) {
+        previousBookName = bookName;
+        if (chapterIdx >= chapters.length) {
+            chapterIdx = 0;
+        }
+        resetChapter();
+    }
     /**
      * @type {string[]}
      */

@@ -4,21 +4,32 @@
 	import Icon from '../Icon.svelte';
 
 	export let round = 'Runda1';
+	export let title = `Clasament ${round}`;
 
 	/**
 	 * @type {string | any[]}
 	 */
 	let scores = [];
+	let fetchedRound = '';
+	let mounted = false;
 
 	async function fetchData() {
+		fetchedRound = round;
 		const response = await fetch(
-			'https://dz5rd0lqnb.execute-api.eu-central-1.amazonaws.com/Prod/scores?round=' + round
+			'https://dz5rd0lqnb.execute-api.eu-central-1.amazonaws.com/Prod/scores?round=' + encodeURIComponent(round)
 		);
 		const data = await response.json();
 		scores = data['body'].slice(0, 10); // Limit to top 10 scores
 	}
 
-	onMount(fetchData);
+	$: if (mounted && round !== fetchedRound) {
+		fetchData();
+	}
+
+	onMount(() => {
+		mounted = true;
+		fetchData();
+	});
 
 	// Subscribe to store and refetch scores when the value changes
 	shouldRefetchScores.subscribe((/** @type {boolean} */ value) => {
@@ -32,7 +43,7 @@
 <table class="scoreboard">
 	<thead>
 		<tr>
-			<th colspan="3">Clasament {round}</th>
+			<th colspan="3">{title}</th>
 		</tr>
 		<tr>
 			<th>Loc</th>

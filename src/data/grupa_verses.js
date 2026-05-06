@@ -140,5 +140,16 @@ export const verses = {
         { "ref": "Evrei 13:17", "verse": "Ascultaţi de mai-marii voştri şi fiţi-le supuşi, căci ei priveghează asupra sufletelor voastre ca unii care au să dea socoteală de ele, pentru ca să poată face lucrul acesta cu bucurie, nu suspinând, căci aşa ceva nu v-ar fi de niciun folos." },
         { "ref": "Iacov 4:6b", "verse": "De aceea zice Scriptura: „Dumnezeu stă împotriva celor mândri, dar dă har celor smeriţi.\"" },
         { "ref": "Iacov 4:10", "verse": "Smeriţi-vă înaintea Domnului, şi El vă va înălţa." },
+
+        { "ref": "Iosua 1:8", "verse": "Cartea aceasta a Legii să nu se depărteze de gura ta; cugetă asupra ei zi şi noapte, căutând să faci tot ce este scris în ea; căci atunci vei izbândi în toate căile tale şi atunci vei lucra cu înţelepciune." },
+        { "ref": "Proverbe 10:22", "verse": "Binecuvântarea Domnului îmbogățește, și El nu lasă să fie urmată de niciun necaz." },
+        { "ref": "Proverbe 28:13", "verse": "Cine își ascunde fărădelegile nu propășește, dar cine le mărturisește și se lasă de ele capătă îndurare." },
+        { "ref": "1 Samuel 15:22", "verse": "Samuel a zis: «Îi plac Domnului mai mult arderile-de-tot și jertfele decât ascultarea de glasul Domnului? Ascultarea face mai mult decât jertfele, și păzirea cuvântului Său face mai mult decât grăsimea berbecilor.»" },
+        { "ref": "Luca 11:28", "verse": "Și El a răspuns: «Ferice mai degrabă de cei ce ascultă Cuvântul lui Dumnezeu și-l păzesc!»" },
+        { "ref": "1 Tesaloniceni 4:3-5", "verse": "Voia lui Dumnezeu este sfințirea voastră: să vă feriți de curvie; fiecare din voi să știe să-și stăpânească vasul în sfințenie și cinste, nu în aprinderea poftei, ca neamurile care nu cunosc pe Dumnezeu." },
+        { "ref": "1 Timotei 4:12", "verse": "Nimeni să nu-ţi dispreţuiască tinereţea; ci fii o pildă pentru credincioşi: în vorbire, în purtare, în dragoste, în credinţă, în curăţie." },
+        { "ref": "1 Timotei 6:10", "verse": "Căci iubirea de bani este rădăcina tuturor relelor; și unii, care au umblat după ea, au rătăcit de la credință și s-au străpuns singuri cu o mulțime de chinuri." },
+        { "ref": "2 Timotei 2:22", "verse": "Fugi de poftele tinereții și urmărește neprihănirea, credința, dragostea, pacea, împreună cu cei ce cheamă pe Domnul dintr-o inimă curată." },
+        { "ref": "1 Ioan 1:9", "verse": "Dacă ne mărturisim păcatele, El este credincios și drept ca să ne ierte păcatele și să ne curățească de orice nelegiuire." },
     ]
 }

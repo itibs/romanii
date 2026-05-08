@@ -899,6 +899,35 @@ export const chapters = {
             "pentru ca, prin două lucruri care nu se pot schimba şi în care este cu neputinţă ca Dumnezeu să mintă, să găsim o puternică îmbărbătare noi, a căror scăpare a fost să apucăm nădejdea care ne era pusă înainte,",
             "pe care o avem ca o ancoră a sufletului; o nădejde tare şi neclintită, care pătrunde dincolo de perdeaua dinăuntrul Templului,",
             "unde Isus a intrat pentru noi ca înainte-mergător, când a fost făcut „Mare Preot în veac, după rânduiala lui Melhisedec”."
+        ], [
+            "În adevăr, Melhisedec acesta, împăratul Salemului, preot al Dumnezeului Preaînalt, care a întâmpinat pe Avraam când acesta se întorcea de la măcelul împăraţilor, care l-a binecuvântat,",
+            "care a primit de la Avraam zeciuială din tot, care, după însemnarea numelui său, este întâi „Împărat al neprihănirii”, apoi şi „Împărat al Salemului”, adică „Împărat al păcii”,",
+            "fără tată, fără mamă, fără spiţă de neam, neavând nici început al zilelor, nici sfârşit al vieţii, dar care a fost asemănat cu Fiul lui Dumnezeu, rămâne preot în veac.",
+            "Vedeţi bine dar cât de mare a fost el dacă până şi patriarhul Avraam i-a dat zeciuială din prada de război!",
+            "Aceia dintre fiii lui Levi care îndeplinesc slujba de preoţi după Lege au poruncă să ia zeciuială de la norod, adică de la fraţii lor, cu toate că şi ei se coboară din Avraam.",
+            "Iar el, care nu se cobora din familia lor, a luat zeciuială de la Avraam şi a binecuvântat pe cel ce avea făgăduinţele.",
+            "Dar fără îndoială că cel mai mic este binecuvântat de cel mai mare.",
+            "Şi apoi, aici, cei ce iau zeciuială sunt nişte oameni muritori, pe când, acolo, o ia cineva despre care se mărturiseşte că este viu.",
+            "Mai mult, însuşi Levi, care ia zeciuială, a plătit zeciuiala, ca să zicem aşa, prin Avraam;",
+            "căci era încă în coapsele strămoşului său când a întâmpinat Melhisedec pe Avraam.",
+            "Dacă dar desăvârşirea ar fi fost cu putinţă prin preoţia leviţilor – căci sub preoţia aceasta a primit poporul Legea – ce nevoie mai era să se ridice un alt preot „după rânduiala lui Melhisedec”, şi nu după rânduiala lui Aaron?",
+            "Pentru că, odată schimbată preoţia, trebuia numaidecât să aibă loc şi o schimbare a Legii.",
+            "În adevăr, Acela despre care sunt zise aceste lucruri face parte dintr-o altă seminţie, din care nimeni n-a slujit altarului.",
+            "Căci este vădit că Domnul nostru a ieşit din Iuda, seminţie despre care Moise n-a zis nimic cu privire la preoţie.",
+            "Lucrul acesta se face şi mai luminos când vedem ridicându-se după asemănarea lui Melhisedec un alt preot,",
+            "pus nu prin legea unei porunci pământeşti, ci prin puterea unei vieţi nepieritoare.",
+            "Fiindcă iată ce se mărturiseşte despre El: „Tu eşti preot în veac după rânduiala lui Melhisedec.”",
+            "Astfel, pe de o parte, se desfiinţează aici o poruncă de mai înainte din pricina neputinţei şi zădărniciei ei –",
+            "căci Legea n-a făcut nimic desăvârşit – şi, pe de alta, se pune în loc o nădejde mai bună, prin care ne apropiem de Dumnezeu.",
+            "Şi fiindcă lucrul acesta nu s-a făcut fără jurământ –",
+            "căci, pe când leviţii se făceau preoţi fără jurământ, Isus S-a făcut preot prin jurământul Celui ce I-a zis: „Domnul a jurat şi nu Se va căi: 'Tu eşti preot în veac după rânduiala lui Melhisedec'” –,",
+            "prin chiar faptul acesta, El s-a făcut chezaşul unui legământ mai bun.",
+            "Mai mult, acolo au fost preoţi în mare număr, pentru că moartea îi împiedica să rămână pururea.",
+            "Dar El, fiindcă rămâne „în veac”, are o preoţie care nu poate trece de la unul la altul.",
+            "De aceea şi poate să mântuiască în chip desăvârşit pe cei ce se apropie de Dumnezeu prin El, pentru că trăieşte pururea ca să mijlocească pentru ei.",
+            "Şi tocmai un astfel de Mare Preot ne trebuia: sfânt, nevinovat, fără pată, despărţit de păcătoşi şi înălţat mai presus de ceruri,",
+            "care n-are nevoie, ca ceilalţi mari preoţi, să aducă jertfe în fiecare zi, întâi pentru păcatele sale şi apoi pentru păcatele norodului, căci lucrul acesta l-a făcut o dată pentru totdeauna, când S-a adus jertfă pe Sine Însuşi.",
+            "În adevăr, Legea pune mari preoţi pe nişte oameni supuşi slăbiciunii, dar cuvântul jurământului, făcut după ce a fost dată Legea, pune pe Fiul, care este desăvârşit pentru veşnicie."
         ]
     ]
 }

@@ -21,6 +21,15 @@
     let crtWord = '';
     $: crtWord = wordIdx < inputWords.length ? inputWords[wordIdx] : '';
 
+    const wordHasLetter = (/** @type {string} */ word) => {
+        for (let i = 0; i < word.length; i++) {
+            if (word[i].match(/[a-zăâțţșşî]/i)) {
+                return true;
+            }
+        }
+        return false;
+    };
+
     const nextWordButtonPressed = () => {
         if (disableNextButton) {
             nextButtonDisabled = true;
@@ -32,12 +41,16 @@
         nextWord();
     }
     const nextWord = () => {
-        wordIdx++;
-        discoveredText = inputWords.slice(0, wordIdx).join(' ')
-        if (wordIdx >= inputWords.length) {
-            wordIdx = 0;
-            fnVerseDone();
-        }
+        do {
+            wordIdx++;
+            if (wordIdx >= inputWords.length) {
+                discoveredText = inputWords.join(' ');
+                fnVerseDone();
+                return;
+            }
+        } while (!wordHasLetter(inputWords[wordIdx]));
+
+        discoveredText = inputWords.slice(0, wordIdx).join(' ');
     }
 
     let userInput = ''
@@ -70,12 +83,14 @@
             nextWordButtonPressed();
         }
 
+        if (!wordHasLetter(crtWord)) {
+            nextWord();
+            return;
+        }
+
         let i = 0;
         while (i < crtWord.length && !crtWord[i].match(/[a-zăâțţșşî]/i)) {
             i++;
-        }
-        if (i == crtWord.length) {
-            nextWord();
         }
 
         let normalizedActual = normalizeLetter(c)

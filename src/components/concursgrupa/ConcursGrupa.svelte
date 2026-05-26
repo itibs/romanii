@@ -79,12 +79,7 @@
 {#key crtVerse}
 	<VersesInput
 		inputText={crtVerse}
-		fnVerseDone={() => {
-			if (verseIdx < verses.length) {
-				verseIdx++;
-			}
-			discoveredVerseText = '';
-		}}
+		fnVerseDone={handleVerseDone}
 		bind:discoveredText={discoveredVerseText}
 		disableNextButton={!trainingMode}
 		bind:reset={resetVersesInput}
@@ -100,3 +95,12 @@
 </div>
 <br>
 <button on:click={reset}>Reset</button>
+
+{#if round}
+	<RunHistory
+		round={round}
+		title={`Istoric pentru ${round}`}
+		verseLabels={verseLabels}
+		highlightRunId={lastSavedRunId}
+	/>
+{/if}

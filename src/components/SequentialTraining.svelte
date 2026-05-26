@@ -144,6 +144,14 @@
 {#if eligibleForScoring && verseIdx == crtChapter.length}
     <ScoreSubmitForm score={elapsedTime} {round} resetSignal={scoreResetSignal} />
 {/if}
+{#if competitiveMode && round}
+    <RunHistory
+        round={round}
+        title={`Istoric pentru ${bookName} - Capitolul ${chapterIdx + 1}`}
+        verseLabels={crtChapter.map((_, i) => String(rollingSumVerseIdx + i + 1))}
+        highlightRunId={lastSavedRunId}
+    />
+{/if}
 <button on:click={jumpToChapter(chapterIdx)}>
     Resetează capitolul
 </button>

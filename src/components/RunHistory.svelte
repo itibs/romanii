@@ -8,10 +8,14 @@
     export let title = 'Istoric încercări';
     /** @type {string[]} */
     export let verseLabels = [];
+    /** @type {number[]} */
+    export let verseWordCounts = [];
     /** Optional latest run id to auto-highlight after a finish. */
     export let highlightRunId = '';
 
     let expanded = false;
+    /** @type {'wpm' | 'seconds'} */
+    let metric = 'wpm';
     /** @type {Set<string>} */
     let selectedIds = new Set();
 
@@ -21,9 +25,22 @@
         '#9c755f', '#bab0ac'
     ];
 
+    $: hasWordCounts = verseWordCounts && verseWordCounts.length > 0;
+    $: if (!hasWordCounts && metric === 'wpm') {
+        metric = 'seconds';
+    }
+
     $: allRuns = (($runHistoryStore || {})[round] || [])
         .slice()
         .sort((a, b) => b.timestamp - a.timestamp);
+
+    // Total WPM for a run, given the current chapter's verseWordCounts.
+    function totalWpm(run) {
+        if (!hasWordCounts || !run || run.totalTime <= 0) return null;
+        const totalWords = verseWordCounts.reduce((a, b) => a + (b || 0), 0);
+        if (totalWords <= 0) return null;
+        return (totalWords / run.totalTime) * 60;
+    }
 
     // Auto-select latest run + any newly-finished run
     let lastSelectedSignature = '';
@@ -32,13 +49,10 @@
         if (signature !== lastSelectedSignature) {
             lastSelectedSignature = signature;
             const next = new Set(selectedIds);
-            // Keep selections that still exist
             for (const id of [...next]) {
                 if (!allRuns.find((r) => r.id === id)) next.delete(id);
             }
-            // Always include latest run if any
             if (allRuns[0]) next.add(allRuns[0].id);
-            // Include newly-finished run if provided
             if (highlightRunId && allRuns.find((r) => r.id === highlightRunId)) {
                 next.add(highlightRunId);
             }
@@ -46,18 +60,15 @@
         }
     }
 
-    // Auto-expand panel when a run is just saved
     let prevHighlight = '';
     $: if (highlightRunId && highlightRunId !== prevHighlight) {
         prevHighlight = highlightRunId;
         expanded = true;
     }
 
-    // Build the ordered list of runs to chart. Latest selected run (by timestamp)
-    // is first so PerVerseChart can render it as the highlighted/bar series.
     $: chartedRuns = (() => {
         const picked = allRuns.filter((r) => selectedIds.has(r.id));
-        return picked; // already sorted desc by timestamp
+        return picked;
     })();
 
     function toggleSelected(id) {
@@ -111,11 +122,41 @@
 
         {#if expanded}
             <div class="panel">
-                <h4>Timp pe verset</h4>
+                <div class="chart-header">
+                    <h4>{metric === 'wpm' ? 'Viteza pe verset (cuv/min)' : 'Timp pe verset (secunde)'}</h4>
+                    {#if hasWordCounts}
+                        <div class="metric-toggle" role="tablist" aria-label="Unitate de măsură">
+                            <button
+                                class="small"
+                                class:active={metric === 'wpm'}
+                                on:click={() => (metric = 'wpm')}
+                                title="Cuvinte pe minut (normalizat după lungimea versetului)"
+                            >cuv/min</button>
+                            <button
+                                class="small"
+                                class:active={metric === 'seconds'}
+                                on:click={() => (metric = 'seconds')}
+                                title="Timp brut pe verset"
+                            >secunde</button>
+                        </div>
+                    {/if}
+                </div>
                 <p class="hint">
-                    Bara roșie reprezintă ultima încercare. Bifează încercări din listă pentru a le compara.
+                    {#if metric === 'wpm'}
+                        Bara roșie e ultima încercare. <strong>Mai înalt = mai rapid.</strong> Lungimea versetului
+                        este normalizată — așa că un verset lung dar tipărit rapid nu mai arată „lent”.
+                    {:else}
+                        Bara roșie e ultima încercare. <strong>Mai înalt = mai lent.</strong> Versetele lungi
+                        apar în mod natural ca bare mai înalte.
+                    {/if}
+                    Bifează încercări din listă pentru a le compara.
                 </p>
-                <PerVerseChart runs={chartedRuns} verseLabels={verseLabels} />
+                <PerVerseChart
+                    runs={chartedRuns}
+                    verseLabels={verseLabels}
+                    verseWordCounts={verseWordCounts}
+                    metric={metric}
+                />
 
                 {#if allRuns.length > 1}
                     <h4>Evoluția timpului total</h4>
@@ -129,6 +170,9 @@
                             <th></th>
                             <th>Data</th>
                             <th>Total (s)</th>
+                            {#if hasWordCounts}
+                                <th>cuv/min</th>
+                            {/if}
                             <th>Δ</th>
                             <th></th>
                             <th></th>
@@ -151,6 +195,9 @@
                                 </td>
                                 <td>{formatTimestamp(run.timestamp)}{i === 0 ? ' (ultima)' : ''}</td>
                                 <td class="num">{run.totalTime.toFixed(2)}</td>
+                                {#if hasWordCounts}
+                                    <td class="num">{totalWpm(run) !== null ? totalWpm(run).toFixed(1) : '-'}</td>
+                                {/if}
                                 <td class="delta">{formatDelta(run)}</td>
                                 <td>
                                     {#if i !== 0}
@@ -217,6 +264,36 @@
     .panel h4:first-child {
         margin-top: 0;
     }
+    .chart-header {
+        display: flex;
+        align-items: baseline;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+    .chart-header h4 {
+        margin: 0;
+    }
+    .metric-toggle {
+        display: inline-flex;
+        gap: 0;
+        border: 1px solid #c0c0c0;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+    .metric-toggle button.small {
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        padding: 2px 10px;
+        cursor: pointer;
+    }
+    .metric-toggle button.small + button.small {
+        border-left: 1px solid #c0c0c0;
+    }
+    .metric-toggle button.small.active {
+        background: rgba(225, 87, 89, 0.15);
+        font-weight: bold;
+    }
     .hint {
         color: #666;
         font-size: 0.9em;
@@ -276,6 +353,15 @@
     }
     :global(body.dark-mode) .panel {
         border-color: #3a4c61;
+    }
+    :global(body.dark-mode) .metric-toggle {
+        border-color: #3a4c61;
+    }
+    :global(body.dark-mode) .metric-toggle button.small + button.small {
+        border-left-color: #3a4c61;
+    }
+    :global(body.dark-mode) .metric-toggle button.small.active {
+        background: rgba(225, 87, 89, 0.25);
     }
     :global(body.dark-mode) .runs-table th,
     :global(body.dark-mode) .runs-table td {

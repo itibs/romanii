@@ -3,40 +3,104 @@
 
     /**
      * Renders a multi-series chart of per-verse times for one or more runs.
-     * Each run is shown as a colored polyline + dots, and the most-recent
-     * run is also rendered as filled bars in the background so it is easy
-     * to see which segments of the chapter are slow.
+     *
+     * Two metrics are supported:
+     *  - 'wpm'     — words per minute (verseWordCounts[i] / verseTimes[i] * 60).
+     *                Higher bars = faster. Verse length is normalised out,
+     *                which is what we want when long verses look slow simply
+     *                because there are more words to type.
+     *  - 'seconds' — raw time per verse. Lower bars = faster.
+     *
+     * The most-recent run is rendered as filled bars in the background and
+     * a thick polyline; other selected runs are dashed polylines.
      */
 
     export let runs = [];
     export let verseLabels = [];
+    /** @type {number[]} */
+    export let verseWordCounts = [];
+    /** @type {'wpm' | 'seconds'} */
+    export let metric = 'wpm';
 
     const palette = [
-        '#e15759', // current run / red
-        '#4e79a7', // blue
-        '#f28e2b', // orange
-        '#76b7b2', // teal
-        '#59a14f', // green
-        '#edc948', // yellow
-        '#b07aa1', // purple
-        '#ff9da7', // pink
-        '#9c755f', // brown
-        '#bab0ac'  // gray
+        '#e15759', '#4e79a7', '#f28e2b', '#76b7b2',
+        '#59a14f', '#edc948', '#b07aa1', '#ff9da7',
+        '#9c755f', '#bab0ac'
     ];
 
     let hoverIdx = -1;
 
-    $: maxVerses = Math.max(0, ...runs.map((r) => (r && r.verseTimes ? r.verseTimes.length : 0)));
-    $: maxTime = (() => {
-        let m = 0;
-        for (const r of runs) {
-            if (!r || !r.verseTimes) continue;
-            for (const t of r.verseTimes) if (t > m) m = t;
+    $: effectiveMetric = (metric === 'wpm' && verseWordCounts && verseWordCounts.length > 0)
+        ? 'wpm'
+        : 'seconds';
+
+    function computeValue(verseTimes, i, m, wc) {
+        const t = verseTimes[i];
+        if (t === undefined || t === null) return null;
+        if (m === 'wpm') {
+            const w = wc && wc[i];
+            if (!w || t <= 0) return null;
+            return (w / t) * 60;
         }
-        return m === 0 ? 1 : m;
+        return t;
+    }
+
+    function computeTooltip(verseTimes, i, m, wc, label) {
+        const t = verseTimes[i];
+        const w = wc && wc[i];
+        const v = computeValue(verseTimes, i, m, wc);
+        if (v === null) return `${label}: -`;
+        if (m === 'wpm') {
+            return `${label}: ${v.toFixed(1)} cuv/min (${(t || 0).toFixed(2)}s, ${w} cuv)`;
+        }
+        return `${label}: ${(t || 0).toFixed(2)}s`;
+    }
+
+    function labelFor(i) {
+        if (verseLabels && verseLabels[i]) return verseLabels[i];
+        return String(i + 1);
+    }
+
+    // Build the rendered series fully reactively so any change to runs /
+    // metric / verseWordCounts forces a re-render.
+    $: series = runs.map((run, ri) => {
+        if (!run || !run.verseTimes) return null;
+        const points = run.verseTimes.map((_, i) => {
+            const v = computeValue(run.verseTimes, i, effectiveMetric, verseWordCounts);
+            return {
+                idx: i,
+                value: v,
+                tooltip: computeTooltip(run.verseTimes, i, effectiveMetric, verseWordCounts, labelFor(i))
+            };
+        });
+        return { runId: run.id || ri, color: palette[ri % palette.length], isLatest: ri === 0, points };
+    }).filter((s) => s !== null);
+
+    $: maxVerses = Math.max(0, ...series.map((s) => s.points.length));
+
+    $: allValues = (() => {
+        const vals = [];
+        for (const s of series) {
+            for (const p of s.points) {
+                if (p.value !== null && isFinite(p.value)) vals.push(p.value);
+            }
+        }
+        return vals;
     })();
 
-    // Axis ticks for Y
+    // Robust Y-axis upper bound — protects against single outliers.
+    $: maxValue = (() => {
+        if (allValues.length === 0) return 1;
+        const sorted = [...allValues].sort((a, b) => a - b);
+        const median = sorted[Math.floor(sorted.length / 2)] || 1;
+        const p90Idx = Math.min(sorted.length - 1, Math.floor(sorted.length * 0.9));
+        const p90 = sorted[p90Idx] || median;
+        const peak = sorted[sorted.length - 1] || median;
+        const robust = Math.max(median * 4, p90 * 1.15, 1);
+        if (peak <= robust * 1.5) return Math.max(robust, peak);
+        return robust;
+    })();
+
     function niceCeil(v) {
         if (v <= 0) return 1;
         const pow = Math.pow(10, Math.floor(Math.log10(v)));
@@ -48,7 +112,7 @@
         else nice = 10;
         return nice * pow;
     }
-    $: yMax = niceCeil(maxTime * 1.05);
+    $: yMax = niceCeil(maxValue * 1.05);
     $: yTicks = (() => {
         const ticks = [];
         const steps = 5;
@@ -56,10 +120,9 @@
         return ticks;
     })();
 
-    // Chart geometry
     const width = 720;
     const height = 320;
-    const margin = { top: 16, right: 16, bottom: 56, left: 48 };
+    const margin = { top: 16, right: 16, bottom: 56, left: 56 };
     $: innerW = width - margin.left - margin.right;
     $: innerH = height - margin.top - margin.bottom;
 
@@ -69,30 +132,32 @@
         return margin.left + xStep * (i + 0.5);
     }
     function yPos(v) {
-        return margin.top + innerH - (v / yMax) * innerH;
+        const clamped = Math.min(v, yMax);
+        return margin.top + innerH - (clamped / yMax) * innerH;
     }
 
-    function labelFor(i) {
-        if (verseLabels && verseLabels[i]) return verseLabels[i];
-        return String(i + 1);
-    }
-
-    function polylinePoints(verseTimes) {
-        return verseTimes
-            .map((t, i) => `${xCenter(i)},${yPos(t)}`)
-            .join(' ');
-    }
-
-    // Pick a label rotation when there are many bars
     $: rotateLabels = maxVerses > 12;
+
+    $: yTickFormatter = effectiveMetric === 'wpm'
+        ? (t) => `${t.toFixed(0)}`
+        : (t) => `${t.toFixed(1)}s`;
+    $: yAxisTitle = effectiveMetric === 'wpm' ? 'Cuvinte / minut' : 'Secunde';
+
+    function polylinePoints(points) {
+        const pts = [];
+        for (const p of points) {
+            if (p.value === null) continue;
+            pts.push(`${xCenter(p.idx)},${yPos(p.value)}`);
+        }
+        return pts.join(' ');
+    }
 </script>
 
-{#if runs.length === 0 || maxVerses === 0}
+{#if series.length === 0 || maxVerses === 0}
     <p><em>Nu există date pentru grafic.</em></p>
 {:else}
     <div class="chart-wrap">
         <svg viewBox="0 0 {width} {height}" preserveAspectRatio="xMidYMid meet" class="chart">
-            <!-- Y grid + ticks -->
             {#each yTicks as t}
                 <line
                     x1={margin.left}
@@ -102,53 +167,52 @@
                     class="grid"
                 />
                 <text x={margin.left - 6} y={yPos(t)} class="tick" text-anchor="end" dominant-baseline="middle">
-                    {t.toFixed(1)}s
+                    {yTickFormatter(t)}
                 </text>
             {/each}
 
-            <!-- Bars for the most recent run (runs[0]) -->
-            {#if runs[0]}
-                {#each runs[0].verseTimes as t, i}
-                    <rect
-                        x={margin.left + xStep * i + xStep * 0.18}
-                        y={yPos(t)}
-                        width={Math.max(1, xStep * 0.64)}
-                        height={Math.max(0, margin.top + innerH - yPos(t))}
-                        class="bar"
-                        class:hover={hoverIdx === i}
-                        on:mouseenter={() => (hoverIdx = i)}
-                        on:mouseleave={() => (hoverIdx = -1)}
-                    >
-                        <title>{labelFor(i)}: {t.toFixed(2)}s</title>
-                    </rect>
+            {#if series[0]}
+                {#each series[0].points as p (p.idx)}
+                    {#if p.value !== null}
+                        <rect
+                            x={margin.left + xStep * p.idx + xStep * 0.18}
+                            y={yPos(p.value)}
+                            width={Math.max(1, xStep * 0.64)}
+                            height={Math.max(0, margin.top + innerH - yPos(p.value))}
+                            class="bar"
+                            class:hover={hoverIdx === p.idx}
+                            on:mouseenter={() => (hoverIdx = p.idx)}
+                            on:mouseleave={() => (hoverIdx = -1)}
+                        >
+                            <title>{p.tooltip}</title>
+                        </rect>
+                    {/if}
                 {/each}
             {/if}
 
-            <!-- Polylines for every selected run -->
-            {#each runs as run, ri}
-                {#if run && run.verseTimes && run.verseTimes.length > 0}
-                    <polyline
-                        points={polylinePoints(run.verseTimes)}
-                        fill="none"
-                        stroke={palette[ri % palette.length]}
-                        stroke-width={ri === 0 ? 2.5 : 1.5}
-                        stroke-opacity={ri === 0 ? 1 : 0.85}
-                        stroke-dasharray={ri === 0 ? '' : '4 3'}
-                    />
-                    {#each run.verseTimes as t, i}
+            {#each series as s, ri (s.runId)}
+                <polyline
+                    points={polylinePoints(s.points)}
+                    fill="none"
+                    stroke={s.color}
+                    stroke-width={s.isLatest ? 2.5 : 1.5}
+                    stroke-opacity={s.isLatest ? 1 : 0.85}
+                    stroke-dasharray={s.isLatest ? '' : '4 3'}
+                />
+                {#each s.points as p (p.idx)}
+                    {#if p.value !== null}
                         <circle
-                            cx={xCenter(i)}
-                            cy={yPos(t)}
-                            r={ri === 0 ? 3.5 : 2.5}
-                            fill={palette[ri % palette.length]}
+                            cx={xCenter(p.idx)}
+                            cy={yPos(p.value)}
+                            r={s.isLatest ? 3.5 : 2.5}
+                            fill={s.color}
                         >
-                            <title>{labelFor(i)}: {t.toFixed(2)}s</title>
+                            <title>{p.tooltip}</title>
                         </circle>
-                    {/each}
-                {/if}
+                    {/if}
+                {/each}
             {/each}
 
-            <!-- X axis labels -->
             {#each Array(maxVerses) as _, i}
                 <text
                     x={xCenter(i)}
@@ -161,11 +225,9 @@
                 </text>
             {/each}
 
-            <!-- Axes -->
             <line x1={margin.left} x2={margin.left + innerW} y1={margin.top + innerH} y2={margin.top + innerH} class="axis" />
             <line x1={margin.left} x2={margin.left} y1={margin.top} y2={margin.top + innerH} class="axis" />
 
-            <!-- Axis titles -->
             <text x={margin.left + innerW / 2} y={height - 4} class="axis-title" text-anchor="middle">Verset</text>
             <text
                 x={-(margin.top + innerH / 2)}
@@ -173,7 +235,7 @@
                 class="axis-title"
                 text-anchor="middle"
                 transform="rotate(-90)"
-            >Secunde</text>
+            >{yAxisTitle}</text>
         </svg>
     </div>
 {/if}

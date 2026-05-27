@@ -11,6 +11,7 @@ const MAX_RUNS_PER_ROUND = 200;
  * @property {number} totalTime - total seconds for the run
  * @property {number[]} verseTimes - seconds spent on each verse, in order
  * @property {string[]} [verseLabels] - optional labels for each verse (e.g. verse refs / numbers)
+ * @property {number[]} [verseWordCounts] - typable words per verse, used to derive words-per-minute stats
  */
 
 const isBrowser = typeof window !== 'undefined' && typeof localStorage !== 'undefined';
@@ -86,7 +87,8 @@ export function saveRun(run) {
     timestamp: run.timestamp || Date.now(),
     totalTime: run.totalTime,
     verseTimes: run.verseTimes.map((t) => Math.max(0, Number(t) || 0)),
-    verseLabels: run.verseLabels ? [...run.verseLabels] : undefined
+    verseLabels: run.verseLabels ? [...run.verseLabels] : undefined,
+    verseWordCounts: run.verseWordCounts ? run.verseWordCounts.map((n) => Math.max(0, Number(n) || 0)) : undefined
   };
 
   list.push(stored);

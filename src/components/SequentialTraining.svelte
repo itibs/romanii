@@ -5,6 +5,7 @@
     import RunHistory from '/src/components/RunHistory.svelte';
     import { createStopwatch } from '/src/lib/stopwatch.js';
     import { saveRun } from '/src/lib/runHistory.js';
+    import { countWords } from '/src/lib/verseWords.js';
 
     export let bookName;
     export let chapters;
@@ -86,6 +87,9 @@
     let runSavedForThisAttempt = false;
     let lastSavedRunId = '';
 
+    $: chapterVerseLabels = crtChapter.map((_, i) => String(rollingSumVerseIdx + i + 1));
+    $: chapterVerseWordCounts = crtChapter.map((v) => countWords(v));
+
     $: if (competitionResetSignal !== previousCompetitionResetSignal) {
         previousCompetitionResetSignal = competitionResetSignal;
         resetChapter();
@@ -107,12 +111,12 @@
         stopwatch.stop();
         if (eligibleForScoring && !runSavedForThisAttempt && round) {
             runSavedForThisAttempt = true;
-            const verseLabels = crtChapter.map((_, i) => String(rollingSumVerseIdx + i + 1));
             const saved = saveRun({
                 round,
                 totalTime: elapsedTime,
                 verseTimes: splits.slice(0, crtChapter.length),
-                verseLabels
+                verseLabels: chapterVerseLabels,
+                verseWordCounts: chapterVerseWordCounts
             });
             if (saved) {
                 lastSavedRunId = saved.id;
@@ -176,7 +180,8 @@
     <RunHistory
         round={round}
         title={`Istoric pentru ${bookName} - Capitolul ${chapterIdx + 1}`}
-        verseLabels={crtChapter.map((_, i) => String(rollingSumVerseIdx + i + 1))}
+        verseLabels={chapterVerseLabels}
+        verseWordCounts={chapterVerseWordCounts}
         highlightRunId={lastSavedRunId}
     />
 {/if}

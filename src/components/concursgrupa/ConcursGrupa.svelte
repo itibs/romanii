@@ -5,6 +5,7 @@
 	import RunHistory from '/src/components/RunHistory.svelte';
 	import { createStopwatch } from '/src/lib/stopwatch.js';
 	import { saveRun } from '/src/lib/runHistory.js';
+	import { countWords } from '/src/lib/verseWords.js';
 
 	export let round;
 	export let verses;
@@ -43,6 +44,7 @@
 	let discoveredVerseText = '';
 
 	$: verseLabels = verses.map((v, i) => (v && v.ref) ? v.ref : String(i + 1));
+	$: verseWordCounts = verses.map((v) => countWords(v && v.verse ? v.verse : ''));
 
     $: if (!timerStarted && discoveredVerseText.length > 0) {
         if (!trainingMode) {
@@ -60,7 +62,8 @@
                 round,
                 totalTime: elapsedTime,
                 verseTimes: splits.slice(0, verses.length),
-                verseLabels
+                verseLabels,
+                verseWordCounts
             });
             if (saved) {
                 lastSavedRunId = saved.id;
@@ -130,6 +133,7 @@
 		round={round}
 		title={`Istoric pentru ${round}`}
 		verseLabels={verseLabels}
+		verseWordCounts={verseWordCounts}
 		highlightRunId={lastSavedRunId}
 	/>
 {/if}

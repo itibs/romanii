@@ -2,7 +2,9 @@
 	import VersesInput from '/src/components/VersesInput.svelte';
 	import WrittenText from '/src/components/WrittenText.svelte';
 	import ScoreSubmitForm from '/src/components/ScoreSubmitForm.svelte';
+	import RunHistory from '/src/components/RunHistory.svelte';
 	import { createStopwatch } from '/src/lib/stopwatch.js';
+	import { saveRun } from '/src/lib/runHistory.js';
 
 	export let round;
 	export let verses;
@@ -13,6 +15,8 @@
 
     let eligibleForScoring = false;
 	let scoreResetSignal = 0;
+	let runSavedForThisAttempt = false;
+	let lastSavedRunId = '';
 
 	let resetVersesInput = () => 0;
 
@@ -20,6 +24,7 @@
 	const stopwatchState = stopwatch.state;
 	$: timerStarted = $stopwatchState.hasStarted;
 	$: elapsedTime = $stopwatchState.elapsedTime;
+	$: splits = $stopwatchState.splits;
 
 	let verseIdx = 0;
 	$: if (verses) {
@@ -37,19 +42,42 @@
 
 	let discoveredVerseText = '';
 
+	$: verseLabels = verses.map((v, i) => (v && v.ref) ? v.ref : String(i + 1));
+
     $: if (!timerStarted && discoveredVerseText.length > 0) {
         if (!trainingMode) {
             eligibleForScoring = true;
         }
+        runSavedForThisAttempt = false;
         stopwatch.start();
     }
 
     $: if (timerStarted && verseIdx == verses.length) {
         stopwatch.stop();
+        if (eligibleForScoring && !runSavedForThisAttempt && round) {
+            runSavedForThisAttempt = true;
+            const saved = saveRun({
+                round,
+                totalTime: elapsedTime,
+                verseTimes: splits.slice(0, verses.length),
+                verseLabels
+            });
+            if (saved) {
+                lastSavedRunId = saved.id;
+            }
+        }
     }
 
     $: if (trainingMode) {
         eligibleForScoring = false;
+    }
+
+    function handleVerseDone() {
+        stopwatch.split();
+        if (verseIdx < verses.length) {
+            verseIdx++;
+        }
+        discoveredVerseText = '';
     }
 
     function reset() {
@@ -58,6 +86,7 @@
         verseIdx = 0;
         discoveredVerseText = '';
 		eligibleForScoring = false;
+		runSavedForThisAttempt = false;
 		resetVersesInput();
     }
 </script>

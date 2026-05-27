@@ -2,7 +2,9 @@
     import VersesInput from '/src/components/VersesInput.svelte';
     import WrittenText from '/src/components/WrittenText.svelte';
     import ScoreSubmitForm from '/src/components/ScoreSubmitForm.svelte';
+    import RunHistory from '/src/components/RunHistory.svelte';
     import { createStopwatch } from '/src/lib/stopwatch.js';
+    import { saveRun } from '/src/lib/runHistory.js';
 
     export let bookName;
     export let chapters;
@@ -78,8 +80,11 @@
     const stopwatchState = stopwatch.state;
     $: timerStarted = $stopwatchState.hasStarted;
     $: elapsedTime = $stopwatchState.elapsedTime;
+    $: splits = $stopwatchState.splits;
 
     let previousCompetitionResetSignal = competitionResetSignal;
+    let runSavedForThisAttempt = false;
+    let lastSavedRunId = '';
 
     $: if (competitionResetSignal !== previousCompetitionResetSignal) {
         previousCompetitionResetSignal = competitionResetSignal;
@@ -94,11 +99,33 @@
 
     $: if (!timerStarted && competitiveMode && discoveredVerseText.length > 0) {
         eligibleForScoring = competitiveMode;
+        runSavedForThisAttempt = false;
         stopwatch.start();
     }
 
     $: if (timerStarted && verseIdx == crtChapter.length) {
         stopwatch.stop();
+        if (eligibleForScoring && !runSavedForThisAttempt && round) {
+            runSavedForThisAttempt = true;
+            const verseLabels = crtChapter.map((_, i) => String(rollingSumVerseIdx + i + 1));
+            const saved = saveRun({
+                round,
+                totalTime: elapsedTime,
+                verseTimes: splits.slice(0, crtChapter.length),
+                verseLabels
+            });
+            if (saved) {
+                lastSavedRunId = saved.id;
+            }
+        }
+    }
+
+    function handleVerseDone() {
+        if (competitiveMode) {
+            stopwatch.split();
+        }
+        verseIdx++;
+        discoveredVerseText = '';
     }
 
     function resetChapter() {
@@ -107,6 +134,7 @@
         verseIdx = start.verse - 1;
         discoveredVerseText = '';
         eligibleForScoring = false;
+        runSavedForThisAttempt = false;
         resetVersesInput();
     }
 </script>
@@ -115,7 +143,7 @@
 <WrittenText startIdx={rollingSumVerseIdx+start.verse} verses={crtChapter.slice(start.verse-1, verseIdx).concat(verseIdx < crtChapter.length ? [discoveredVerseText] : [])}></WrittenText>
 <br>
 {#key crtVerse}
-    <VersesInput inputText={crtVerse} fnVerseDone={() => {verseIdx++; discoveredVerseText = ''}} bind:discoveredText={discoveredVerseText} disableNextButton={competitiveMode} bind:reset={resetVersesInput}></VersesInput>
+    <VersesInput inputText={crtVerse} fnVerseDone={handleVerseDone} bind:discoveredText={discoveredVerseText} disableNextButton={competitiveMode} bind:reset={resetVersesInput}></VersesInput>
 {/key}
 <br>
 <br>

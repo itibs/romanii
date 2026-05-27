@@ -143,11 +143,11 @@
                 </div>
                 <p class="hint">
                     {#if metric === 'wpm'}
-                        Barele sunt ultima încercare. <strong>Mai înalt = mai rapid.</strong>
+                        Barele reprezintă cea mai recentă încercare din cele bifate. <strong>Mai înalt = mai rapid.</strong>
                         <span class="legend-color">🟢 verde = cel mai rapid verset, 🔴 roșu = cel mai lent</span>.
                         Lungimea versetului este normalizată, așa că un verset lung dar tipărit rapid nu mai arată „lent”.
                     {:else}
-                        Barele sunt ultima încercare. <strong>Mai înalt = mai lent.</strong>
+                        Barele reprezintă cea mai recentă încercare din cele bifate. <strong>Mai înalt = mai lent.</strong>
                         <span class="legend-color">🟢 verde = cel mai rapid verset (timp mic), 🔴 roșu = cel mai lent</span>.
                         Versetele lungi apar în mod natural ca bare mai înalte.
                     {/if}
@@ -191,7 +191,7 @@
                                             on:change={() => toggleSelected(run.id)}
                                         />
                                         {#if selectedIds.has(run.id)}
-                                            {#if i === 0}
+                                            {#if chartedRuns[0] && chartedRuns[0].id === run.id}
                                                 <span class="swatch swatch-gradient" title="Gradient: roșu = mai slab, verde = mai bun"></span>
                                             {:else}
                                                 <span class="swatch" style="background: {colorFor(run.id)}"></span>

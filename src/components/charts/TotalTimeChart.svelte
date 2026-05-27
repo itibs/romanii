@@ -83,9 +83,6 @@
         return `${v.toFixed(1)}s`;
     }
 
-    // Single source of truth for both the polyline and the dots so they
-    // always share the same coordinates (avoids stale $: line strings when
-    // yMin/yMax update after new runs arrive).
     $: plotPoints = chrono.map((r, i) => ({
         id: r.id,
         x: xPos(i),

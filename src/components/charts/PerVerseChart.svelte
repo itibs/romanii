@@ -11,8 +11,9 @@
      *                because there are more words to type.
      *  - 'seconds' — raw time per verse. Lower bars = faster.
      *
-     * The most-recent run is rendered as filled bars in the background and
-     * a thick polyline; other selected runs are dashed polylines.
+     * The most-recent run is rendered as filled bars (colour-coded by
+     * per-verse "goodness": green = best, red = worst) plus a polyline.
+     * Other selected runs are dashed polylines in palette colours.
      */
 
     export let runs = [];
@@ -61,8 +62,6 @@
         return String(i + 1);
     }
 
-    // Build the rendered series fully reactively so any change to runs /
-    // metric / verseWordCounts forces a re-render.
     $: series = runs.map((run, ri) => {
         if (!run || !run.verseTimes) return null;
         const points = run.verseTimes.map((_, i) => {
@@ -88,37 +87,67 @@
         return vals;
     })();
 
-    // Robust Y-axis upper bound — protects against single outliers.
-    $: maxValue = (() => {
-        if (allValues.length === 0) return 1;
-        const sorted = [...allValues].sort((a, b) => a - b);
-        const median = sorted[Math.floor(sorted.length / 2)] || 1;
-        const p90Idx = Math.min(sorted.length - 1, Math.floor(sorted.length * 0.9));
-        const p90 = sorted[p90Idx] || median;
-        const peak = sorted[sorted.length - 1] || median;
-        const robust = Math.max(median * 4, p90 * 1.15, 1);
-        if (peak <= robust * 1.5) return Math.max(robust, peak);
-        return robust;
-    })();
-
-    function niceCeil(v) {
-        if (v <= 0) return 1;
-        const pow = Math.pow(10, Math.floor(Math.log10(v)));
-        const n = v / pow;
+    // Tight Y-axis bound: pick a "nice" tick step around max/5, ceil max to a
+    // multiple of that step. Avoids the huge whitespace caused by the old
+    // robust scaling while still producing readable tick labels.
+    function niceTickStep(rough) {
+        if (rough <= 0) return 1;
+        const pow = Math.pow(10, Math.floor(Math.log10(rough)));
+        const norm = rough / pow;
         let nice;
-        if (n <= 1) nice = 1;
-        else if (n <= 2) nice = 2;
-        else if (n <= 5) nice = 5;
+        if (norm < 1.5) nice = 1;
+        else if (norm < 3) nice = 2;
+        else if (norm < 7) nice = 5;
         else nice = 10;
         return nice * pow;
     }
-    $: yMax = niceCeil(maxValue * 1.05);
-    $: yTicks = (() => {
+
+    $: maxValue = allValues.length > 0 ? Math.max(...allValues) : 1;
+    $: yAxis = (() => {
+        if (maxValue <= 0) return { yMax: 1, ticks: [0, 1] };
+        const step = niceTickStep(maxValue / 5);
+        const yMax = Math.ceil(maxValue / step) * step;
         const ticks = [];
-        const steps = 5;
-        for (let i = 0; i <= steps; i++) ticks.push((yMax * i) / steps);
-        return ticks;
+        for (let v = 0; v <= yMax + step / 2; v += step) ticks.push(v);
+        return { yMax, ticks, step };
     })();
+    $: yMax = yAxis.yMax;
+    $: yTicks = yAxis.ticks;
+
+    // --- Per-bar colour coding (latest run only) ---
+    $: latestValueRange = (() => {
+        if (!series[0]) return { min: 0, max: 0 };
+        const vals = series[0].points.map((p) => p.value).filter((v) => v !== null && isFinite(v));
+        if (vals.length === 0) return { min: 0, max: 0 };
+        return { min: Math.min(...vals), max: Math.max(...vals) };
+    })();
+
+    function goodnessFor(value) {
+        if (value === null || !isFinite(value)) return 0.5;
+        const { min, max } = latestValueRange;
+        if (max <= min) return 0.5;
+        const t = (value - min) / (max - min);
+        return effectiveMetric === 'wpm' ? t : 1 - t;
+    }
+
+    function barFill(value) {
+        if (value === null) return 'rgba(150,150,150,0.15)';
+        const g = goodnessFor(value);
+        const hue = 120 * g;
+        return `hsla(${hue}, 75%, 50%, 0.55)`;
+    }
+    function barStroke(value) {
+        if (value === null) return 'rgba(150,150,150,0.3)';
+        const g = goodnessFor(value);
+        const hue = 120 * g;
+        return `hsl(${hue}, 75%, 35%)`;
+    }
+    function dotColor(value) {
+        if (value === null) return '#999';
+        const g = goodnessFor(value);
+        const hue = 120 * g;
+        return `hsl(${hue}, 75%, 35%)`;
+    }
 
     const width = 720;
     const height = 320;
@@ -140,7 +169,7 @@
 
     $: yTickFormatter = effectiveMetric === 'wpm'
         ? (t) => `${t.toFixed(0)}`
-        : (t) => `${t.toFixed(1)}s`;
+        : (t) => (t >= 10 ? `${t.toFixed(0)}s` : `${t.toFixed(1)}s`);
     $: yAxisTitle = effectiveMetric === 'wpm' ? 'Cuvinte / minut' : 'Secunde';
 
     function polylinePoints(points) {
@@ -179,6 +208,9 @@
                             y={yPos(p.value)}
                             width={Math.max(1, xStep * 0.64)}
                             height={Math.max(0, margin.top + innerH - yPos(p.value))}
+                            fill={barFill(p.value)}
+                            stroke={barStroke(p.value)}
+                            stroke-width="1"
                             class="bar"
                             class:hover={hoverIdx === p.idx}
                             on:mouseenter={() => (hoverIdx = p.idx)}
@@ -191,27 +223,46 @@
             {/if}
 
             {#each series as s, ri (s.runId)}
-                <polyline
-                    points={polylinePoints(s.points)}
-                    fill="none"
-                    stroke={s.color}
-                    stroke-width={s.isLatest ? 2.5 : 1.5}
-                    stroke-opacity={s.isLatest ? 1 : 0.85}
-                    stroke-dasharray={s.isLatest ? '' : '4 3'}
-                />
-                {#each s.points as p (p.idx)}
+                {#if !s.isLatest}
+                    <polyline
+                        points={polylinePoints(s.points)}
+                        fill="none"
+                        stroke={s.color}
+                        stroke-width="1.5"
+                        stroke-opacity="0.85"
+                        stroke-dasharray="4 3"
+                    />
+                    {#each s.points as p (p.idx)}
+                        {#if p.value !== null}
+                            <circle
+                                cx={xCenter(p.idx)}
+                                cy={yPos(p.value)}
+                                r="2.5"
+                                fill={s.color}
+                            >
+                                <title>{p.tooltip}</title>
+                            </circle>
+                        {/if}
+                    {/each}
+                {/if}
+            {/each}
+
+            {#if series[0]}
+                {#each series[0].points as p (p.idx)}
                     {#if p.value !== null}
                         <circle
                             cx={xCenter(p.idx)}
                             cy={yPos(p.value)}
-                            r={s.isLatest ? 3.5 : 2.5}
-                            fill={s.color}
+                            r="3.5"
+                            fill={dotColor(p.value)}
+                            stroke="#fff"
+                            stroke-width="1"
                         >
                             <title>{p.tooltip}</title>
                         </circle>
                     {/if}
                 {/each}
-            {/each}
+            {/if}
 
             {#each Array(maxVerses) as _, i}
                 <text
@@ -260,13 +311,10 @@
         stroke-width: 1;
     }
     .bar {
-        fill: rgba(225, 87, 89, 0.18);
-        stroke: rgba(225, 87, 89, 0.45);
-        stroke-width: 1;
-        transition: fill 0.15s ease;
+        transition: filter 0.15s ease;
     }
     .bar.hover {
-        fill: rgba(225, 87, 89, 0.4);
+        filter: brightness(0.85);
     }
     .tick {
         fill: #555;
@@ -288,5 +336,8 @@
     }
     :global(body.dark-mode) .axis-title {
         fill: #d7d7d7;
+    }
+    :global(body.dark-mode) .bar.hover {
+        filter: brightness(1.15);
     }
 </style>

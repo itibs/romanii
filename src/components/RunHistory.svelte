@@ -143,11 +143,13 @@
                 </div>
                 <p class="hint">
                     {#if metric === 'wpm'}
-                        Bara roșie e ultima încercare. <strong>Mai înalt = mai rapid.</strong> Lungimea versetului
-                        este normalizată — așa că un verset lung dar tipărit rapid nu mai arată „lent”.
+                        Barele sunt ultima încercare. <strong>Mai înalt = mai rapid.</strong>
+                        <span class="legend-color">🟢 verde = cel mai rapid verset, 🔴 roșu = cel mai lent</span>.
+                        Lungimea versetului este normalizată, așa că un verset lung dar tipărit rapid nu mai arată „lent”.
                     {:else}
-                        Bara roșie e ultima încercare. <strong>Mai înalt = mai lent.</strong> Versetele lungi
-                        apar în mod natural ca bare mai înalte.
+                        Barele sunt ultima încercare. <strong>Mai înalt = mai lent.</strong>
+                        <span class="legend-color">🟢 verde = cel mai rapid verset (timp mic), 🔴 roșu = cel mai lent</span>.
+                        Versetele lungi apar în mod natural ca bare mai înalte.
                     {/if}
                     Bifează încercări din listă pentru a le compara.
                 </p>
@@ -189,7 +191,11 @@
                                             on:change={() => toggleSelected(run.id)}
                                         />
                                         {#if selectedIds.has(run.id)}
-                                            <span class="swatch" style="background: {colorFor(run.id)}"></span>
+                                            {#if i === 0}
+                                                <span class="swatch swatch-gradient" title="Gradient: roșu = mai slab, verde = mai bun"></span>
+                                            {:else}
+                                                <span class="swatch" style="background: {colorFor(run.id)}"></span>
+                                            {/if}
                                         {/if}
                                     </label>
                                 </td>
@@ -333,6 +339,15 @@
         height: 12px;
         border-radius: 2px;
         border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+    .swatch-gradient {
+        width: 28px;
+        background: linear-gradient(
+            to right,
+            hsl(0, 75%, 50%),
+            hsl(60, 75%, 50%),
+            hsl(120, 75%, 50%)
+        );
     }
     button.small {
         font-size: 0.85em;

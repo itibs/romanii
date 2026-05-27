@@ -71,6 +71,20 @@
         return picked;
     })();
 
+    // Stable signature so swatches re-render when the charted set or order changes.
+    $: chartedRunIds = chartedRuns.map((r) => r.id).join('|');
+
+    // Legend swatch per run id — must stay in sync with PerVerseChart series colours:
+    // index 0 = gradient bars; index 1+ = palette[that index] dashed line.
+    $: swatchById = (() => {
+        /** @type {Record<string, string>} */
+        const m = {};
+        chartedRuns.forEach((r, i) => {
+            m[r.id] = i === 0 ? 'gradient' : palette[i % palette.length];
+        });
+        return m;
+    })();
+
     function toggleSelected(id) {
         const next = new Set(selectedIds);
         if (next.has(id)) next.delete(id);
@@ -96,12 +110,6 @@
         if (!confirm('Sigur vrei să ștergi tot istoricul pentru această rundă?')) return;
         clearRound(round);
         selectedIds = new Set();
-    }
-
-    function colorFor(id) {
-        const idx = chartedRuns.findIndex((r) => r.id === id);
-        if (idx < 0) return '#999';
-        return palette[idx % palette.length];
     }
 
     function formatDelta(run) {
@@ -191,11 +199,13 @@
                                             on:change={() => toggleSelected(run.id)}
                                         />
                                         {#if selectedIds.has(run.id)}
-                                            {#if chartedRuns[0] && chartedRuns[0].id === run.id}
-                                                <span class="swatch swatch-gradient" title="Gradient: roșu = mai slab, verde = mai bun"></span>
-                                            {:else}
-                                                <span class="swatch" style="background: {colorFor(run.id)}"></span>
-                                            {/if}
+                                            {#key chartedRunIds}
+                                                {#if swatchById[run.id] === 'gradient'}
+                                                    <span class="swatch swatch-gradient" title="Gradient: roșu = mai slab, verde = mai bun"></span>
+                                                {:else if swatchById[run.id]}
+                                                    <span class="swatch" style="background: {swatchById[run.id]}"></span>
+                                                {/if}
+                                            {/key}
                                         {/if}
                                     </label>
                                 </td>

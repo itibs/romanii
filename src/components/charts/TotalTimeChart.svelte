@@ -4,37 +4,56 @@
     /**
      * Renders the trend of total run time over time.
      * Runs are plotted in chronological order on the X axis (oldest to newest)
-     * and total time on the Y axis.
+     * and total time on the Y axis. The Y range is tight to the actual data
+     * (both min and max) so a series of e.g. 150–200s runs doesn't waste
+     * 75% of the chart on whitespace below 150s.
      */
     export let runs = [];
     export let highlightId = '';
 
     $: chrono = [...runs].sort((a, b) => a.timestamp - b.timestamp);
 
-    function niceCeil(v) {
-        if (v <= 0) return 1;
-        const pow = Math.pow(10, Math.floor(Math.log10(v)));
-        const n = v / pow;
+    function niceTickStep(rough) {
+        if (rough <= 0) return 1;
+        const pow = Math.pow(10, Math.floor(Math.log10(rough)));
+        const norm = rough / pow;
         let nice;
-        if (n <= 1) nice = 1;
-        else if (n <= 2) nice = 2;
-        else if (n <= 5) nice = 5;
+        if (norm < 1.5) nice = 1;
+        else if (norm < 3) nice = 2;
+        else if (norm < 7) nice = 5;
         else nice = 10;
         return nice * pow;
     }
 
-    $: maxTotal = chrono.reduce((m, r) => Math.max(m, r.totalTime || 0), 0);
-    $: yMax = niceCeil(Math.max(1, maxTotal * 1.05));
-    $: yTicks = (() => {
+    $: times = chrono.map((r) => r.totalTime || 0).filter((t) => isFinite(t));
+    $: minTotal = times.length > 0 ? Math.min(...times) : 0;
+    $: maxTotal = times.length > 0 ? Math.max(...times) : 1;
+
+    $: yAxis = (() => {
+        if (times.length === 0) return { yMin: 0, yMax: 1, step: 0.5, ticks: [0, 0.5, 1] };
+
+        // Pad both ends; when min === max use 10% of the value as padding so
+        // a single point still has a visible chart region.
+        const range = maxTotal - minTotal;
+        const padding = range > 0 ? range * 0.12 : Math.max(0.5, maxTotal * 0.1);
+        const rawMin = Math.max(0, minTotal - padding);
+        const rawMax = maxTotal + padding;
+
+        const span = rawMax - rawMin;
+        const step = niceTickStep(span / 5);
+        const yMin = Math.max(0, Math.floor(rawMin / step) * step);
+        const yMax = Math.ceil(rawMax / step) * step;
         const ticks = [];
-        const steps = 5;
-        for (let i = 0; i <= steps; i++) ticks.push((yMax * i) / steps);
-        return ticks;
+        for (let v = yMin; v <= yMax + step / 2; v += step) ticks.push(v);
+        return { yMin, yMax, step, ticks };
     })();
+    $: yMin = yAxis.yMin;
+    $: yMax = yAxis.yMax;
+    $: yTicks = yAxis.ticks;
 
     const width = 720;
     const height = 240;
-    const margin = { top: 16, right: 16, bottom: 48, left: 48 };
+    const margin = { top: 16, right: 16, bottom: 48, left: 56 };
     $: innerW = width - margin.left - margin.right;
     $: innerH = height - margin.top - margin.bottom;
 
@@ -45,7 +64,8 @@
         return margin.left + xStep * i;
     }
     function yPos(v) {
-        return margin.top + innerH - (v / yMax) * innerH;
+        const denom = yMax - yMin || 1;
+        return margin.top + innerH - ((v - yMin) / denom) * innerH;
     }
 
     function fmtDate(ts) {
@@ -57,9 +77,14 @@
         }
     }
 
+    function fmtTick(v) {
+        if (v >= 100) return `${v.toFixed(0)}s`;
+        if (v >= 10) return `${v.toFixed(0)}s`;
+        return `${v.toFixed(1)}s`;
+    }
+
     $: line = chrono.map((r, i) => `${xPos(i)},${yPos(r.totalTime)}`).join(' ');
 
-    // Show up to ~8 evenly-spaced x labels
     $: xLabelIdxs = (() => {
         if (chrono.length <= 8) return chrono.map((_, i) => i);
         const out = [];
@@ -84,7 +109,7 @@
                     class="grid"
                 />
                 <text x={margin.left - 6} y={yPos(t)} class="tick" text-anchor="end" dominant-baseline="middle">
-                    {t.toFixed(1)}s
+                    {fmtTick(t)}
                 </text>
             {/each}
 

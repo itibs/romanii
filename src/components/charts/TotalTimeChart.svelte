@@ -9,9 +9,11 @@
      * 75% of the chart on whitespace below 150s.
      */
     export let runs = [];
+    /** Optional run id to highlight; defaults to the chronologically latest. */
     export let highlightId = '';
 
     $: chrono = [...runs].sort((a, b) => a.timestamp - b.timestamp);
+    $: effectiveHighlightId = highlightId || (chrono.length ? chrono[chrono.length - 1].id : '');
 
     function niceTickStep(rough) {
         if (rough <= 0) return 1;
@@ -32,8 +34,6 @@
     $: yAxis = (() => {
         if (times.length === 0) return { yMin: 0, yMax: 1, step: 0.5, ticks: [0, 0.5, 1] };
 
-        // Pad both ends; when min === max use 10% of the value as padding so
-        // a single point still has a visible chart region.
         const range = maxTotal - minTotal;
         const padding = range > 0 ? range * 0.12 : Math.max(0.5, maxTotal * 0.1);
         const rawMin = Math.max(0, minTotal - padding);
@@ -83,7 +83,17 @@
         return `${v.toFixed(1)}s`;
     }
 
-    $: line = chrono.map((r, i) => `${xPos(i)},${yPos(r.totalTime)}`).join(' ');
+    // Single source of truth for both the polyline and the dots so they
+    // always share the same coordinates (avoids stale $: line strings when
+    // yMin/yMax update after new runs arrive).
+    $: plotPoints = chrono.map((r, i) => ({
+        id: r.id,
+        x: xPos(i),
+        y: yPos(r.totalTime),
+        totalTime: r.totalTime,
+        timestamp: r.timestamp
+    }));
+    $: polylinePoints = plotPoints.map((p) => `${p.x},${p.y}`).join(' ');
 
     $: xLabelIdxs = (() => {
         if (chrono.length <= 8) return chrono.map((_, i) => i);
@@ -113,20 +123,22 @@
                 </text>
             {/each}
 
-            {#if chrono.length > 1}
-                <polyline points={line} fill="none" stroke="#4e79a7" stroke-width="2" />
-            {/if}
+            {#key polylinePoints}
+                {#if plotPoints.length > 1}
+                    <polyline points={polylinePoints} fill="none" stroke="#4e79a7" stroke-width="2" />
+                {/if}
+            {/key}
 
-            {#each chrono as r, i}
+            {#each plotPoints as p (p.id)}
                 <circle
-                    cx={xPos(i)}
-                    cy={yPos(r.totalTime)}
-                    r={r.id === highlightId ? 5.5 : 3.5}
-                    fill={r.id === highlightId ? '#e15759' : '#4e79a7'}
+                    cx={p.x}
+                    cy={p.y}
+                    r={p.id === effectiveHighlightId ? 5.5 : 3.5}
+                    fill={p.id === effectiveHighlightId ? '#e15759' : '#4e79a7'}
                     stroke="#fff"
                     stroke-width="1"
                 >
-                    <title>{fmtDate(r.timestamp)}: {r.totalTime.toFixed(2)}s</title>
+                    <title>{fmtDate(p.timestamp)}: {p.totalTime.toFixed(2)}s</title>
                 </circle>
             {/each}
 

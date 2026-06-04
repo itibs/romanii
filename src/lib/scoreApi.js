@@ -8,6 +8,8 @@ const SCORES_URL = 'https://dz5rd0lqnb.execute-api.eu-central-1.amazonaws.com/Pr
  * @param {string} round
  */
 export async function submitScore(score, name, round) {
+  name = name.trim();
+
   if (name === '') {
     alert('Numele nu poate fi gol');
     return;

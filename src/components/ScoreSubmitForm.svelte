@@ -17,6 +17,7 @@
 	}
 
 	async function handleSubmit() {
+		userName = userName.trim();
 		const response = await submitScore(score, userName, round);
 		if (response !== undefined) {
 			submitted = true;

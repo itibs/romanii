@@ -25,6 +25,11 @@
 			first: 33,
 			nrVerses: 10
 		},
+		'Versete 2025-2026.5': {
+			description: 'Versetele 44-51',
+			first: 43,
+			nrVerses: 8
+		},
 	};
 </script>
 

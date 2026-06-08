@@ -151,5 +151,14 @@ export const verses = {
         { "ref": "1 Timotei 6:10", "verse": "Căci iubirea de bani este rădăcina tuturor relelor; și unii, care au umblat după ea, au rătăcit de la credință și s-au străpuns singuri cu o mulțime de chinuri." },
         { "ref": "2 Timotei 2:22", "verse": "Fugi de poftele tinereții și urmărește neprihănirea, credința, dragostea, pacea, împreună cu cei ce cheamă pe Domnul dintr-o inimă curată." },
         { "ref": "1 Ioan 1:9", "verse": "Dacă ne mărturisim păcatele, El este credincios și drept ca să ne ierte păcatele și să ne curățească de orice nelegiuire." },
+
+        { "ref": "Deuteronomul 31:8", "verse": "Domnul Însuşi va merge înaintea ta, El Însuşi va fi cu tine, nu te va părăsi şi nu te va lăsa; nu te teme şi nu te înspăimânta!" },
+        { "ref": "Psalmul 62:7", "verse": "Pe Dumnezeu se întemeiază ajutorul şi slava mea; în Dumnezeu este stânca puterii mele, locul meu de adăpost." },
+        { "ref": "Proverbe 3:5", "verse": "Încrede-te în Domnul din toată inima ta, și nu te bizui pe înțelepciunea ta!" },
+        { "ref": "Isaia 55:8", "verse": "Căci gândurile Mele nu sunt gândurile voastre, și căile voastre nu sunt căile Mele, zice Domnul." },
+        { "ref": "Isaia 55:9", "verse": "Ci cât sunt de sus cerurile față de pământ, atât sunt de sus căile Mele față de căile voastre și gândurile Mele față de gândurile voastre." },
+        { "ref": "Evrei 4:13", "verse": "Nicio făptură nu este ascunsă de El, ci totul este gol și descoperit înaintea ochilor Aceluia cu care avem a face." },
+        { "ref": "1 Ioan 1:6", "verse": "Dacă zicem că avem părtăşie cu El, şi umblăm în întuneric, minţim şi nu trăim adevărul." },
+        { "ref": "1 Ioan 1:7", "verse": "Dar dacă umblăm în lumină, după cum El însuşi este în lumină, avem părtăşie unii cu alţii; şi sângele lui Isus Hristos, Fiul Lui, ne curăţă de orice păcat." },
     ]
 }

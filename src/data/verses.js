@@ -928,6 +928,20 @@ export const chapters = {
             "Şi tocmai un astfel de Mare Preot ne trebuia: sfânt, nevinovat, fără pată, despărţit de păcătoşi şi înălţat mai presus de ceruri,",
             "care n-are nevoie, ca ceilalţi mari preoţi, să aducă jertfe în fiecare zi, întâi pentru păcatele sale şi apoi pentru păcatele norodului, căci lucrul acesta l-a făcut o dată pentru totdeauna, când S-a adus jertfă pe Sine Însuşi.",
             "În adevăr, Legea pune mari preoţi pe nişte oameni supuşi slăbiciunii, dar cuvântul jurământului, făcut după ce a fost dată Legea, pune pe Fiul, care este desăvârşit pentru veşnicie."
+        ], [
+            "Punctul cel mai însemnat al celor spuse este că avem un Mare Preot care S-a aşezat la dreapta scaunului de domnie al Măririi, în ceruri,",
+            "ca slujitor al Locului Preasfânt şi al adevăratului cort, care a fost ridicat nu de un om, ci de Domnul.",
+            "Orice mare preot este pus să aducă lui Dumnezeu daruri şi jertfe. De aceea era de trebuinţă ca şi celălalt Mare Preot să aibă ceva de adus.",
+            "Dacă ar fi pe pământ, nici n-ar mai fi preot, fiindcă sunt cei ce aduc darurile după Lege.",
+            "Ei fac o slujbă care este chipul şi umbra lucrurilor cereşti, după poruncile primite de Moise de la Dumnezeu, când avea să facă cortul: „Ia seama”, i s-a zis, „să faci totul după chipul care ţi-a fost arătat pe munte.”",
+            "Dar, acum, Hristos a căpătat o slujbă cu atât mai înaltă, cu cât legământul al cărui Mijlocitor este El e mai bun, căci este aşezat pe făgăduinţe mai bune.",
+            "În adevăr, dacă legământul dintâi ar fi fost fără cusur, n-ar mai fi fost vorba să fie înlocuit cu un al doilea.",
+            "Căci ca o mustrare a zis Dumnezeu lui Israel: „Iată, vin zile”, zice Domnul, „când voi face cu casa lui Israel şi cu casa lui Iuda un legământ nou,",
+            "nu ca legământul pe care l-am făcut cu părinţii lor în ziua când i-am apucat de mână ca să-i scot din ţara Egiptului. Pentru că n-au rămas în legământul Meu şi nici Mie nu Mi-a păsat de ei”, zice Domnul.",
+            "„Dar iată legământul pe care-l voi face cu casa lui Israel după acele zile”, zice Domnul: „Voi pune legile Mele în mintea lor şi le voi scrie în inimile lor; Eu voi fi Dumnezeul lor, şi ei vor fi poporul Meu.",
+            "Şi nu va mai învăţa fiecare pe vecinul sau pe fratele său zicând: 'Cunoaşte pe Domnul!' Căci toţi Mă vor cunoaşte, de la cel mai mic până la cel mai mare dintre ei.",
+            "Pentru că le voi ierta nelegiuirile şi nu-Mi voi mai aduce aminte de păcatele şi fărădelegile lor.”",
+            "Prin faptul că zice: „Un nou legământ”, a mărturisit că cel dintâi este vechi, iar ce este vechi, ce a îmbătrânit, este aproape de pieire."
         ]
     ]
 }

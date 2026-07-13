@@ -942,6 +942,35 @@ export const chapters = {
             "Şi nu va mai învăţa fiecare pe vecinul sau pe fratele său zicând: 'Cunoaşte pe Domnul!' Căci toţi Mă vor cunoaşte, de la cel mai mic până la cel mai mare dintre ei.",
             "Pentru că le voi ierta nelegiuirile şi nu-Mi voi mai aduce aminte de păcatele şi fărădelegile lor.”",
             "Prin faptul că zice: „Un nou legământ”, a mărturisit că cel dintâi este vechi, iar ce este vechi, ce a îmbătrânit, este aproape de pieire."
+        ], [
+            "Legământul dintâi avea şi el porunci privitoare la slujba dumnezeiască şi la un locaş pământesc de închinare.",
+            "În adevăr, s-a făcut un cort. În partea dinainte, numită „Locul Sfânt”, erau sfeşnicul, masa şi pâinile pentru punerea înaintea Domnului;",
+            "după perdeaua a doua se afla partea cortului care se chema „Locul Preasfânt”.",
+            "El avea un altar de aur pentru tămâie şi chivotul legământului, ferecat peste tot cu aur. În chivot erau un vas de aur cu mană, toiagul lui Aaron, care înfrunzise, şi tablele legământului.",
+            "Deasupra erau heruvimii slavei, care acopereau capacul ispăşirii cu umbra lor. Nu este vremea să vorbim acum cu de-amănuntul despre aceste lucruri.",
+            "Şi după ce au fost întocmite astfel lucrurile acestea, preoţii care fac slujbele, intră totdeauna în partea dintâi a cortului.",
+            "Dar în partea a doua intră numai marele preot, o dată pe an, şi nu fără sânge, pe care îl aduce pentru sine însuşi şi pentru păcatele din neştiinţă ale norodului.",
+            "Prin aceasta, Duhul Sfânt arăta că drumul în Locul Preasfânt nu era încă deschis câtă vreme stătea în picioare cortul dintâi.",
+            "Aceasta era o asemănare pentru vremurile de acum, când se aduc daruri şi jertfe care nu pot duce pe cel ce se închină în felul acesta la desăvârşirea cerută de cugetul lui.",
+            "Ele sunt doar nişte porunci pământeşti, date ca toate cele privitoare la mâncăruri, băuturi şi felurite spălături, până la o vreme de îndreptare.",
+            "Dar Hristos a venit ca Mare Preot al bunurilor viitoare, a trecut prin cortul acela mai mare şi mai desăvârşit, care nu este făcut de mâini, adică nu este din zidirea aceasta,",
+            "şi a intrat, o dată pentru totdeauna, în Locul Preasfânt nu cu sânge de ţapi şi de viţei, ci cu însuşi sângele Său, după ce a căpătat o răscumpărare veşnică.",
+            "Căci, dacă sângele taurilor şi al ţapilor şi cenuşa unei vaci, stropite peste cei întinaţi, îi sfinţesc şi le aduc curăţirea trupului,",
+            "cu cât mai mult sângele lui Hristos, care, prin Duhul cel veşnic, S-a adus pe Sine Însuşi jertfă fără pată lui Dumnezeu, vă va curăţi cugetul vostru de faptele moarte, ca să slujiţi Dumnezeului celui viu!",
+            "Şi tocmai de aceea este El Mijlocitorul unui legământ nou, pentru ca, prin moartea Lui pentru răscumpărarea din abaterile făptuite sub legământul dintâi, cei ce au fost chemaţi să capete veşnica moştenire care le-a fost făgăduită.",
+            "În adevăr, acolo unde este un testament, trebuie neapărat să aibă loc moartea celui ce l-a făcut.",
+            "Pentru că un testament nu capătă putere decât după moarte. N-are nicio putere câtă vreme trăieşte cel ce l-a făcut.",
+            "De aceea şi întâiul legământ n-a fost sfinţit fără sânge.",
+            "Şi, într-adevăr, Moise, după ce a rostit înaintea întregului norod toate poruncile Legii, a luat sânge de viţei şi de ţapi, cu apă, lână stacojie şi isop, a stropit cartea şi tot norodul",
+            "şi a zis: „Acesta este sângele legământului care a poruncit Dumnezeu să fie făcut cu voi.”",
+            "De asemenea, a stropit cu sânge cortul şi toate vasele pentru slujbă.",
+            "Şi, după Lege, aproape totul este curăţit cu sânge; şi fără vărsare de sânge, nu este iertare.",
+            "Dar, deoarece chipurile lucrurilor care sunt în ceruri au trebuit curăţite în felul acesta, trebuia ca înseşi lucrurile cereşti să fie curăţite cu jertfe mai bune decât acestea.",
+            "Căci Hristos n-a intrat într-un locaş de închinare făcut de mână omenească, după chipul adevăratului locaş de închinare, ci a intrat chiar în cer, ca să Se înfăţişeze acum, pentru noi, înaintea lui Dumnezeu.",
+            "Şi nu ca să Se aducă de mai multe ori jertfă pe Sine Însuşi, ca marele preot care intră în fiecare an în Locul Preasfânt cu un sânge care nu este al lui,",
+            "fiindcă atunci ar fi trebuit să pătimească de mai multe ori de la întemeierea lumii, pe când acum, la sfârşitul veacurilor, S-a arătat o singură dată ca să şteargă păcatul prin jertfa Sa.",
+            "Şi, după cum oamenilor le este rânduit să moară o singură dată, iar după aceea vine judecata,",
+            "tot aşa, Hristos, după ce S-a adus jertfă o singură dată, ca să poarte păcatele multora, Se va arăta a doua oară nu în vederea păcatului, ci ca să aducă mântuirea celor ce-L aşteaptă."
         ]
     ]
 }

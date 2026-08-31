@@ -1,5 +1,5 @@
 /**
- * Ctrl+Space resets the current chapter.
+ * Ctrl+Backspace resets the current chapter.
  * Shift/Alt/Meta are excluded so the shortcut stays unambiguous.
  *
  * @param {KeyboardEvent} event
@@ -9,7 +9,7 @@ export function isResetChapterShortcut(event) {
 		return false;
 	}
 
-	return event.code === 'Space' || event.key === ' ';
+	return event.code === 'Backspace' || event.key === 'Backspace';
 }
 
 /**

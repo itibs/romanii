@@ -109,8 +109,8 @@
 </table>
 <br>
 <br>
-<button on:click={jumpToChapter(chapterIdx)} title="Ctrl+Space">
+<button on:click={jumpToChapter(chapterIdx)} title="Ctrl+Backspace">
     Resetează capitolul
 </button>
-(Ctrl+Space)
+(Ctrl+Backspace)
 <br><br>

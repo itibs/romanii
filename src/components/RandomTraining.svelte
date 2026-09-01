@@ -2,7 +2,7 @@
     import { onMount } from 'svelte';
     import VersesInput from '/src/components/VersesInput.svelte';
     import WrittenText from '/src/components/WrittenText.svelte';
-    import { listenForResetChapterShortcut } from '/src/lib/resetChapterShortcut.js';
+    import { listenForResetChapterShortcut, RESET_CHAPTER_SHORTCUT_HINT } from '/src/lib/resetChapterShortcut.js';
 
     export let bookName;
     export let chapters;
@@ -109,8 +109,8 @@
 </table>
 <br>
 <br>
-<button on:click={jumpToChapter(chapterIdx)} title="Ctrl+Backspace">
+<button on:click={jumpToChapter(chapterIdx)} title={RESET_CHAPTER_SHORTCUT_HINT}>
     Resetează capitolul
 </button>
-(Ctrl+Backspace)
+({RESET_CHAPTER_SHORTCUT_HINT})
 <br><br>

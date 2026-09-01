@@ -7,7 +7,7 @@
     import { createStopwatch } from '/src/lib/stopwatch.js';
     import { saveRun } from '/src/lib/runHistory.js';
     import { countWords } from '/src/lib/verseWords.js';
-    import { listenForResetChapterShortcut } from '/src/lib/resetChapterShortcut.js';
+    import { listenForResetChapterShortcut, RESET_CHAPTER_SHORTCUT_HINT } from '/src/lib/resetChapterShortcut.js';
 
     export let bookName;
     export let chapters;
@@ -189,7 +189,7 @@
         highlightRunId={lastSavedRunId}
     />
 {/if}
-<button on:click={jumpToChapter(chapterIdx)} title="Ctrl+Backspace">
+<button on:click={jumpToChapter(chapterIdx)} title={RESET_CHAPTER_SHORTCUT_HINT}>
     Resetează capitolul
 </button>
-(Ctrl+Backspace)
+({RESET_CHAPTER_SHORTCUT_HINT})

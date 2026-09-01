@@ -1,16 +1,19 @@
 /**
- * Ctrl+Backspace resets the current chapter.
- * Shift/Alt/Meta are excluded so the shortcut stays unambiguous.
+ * Ctrl+Backspace (Windows/Linux) or Cmd+Backspace (Mac) resets the current chapter.
+ * Shift and Alt are excluded so the shortcut stays unambiguous.
  *
  * @param {KeyboardEvent} event
  */
 export function isResetChapterShortcut(event) {
-	if (!event.ctrlKey || event.altKey || event.metaKey || event.shiftKey || event.repeat) {
+	const hasModifier = event.ctrlKey || event.metaKey;
+	if (!hasModifier || event.altKey || event.shiftKey || event.repeat) {
 		return false;
 	}
 
 	return event.code === 'Backspace' || event.key === 'Backspace';
 }
+
+export const RESET_CHAPTER_SHORTCUT_HINT = 'Ctrl+Backspace / Cmd+Backspace';
 
 /**
  * @param {() => void} onReset

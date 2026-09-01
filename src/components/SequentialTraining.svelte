@@ -1,4 +1,5 @@
 <script>
+    import { onMount } from 'svelte';
     import VersesInput from '/src/components/VersesInput.svelte';
     import WrittenText from '/src/components/WrittenText.svelte';
     import ScoreSubmitForm from '/src/components/ScoreSubmitForm.svelte';
@@ -6,6 +7,7 @@
     import { createStopwatch } from '/src/lib/stopwatch.js';
     import { saveRun } from '/src/lib/runHistory.js';
     import { countWords } from '/src/lib/verseWords.js';
+    import { listenForResetChapterShortcut, RESET_CHAPTER_SHORTCUT_HINT } from '/src/lib/resetChapterShortcut.js';
 
     export let bookName;
     export let chapters;
@@ -141,6 +143,8 @@
         runSavedForThisAttempt = false;
         resetVersesInput();
     }
+
+    onMount(() => listenForResetChapterShortcut(resetChapter));
 </script>
 
 <h2>{bookName} - Capitolul {chapterIdx+1}</h2>
@@ -185,6 +189,7 @@
         highlightRunId={lastSavedRunId}
     />
 {/if}
-<button on:click={jumpToChapter(chapterIdx)}>
+<button on:click={jumpToChapter(chapterIdx)} title={RESET_CHAPTER_SHORTCUT_HINT}>
     Resetează capitolul
 </button>
+({RESET_CHAPTER_SHORTCUT_HINT})

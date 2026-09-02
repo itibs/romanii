@@ -4,7 +4,7 @@
 
 	let bookName = 'Evrei';
 	let start = {
-		chapter: 9,
+		chapter: 10,
 		verse: 1
 	};
 	let bookEntries = Object.entries(chapters);

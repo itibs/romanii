@@ -161,12 +161,14 @@
                     {/if}
                     Bifează încercări din listă pentru a le compara.
                 </p>
-                <PerVerseChart
-                    runs={chartedRuns}
-                    verseLabels={verseLabels}
-                    verseWordCounts={verseWordCounts}
-                    metric={metric}
-                />
+                {#key `${round}|${verseLabels.length}`}
+                    <PerVerseChart
+                        runs={chartedRuns}
+                        verseLabels={verseLabels}
+                        verseWordCounts={verseWordCounts}
+                        metric={metric}
+                    />
+                {/key}
 
                 {#if allRuns.length > 1}
                     <h4>Evoluția timpului total</h4>

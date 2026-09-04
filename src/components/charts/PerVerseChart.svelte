@@ -16,6 +16,21 @@
      * Other selected runs are dashed polylines in palette colours.
      */
 
+    import {
+        CHART_HEIGHT,
+        CHART_WIDTH,
+        MARGIN,
+        axisLabelsFor,
+        barWidth,
+        barX,
+        displayLabel,
+        innerSize,
+        maxCharsForLabel,
+        selectXLabelIndices,
+        xCenter as xCenterAt,
+        xStep as xStepFor
+    } from '/src/lib/perVerseChartLayout.js';
+
     export let runs = [];
     export let verseLabels = [];
     /** @type {number[]} */
@@ -31,9 +46,9 @@
 
     let hoverIdx = -1;
 
-    $: effectiveMetric = (metric === 'wpm' && verseWordCounts && verseWordCounts.length > 0)
-        ? 'wpm'
-        : 'seconds';
+    $: hasAnyWordCounts = (verseWordCounts && verseWordCounts.length > 0)
+        || (runs || []).some((r) => r && r.verseWordCounts && r.verseWordCounts.length > 0);
+    $: effectiveMetric = (metric === 'wpm' && hasAnyWordCounts) ? 'wpm' : 'seconds';
 
     function computeValue(verseTimes, i, m, wc) {
         const t = verseTimes[i];
@@ -57,19 +72,19 @@
         return `${label}: ${(t || 0).toFixed(2)}s`;
     }
 
-    function labelFor(i) {
-        if (verseLabels && verseLabels[i]) return verseLabels[i];
-        return String(i + 1);
-    }
-
     $: series = runs.map((run, ri) => {
         if (!run || !run.verseTimes) return null;
+        const wc = (run.verseWordCounts && run.verseWordCounts.length > 0)
+            ? run.verseWordCounts
+            : verseWordCounts;
+        const runLabels = (run.verseLabels && run.verseLabels.length) ? run.verseLabels : verseLabels;
         const points = run.verseTimes.map((_, i) => {
-            const v = computeValue(run.verseTimes, i, effectiveMetric, verseWordCounts);
+            const v = computeValue(run.verseTimes, i, effectiveMetric, wc);
+            const label = (runLabels && runLabels[i]) ? runLabels[i] : String(i + 1);
             return {
                 idx: i,
                 value: v,
-                tooltip: computeTooltip(run.verseTimes, i, effectiveMetric, verseWordCounts, labelFor(i))
+                tooltip: computeTooltip(run.verseTimes, i, effectiveMetric, wc, label)
             };
         });
         return { runId: run.id || ri, color: palette[ri % palette.length], isLatest: ri === 0, points };
@@ -149,34 +164,35 @@
         return `hsl(${hue}, 75%, 35%)`;
     }
 
-    const width = 720;
-    const height = 320;
-    const margin = { top: 16, right: 16, bottom: 56, left: 56 };
-    $: innerW = width - margin.left - margin.right;
-    $: innerH = height - margin.top - margin.bottom;
+    const width = CHART_WIDTH;
+    const height = CHART_HEIGHT;
+    const margin = MARGIN;
+    const { innerW, innerH } = innerSize(width, height, margin);
 
-    $: xStep = maxVerses > 0 ? innerW / maxVerses : 0;
+    $: xStep = xStepFor(maxVerses, innerW);
+    $: axisLabels = axisLabelsFor(maxVerses, runs && runs[0], verseLabels);
+    $: xLabelIdxs = selectXLabelIndices(maxVerses, innerW, axisLabels);
+    $: labelMaxChars = maxCharsForLabel(innerW, xLabelIdxs.length);
 
-    function xCenter(i) {
-        return margin.left + xStep * (i + 0.5);
-    }
-    function yPos(v) {
+    // Reactive so SVG x/y attributes recompute when chapter length (xStep) or
+    // scale (yMax) changes. Hidden closures were leaving labels at the previous
+    // chapter's positions while the bars moved.
+    $: xAt = (i) => xCenterAt(i, margin.left, xStep);
+    $: yAt = (v) => {
         const clamped = Math.min(v, yMax);
         return margin.top + innerH - (clamped / yMax) * innerH;
-    }
-
-    $: rotateLabels = maxVerses > 12;
+    };
 
     $: yTickFormatter = effectiveMetric === 'wpm'
         ? (t) => `${t.toFixed(0)}`
         : (t) => (t >= 10 ? `${t.toFixed(0)}s` : `${t.toFixed(1)}s`);
     $: yAxisTitle = effectiveMetric === 'wpm' ? 'Cuvinte / minut' : 'Secunde';
 
-    function polylinePoints(points) {
+    function polylinePoints(points, xFn, yFn) {
         const pts = [];
         for (const p of points) {
             if (p.value === null) continue;
-            pts.push(`${xCenter(p.idx)},${yPos(p.value)}`);
+            pts.push(`${xFn(p.idx)},${yFn(p.value)}`);
         }
         return pts.join(' ');
     }
@@ -191,11 +207,11 @@
                 <line
                     x1={margin.left}
                     x2={margin.left + innerW}
-                    y1={yPos(t)}
-                    y2={yPos(t)}
+                    y1={yAt(t)}
+                    y2={yAt(t)}
                     class="grid"
                 />
-                <text x={margin.left - 6} y={yPos(t)} class="tick" text-anchor="end" dominant-baseline="middle">
+                <text x={margin.left - 6} y={yAt(t)} class="tick" text-anchor="end" dominant-baseline="middle">
                     {yTickFormatter(t)}
                 </text>
             {/each}
@@ -204,10 +220,10 @@
                 {#each series[0].points as p (p.idx)}
                     {#if p.value !== null}
                         <rect
-                            x={margin.left + xStep * p.idx + xStep * 0.18}
-                            y={yPos(p.value)}
-                            width={Math.max(1, xStep * 0.64)}
-                            height={Math.max(0, margin.top + innerH - yPos(p.value))}
+                            x={barX(p.idx, margin.left, xStep)}
+                            y={yAt(p.value)}
+                            width={barWidth(xStep)}
+                            height={Math.max(0, margin.top + innerH - yAt(p.value))}
                             fill={barFill(p.value)}
                             stroke={barStroke(p.value)}
                             stroke-width="1"
@@ -225,7 +241,7 @@
             {#each series as s, ri (s.runId)}
                 {#if !s.isLatest}
                     <polyline
-                        points={polylinePoints(s.points)}
+                        points={polylinePoints(s.points, xAt, yAt)}
                         fill="none"
                         stroke={s.color}
                         stroke-width="1.5"
@@ -235,8 +251,8 @@
                     {#each s.points as p (p.idx)}
                         {#if p.value !== null}
                             <circle
-                                cx={xCenter(p.idx)}
-                                cy={yPos(p.value)}
+                                cx={xAt(p.idx)}
+                                cy={yAt(p.value)}
                                 r="2.5"
                                 fill={s.color}
                             >
@@ -251,8 +267,8 @@
                 {#each series[0].points as p (p.idx)}
                     {#if p.value !== null}
                         <circle
-                            cx={xCenter(p.idx)}
-                            cy={yPos(p.value)}
+                            cx={xAt(p.idx)}
+                            cy={yAt(p.value)}
                             r="3.5"
                             fill={dotColor(p.value)}
                             stroke="#fff"
@@ -264,15 +280,23 @@
                 {/each}
             {/if}
 
-            {#each Array(maxVerses) as _, i}
+            {#each Array.from({ length: maxVerses }, (_, i) => i) as i (i)}
+                <line
+                    x1={xAt(i)}
+                    x2={xAt(i)}
+                    y1={margin.top + innerH}
+                    y2={margin.top + innerH + 4}
+                    class="axis"
+                />
+            {/each}
+            {#each xLabelIdxs as i (i)}
                 <text
-                    x={xCenter(i)}
-                    y={margin.top + innerH + (rotateLabels ? 10 : 16)}
+                    x={xAt(i)}
+                    y={margin.top + innerH + 16}
                     class="tick"
-                    text-anchor={rotateLabels ? 'end' : 'middle'}
-                    transform={rotateLabels ? `rotate(-45 ${xCenter(i)} ${margin.top + innerH + 10})` : ''}
+                    text-anchor="middle"
                 >
-                    {labelFor(i)}
+                    {displayLabel(axisLabels[i], labelMaxChars)}
                 </text>
             {/each}
 

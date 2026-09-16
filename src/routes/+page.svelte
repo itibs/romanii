@@ -51,7 +51,7 @@
 <input id="competitiveMode" type="checkbox" bind:checked={competitiveMode} on:change={handleCompetitiveModeChange} />
 <br>
 {#if competitiveMode}
-    <p>Modul competitiv începe întotdeauna de la versetul 1 și permite trimiterea scorului la finalul capitolului.</p>
+    <p>Modul competitiv începe întotdeauna de la versetul 1 și permite trimiterea scorului la finalul capitolului. După fiecare verset vei vedea pe scurt cât ești înainte sau în urmă față de recordul local (pe verset și pe total).</p>
     <ScoreBoard round={selectedRound} title={`Clasament ${selectedChapterTitle}`} />
 {/if}
 <SequentialTraining

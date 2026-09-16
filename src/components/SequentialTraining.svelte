@@ -5,8 +5,10 @@
     import ScoreSubmitForm from '/src/components/ScoreSubmitForm.svelte';
     import RunHistory from '/src/components/RunHistory.svelte';
     import { createStopwatch } from '/src/lib/stopwatch.js';
-    import { saveRun } from '/src/lib/runHistory.js';
+    import { saveRun, runHistoryStore } from '/src/lib/runHistory.js';
     import { countWords } from '/src/lib/verseWords.js';
+    import { comparePace } from '/src/lib/recordComparison.js';
+    import VersePaceFlash from '/src/components/VersePaceFlash.svelte';
     import { listenForResetChapterShortcut, RESET_CHAPTER_SHORTCUT_HINT } from '/src/lib/resetChapterShortcut.js';
 
     export let bookName;
@@ -88,6 +90,10 @@
     let previousCompetitionResetSignal = competitionResetSignal;
     let runSavedForThisAttempt = false;
     let lastSavedRunId = '';
+    /** @type {{ id: string, verseDelta: number | null, cumulativeDelta: number | null, verseLabel?: string } | null} */
+    let paceFlash = null;
+
+    $: previousRuns = (($runHistoryStore || {})[round] || []);
 
     $: chapterVerseLabels = crtChapter.map((_, i) => String(rollingSumVerseIdx + i + 1));
     $: chapterVerseWordCounts = crtChapter.map((v) => countWords(v));
@@ -99,6 +105,7 @@
 
     $: if (!competitiveMode) {
         eligibleForScoring = false;
+        paceFlash = null;
     }
 
     $: hasProgress = verseIdx !== start.verse - 1 || discoveredVerseText.length > 0;
@@ -128,7 +135,18 @@
 
     function handleVerseDone() {
         if (competitiveMode) {
-            stopwatch.split();
+            const verseTime = stopwatch.split();
+            if (round) {
+                const currentTimes = [...(splits || []).slice(0, verseIdx), verseTime];
+                const comparison = comparePace(currentTimes, previousRuns);
+                paceFlash = comparison
+                    ? {
+                        ...comparison,
+                        id: `${Date.now()}-${verseIdx}`,
+                        verseLabel: chapterVerseLabels[verseIdx] || String(verseIdx + 1)
+                    }
+                    : null;
+            }
         }
         verseIdx++;
         discoveredVerseText = '';
@@ -141,6 +159,7 @@
         discoveredVerseText = '';
         eligibleForScoring = false;
         runSavedForThisAttempt = false;
+        paceFlash = null;
         resetVersesInput();
     }
 
@@ -149,6 +168,9 @@
 
 <h2>{bookName} - Capitolul {chapterIdx+1}</h2>
 <WrittenText startIdx={rollingSumVerseIdx+start.verse} verses={crtChapter.slice(start.verse-1, verseIdx).concat(verseIdx < crtChapter.length ? [discoveredVerseText] : [])}></WrittenText>
+{#if competitiveMode && (previousRuns.length > 0 || paceFlash)}
+    <VersePaceFlash flash={paceFlash} />
+{/if}
 <br>
 {#key crtVerse}
     <VersesInput inputText={crtVerse} fnVerseDone={handleVerseDone} bind:discoveredText={discoveredVerseText} disableNextButton={competitiveMode} bind:reset={resetVersesInput}></VersesInput>

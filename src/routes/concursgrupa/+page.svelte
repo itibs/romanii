@@ -83,7 +83,7 @@
 {/if}
 {#if !trainingMode}
     <label for="showVersePace">Compară cu recordul local după fiecare verset:</label>
-    <input id="showVersePace" type="checkbox" bind:checked={showVersePace} />
+    <input id="showVersePace" type="checkbox" bind:checked={showVersePace} /><br>
     {#if showVersePace}
         <p>După fiecare verset vei vedea pe scurt cât ești înainte sau în urmă față de recordul local (pe verset și pe total).</p>
     {/if}

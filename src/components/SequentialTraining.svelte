@@ -15,6 +15,7 @@
     export let chapters;
     export let useRollingSumVerseIdx;
     export let competitiveMode = false;
+    export let showVersePace = false;
     export let round = '';
     export let competitionResetSignal = 0;
     export let hasProgress = false;
@@ -108,6 +109,10 @@
         paceFlash = null;
     }
 
+    $: if (!showVersePace) {
+        paceFlash = null;
+    }
+
     $: hasProgress = verseIdx !== start.verse - 1 || discoveredVerseText.length > 0;
 
     $: if (!timerStarted && competitiveMode && discoveredVerseText.length > 0) {
@@ -136,7 +141,7 @@
     function handleVerseDone() {
         if (competitiveMode) {
             const verseTime = stopwatch.split();
-            if (round) {
+            if (showVersePace && round) {
                 const currentTimes = [...(splits || []).slice(0, verseIdx), verseTime];
                 const comparison = comparePace(currentTimes, previousRuns);
                 paceFlash = comparison
@@ -168,7 +173,7 @@
 
 <h2>{bookName} - Capitolul {chapterIdx+1}</h2>
 <WrittenText startIdx={rollingSumVerseIdx+start.verse} verses={crtChapter.slice(start.verse-1, verseIdx).concat(verseIdx < crtChapter.length ? [discoveredVerseText] : [])}></WrittenText>
-{#if competitiveMode && (previousRuns.length > 0 || paceFlash)}
+{#if competitiveMode && showVersePace && (previousRuns.length > 0 || paceFlash)}
     <VersePaceFlash flash={paceFlash} />
 {/if}
 <br>

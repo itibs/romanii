@@ -15,6 +15,7 @@
 	 * @type {boolean}
 	 */
      export let trainingMode;
+    export let showVersePace = false;
 
     let eligibleForScoring = false;
 	let scoreResetSignal = 0;
@@ -81,9 +82,13 @@
         eligibleForScoring = false;
     }
 
+    $: if (trainingMode || !showVersePace) {
+        paceFlash = null;
+    }
+
     function handleVerseDone() {
         const verseTime = stopwatch.split();
-        if (!trainingMode && round) {
+        if (showVersePace && !trainingMode && round) {
             const currentTimes = [...(splits || []).slice(0, verseIdx), verseTime];
             const comparison = comparePace(currentTimes, previousRuns);
             paceFlash = comparison
@@ -125,7 +130,7 @@
 	<h3>{verseIdx + 1}. {verses[verseIdx].ref}</h3>
 {/if}
 <WrittenText startIdx="0" verses={[discoveredVerseText]} showVerseNumbers={false} />
-{#if !trainingMode && (previousRuns.length > 0 || paceFlash)}
+{#if showVersePace && !trainingMode && (previousRuns.length > 0 || paceFlash)}
 	<VersePaceFlash flash={paceFlash} />
 {/if}
 <br />

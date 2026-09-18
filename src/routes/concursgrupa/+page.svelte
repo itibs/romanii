@@ -8,6 +8,7 @@
 	const verses2023 = verses['2023']
 
     let trainingMode = false;
+    let showVersePace = false;
 
 	let stages = {
 		'Stagiul 1': {
@@ -80,8 +81,15 @@
 {#if trainingMode}
     <div style='color: red'>Atenție! Nu poți trimite scorul decât dacă ai început să scrii fără mod antrenament activat și nu l-ai activat pe parcurs!</div>
 {/if}
+{#if !trainingMode}
+    <label for="showVersePace">Compară cu recordul local după fiecare verset:</label>
+    <input id="showVersePace" type="checkbox" bind:checked={showVersePace} /><br>
+    {#if showVersePace}
+        <p>După fiecare verset vei vedea pe scurt cât ești înainte sau în urmă față de recordul local (pe verset și pe total).</p>
+    {/if}
+{/if}
 
-<ConcursGrupa verses={selectedVerses} round={selectedStage} trainingMode={trainingMode} />
+<ConcursGrupa verses={selectedVerses} round={selectedStage} trainingMode={trainingMode} showVersePace={showVersePace} />
 
 <br><br>
 <a href="/concursgrupa/versete">Vezi toate versetele</a>

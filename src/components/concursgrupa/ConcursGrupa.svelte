@@ -4,8 +4,10 @@
 	import ScoreSubmitForm from '/src/components/ScoreSubmitForm.svelte';
 	import RunHistory from '/src/components/RunHistory.svelte';
 	import { createStopwatch } from '/src/lib/stopwatch.js';
-	import { saveRun } from '/src/lib/runHistory.js';
+	import { saveRun, runHistoryStore } from '/src/lib/runHistory.js';
 	import { countWords } from '/src/lib/verseWords.js';
+	import { comparePace } from '/src/lib/recordComparison.js';
+	import VersePaceFlash from '/src/components/VersePaceFlash.svelte';
 
 	export let round;
 	export let verses;
@@ -13,11 +15,16 @@
 	 * @type {boolean}
 	 */
      export let trainingMode;
+    export let showVersePace = false;
 
     let eligibleForScoring = false;
 	let scoreResetSignal = 0;
 	let runSavedForThisAttempt = false;
 	let lastSavedRunId = '';
+	/** @type {{ id: string, verseDelta: number | null, cumulativeDelta: number | null, verseLabel?: string } | null} */
+	let paceFlash = null;
+
+	$: previousRuns = (($runHistoryStore || {})[round] || []);
 
 	let resetVersesInput = () => 0;
 
@@ -75,8 +82,23 @@
         eligibleForScoring = false;
     }
 
+    $: if (trainingMode || !showVersePace) {
+        paceFlash = null;
+    }
+
     function handleVerseDone() {
-        stopwatch.split();
+        const verseTime = stopwatch.split();
+        if (showVersePace && !trainingMode && round) {
+            const currentTimes = [...(splits || []).slice(0, verseIdx), verseTime];
+            const comparison = comparePace(currentTimes, previousRuns);
+            paceFlash = comparison
+                ? {
+                    ...comparison,
+                    id: `${Date.now()}-${verseIdx}`,
+                    verseLabel: verseLabels[verseIdx] || String(verseIdx + 1)
+                }
+                : null;
+        }
         if (verseIdx < verses.length) {
             verseIdx++;
         }
@@ -90,6 +112,7 @@
         discoveredVerseText = '';
 		eligibleForScoring = false;
 		runSavedForThisAttempt = false;
+		paceFlash = null;
 		resetVersesInput();
     }
 </script>
@@ -107,6 +130,9 @@
 	<h3>{verseIdx + 1}. {verses[verseIdx].ref}</h3>
 {/if}
 <WrittenText startIdx="0" verses={[discoveredVerseText]} showVerseNumbers={false} />
+{#if showVersePace && !trainingMode && (previousRuns.length > 0 || paceFlash)}
+	<VersePaceFlash flash={paceFlash} />
+{/if}
 <br />
 {#key crtVerse}
 	<VersesInput

@@ -11,6 +11,7 @@
     let bookEntries = Object.entries(chapters)
 
     let competitiveMode = false;
+    let showVersePace = false;
     let exitedCompetitiveMode = false;
     let competitionResetSignal = 0;
     let chapterIdx = start.chapter - 1;
@@ -52,6 +53,12 @@
 <br>
 {#if competitiveMode}
     <p>Modul competitiv începe întotdeauna de la versetul 1 și permite trimiterea scorului la finalul capitolului.</p>
+    <label for="showVersePace">Compară cu recordul local după fiecare verset:</label>
+    <input id="showVersePace" type="checkbox" bind:checked={showVersePace} />
+    <br>
+    {#if showVersePace}
+        <p>După fiecare verset vei vedea pe scurt cât ești înainte sau în urmă față de recordul local (pe verset și pe total).</p>
+    {/if}
     <ScoreBoard round={selectedRound} title={`Clasament ${selectedChapterTitle}`} />
 {/if}
 <SequentialTraining
@@ -61,6 +68,7 @@
     bind:chapterIdx
     bind:hasProgress={hasChapterProgress}
     competitiveMode={competitiveMode}
+    showVersePace={showVersePace}
     competitionResetSignal={competitionResetSignal}
     round={selectedRound}
 />

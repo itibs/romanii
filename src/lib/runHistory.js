@@ -12,6 +12,7 @@ const MAX_RUNS_PER_ROUND = 200;
  * @property {number[]} verseTimes - seconds spent on each verse, in order
  * @property {string[]} [verseLabels] - optional labels for each verse (e.g. verse refs / numbers)
  * @property {number[]} [verseWordCounts] - typable words per verse, used to derive words-per-minute stats
+ * @property {boolean} [untimedLeadIn] - a verse before the range was typed but left out of the time
  */
 
 const isBrowser = typeof window !== 'undefined' && typeof localStorage !== 'undefined';
@@ -88,7 +89,8 @@ export function saveRun(run) {
     totalTime: run.totalTime,
     verseTimes: run.verseTimes.map((t) => Math.max(0, Number(t) || 0)),
     verseLabels: run.verseLabels ? [...run.verseLabels] : undefined,
-    verseWordCounts: run.verseWordCounts ? run.verseWordCounts.map((n) => Math.max(0, Number(n) || 0)) : undefined
+    verseWordCounts: run.verseWordCounts ? run.verseWordCounts.map((n) => Math.max(0, Number(n) || 0)) : undefined,
+    untimedLeadIn: typeof run.untimedLeadIn === 'boolean' ? run.untimedLeadIn : undefined
   };
 
   list.push(stored);

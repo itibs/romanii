@@ -67,7 +67,7 @@
     start={start}
     bind:chapterIdx
     bind:hasProgress={hasChapterProgress}
-    competitiveMode={competitiveMode}
+    bind:competitiveMode
     showVersePace={showVersePace}
     competitionResetSignal={competitionResetSignal}
     round={selectedRound}

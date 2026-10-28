@@ -12,6 +12,8 @@
     export let verseWordCounts = [];
     /** Optional latest run id to auto-highlight after a finish. */
     export let highlightRunId = '';
+    /** Show the drag-to-train action on the per-verse chart. */
+    export let enableTrain = false;
 
     let expanded = false;
     /** @type {'wpm' | 'seconds'} */
@@ -33,6 +35,8 @@
     $: allRuns = (($runHistoryStore || {})[round] || [])
         .slice()
         .sort((a, b) => b.timestamp - a.timestamp);
+
+    $: showLeadInColumn = allRuns.some((r) => typeof r.untimedLeadIn === 'boolean');
 
     // Total WPM for a run, given the current chapter's verseWordCounts.
     function totalWpm(run) {
@@ -167,6 +171,8 @@
                         verseLabels={verseLabels}
                         verseWordCounts={verseWordCounts}
                         metric={metric}
+                        enableTrain={enableTrain}
+                        on:train
                     />
                 {/key}
 
@@ -184,6 +190,9 @@
                             <th>Total (s)</th>
                             {#if hasWordCounts}
                                 <th>cuv/min</th>
+                            {/if}
+                            {#if showLeadInColumn}
+                                <th title="Versetul dinaintea intervalului a fost scris, dar nu a intrat în timp">Anterior</th>
                             {/if}
                             <th>Δ</th>
                             <th></th>
@@ -215,6 +224,9 @@
                                 <td class="num">{run.totalTime.toFixed(2)}</td>
                                 {#if hasWordCounts}
                                     <td class="num">{totalWpm(run) !== null ? totalWpm(run).toFixed(1) : '-'}</td>
+                                {/if}
+                                {#if showLeadInColumn}
+                                    <td>{typeof run.untimedLeadIn === 'boolean' ? (run.untimedLeadIn ? 'da' : 'nu') : '—'}</td>
                                 {/if}
                                 <td class="delta">{formatDelta(run)}</td>
                                 <td>

@@ -9,6 +9,8 @@
 	 * @type {() => void}
 	 */
     export let fnVerseDone;
+    /** Called when the user types or asks for the next word. */
+    export let onActivity = () => {};
     export const reset = () => {
         wordIdx = 0;
     }
@@ -30,7 +32,10 @@
         return false;
     };
 
-    const nextWordButtonPressed = () => {
+    const nextWordButtonPressed = (skipActivity = false) => {
+        if (skipActivity !== true) {
+            onActivity();
+        }
         if (disableNextButton) {
             nextButtonDisabled = true;
             setTimeout(() => {
@@ -76,11 +81,12 @@
         if (userInput.length == 0) { return; }
         let c = userInput.slice(-1);
         userInput = '';
+        onActivity();
         
         if (crtWord.length == 0) { return; }
 
         if (!nextButtonDisabled && c === ' ') {
-            nextWordButtonPressed();
+            nextWordButtonPressed(true);
         }
 
         if (!wordHasLetter(crtWord)) {

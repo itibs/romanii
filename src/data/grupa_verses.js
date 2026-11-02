@@ -160,5 +160,17 @@ export const verses = {
         { "ref": "Evrei 4:13", "verse": "Nicio făptură nu este ascunsă de El, ci totul este gol și descoperit înaintea ochilor Aceluia cu care avem a face." },
         { "ref": "1 Ioan 1:6", "verse": "Dacă zicem că avem părtăşie cu El, şi umblăm în întuneric, minţim şi nu trăim adevărul." },
         { "ref": "1 Ioan 1:7", "verse": "Dar dacă umblăm în lumină, după cum El însuşi este în lumină, avem părtăşie unii cu alţii; şi sângele lui Isus Hristos, Fiul Lui, ne curăţă de orice păcat." },
+    ],
+    '2026-2027': [
+        { "ref": "Psalmul 119:105", "verse": "Cuvântul Tău este o candelă pentru picioarele mele și o lumină pe cărarea mea." },
+        { "ref": "Psalmul 119:133", "verse": "Întărește-mi pașii în Cuvântul Tău, și nu lăsa nicio nelegiuire să stăpânească peste mine!" },
+        { "ref": "Matei 10:37", "verse": "Cine iubește pe tată, ori pe mamă, mai mult decât pe Mine, nu este vrednic de Mine; și cine iubește pe fiu ori pe fiică mai mult decât pe Mine, nu este vrednic de Mine." },
+        { "ref": "Luca 9:23", "verse": "Apoi a zis tuturor: «Dacă voiește cineva să vină după Mine, să se lepede de sine, să-și ia crucea în fiecare zi și să Mă urmeze.»" },
+        { "ref": "Ioan 12:26", "verse": "Dacă Îmi slujește cineva, să Mă urmeze; și unde sunt Eu, acolo va fi și slujitorul Meu. Dacă Îmi slujește cineva, Tatăl îl va cinsti." },
+        { "ref": "Ioan 15:5", "verse": "Eu sunt Vița, voi sunteți mlădițele. Cine rămâne în Mine și în cine rămân Eu aduce multă roadă, căci, despărțiți de Mine, nu puteți face nimic." },
+        { "ref": "Ioan 15:8", "verse": "Dacă aduceți multă roadă, prin aceasta Tatăl Meu va fi proslăvit și voi veți fi astfel ucenicii Mei." },
+        { "ref": "2 Corinteni 5:15", "verse": "Și El a murit pentru toți, pentru ca cei ce trăiesc să nu mai trăiască pentru ei înșiși, ci pentru Cel ce a murit și a înviat pentru ei." },
+        { "ref": "2 Corinteni 5:17", "verse": "Căci, dacă este cineva în Hristos, este o făptură nouă. Cele vechi s-au dus: iată că toate lucrurile s-au făcut noi." },
+        { "ref": "Filipeni 3:7", "verse": "Dar lucrurile, care pentru mine erau câștiguri, le-am socotit ca o pierdere, din pricina lui Hristos." },
     ]
 }

@@ -1052,6 +1052,36 @@ export const chapters = {
             "ei, de care lumea nu era vrednică –, au rătăcit prin pustiuri, prin munţi, prin peşteri şi prin crăpăturile pământului.",
             "Toţi aceştia, măcar că au fost lăudaţi pentru credinţa lor, totuşi n-au primit ce le fusese făgăduit,",
             "pentru că Dumnezeu avea în vedere ceva mai bun pentru noi, ca să n-ajungă ei la desăvârşire fără noi."
+        ], [
+            "Şi noi dar, fiindcă suntem înconjuraţi cu un nor aşa de mare de martori, să dăm la o parte orice piedică şi păcatul care ne înfăşoară aşa de lesne şi să alergăm cu stăruinţă în alergarea care ne stă înainte.",
+            "Să ne uităm ţintă la Căpetenia şi Desăvârşirea credinţei noastre, adică la Isus, care, pentru bucuria care-I era pusă înainte, a suferit crucea, a dispreţuit ruşinea şi şade la dreapta scaunului de domnie al lui Dumnezeu.",
+            "Uitaţi-vă dar cu luare aminte la Cel ce a suferit din partea păcătoşilor o împotrivire aşa de mare faţă de Sine, pentru ca nu cumva să vă pierdeţi inima şi să cădeţi de oboseală în sufletele voastre.",
+            "Voi nu v-aţi împotrivit încă până la sânge în lupta împotriva păcatului.",
+            "Şi aţi uitat sfatul pe care vi-l dă ca unor fii: „Fiule, nu dispreţui pedeapsa Domnului şi nu-ţi pierde inima când eşti mustrat de El.",
+            "Căci Domnul pedepseşte pe cine-l iubeşte şi bate cu nuiaua pe orice fiu pe care-l primeşte.”",
+            "Suferiţi pedeapsa: Dumnezeu Se poartă cu voi ca şi cu nişte fii. Căci care este fiul pe care nu-l pedepseşte tatăl?",
+            "Dar, dacă sunteţi scutiţi de pedeapsă, de care toţi au parte, sunteţi nişte feciori din curvie, iar nu fii.",
+            "Şi apoi, dacă părinţii noştri trupeşti ne-au pedepsit şi tot le-am dat cinstea cuvenită, nu trebuie oare cu atât mai mult să ne supunem Tatălui duhurilor şi să trăim?",
+            "Căci ei, în adevăr, ne pedepseau pentru puţine zile, cum credeau ei că e bine, dar Dumnezeu ne pedepseşte pentru binele nostru, ca să ne facă părtaşi sfinţeniei Lui.",
+            "Este adevărat că orice pedeapsă, deocamdată, pare o pricină de întristare, şi nu de bucurie, dar mai pe urmă aduce celor ce au trecut prin şcoala ei roada dătătoare de pace a neprihănirii.",
+            "Întăriţi-vă dar mâinile obosite şi genunchii slăbănogiţi;",
+            "croiţi cărări drepte cu picioarele voastre, pentru ca cel ce şchiopătează să nu se abată din cale, ci mai degrabă să fie vindecat.",
+            "Urmăriţi pacea cu toţi şi sfinţirea, fără care nimeni nu va vedea pe Domnul.",
+            "Luaţi seama bine ca nimeni să nu se abată de la harul lui Dumnezeu, pentru ca nu cumva să dea lăstari vreo rădăcină de amărăciune, să vă aducă tulburare şi mulţi să fie întinaţi de ea.",
+            "Vegheaţi să nu fie între voi nimeni curvar sau lumesc ca Esau, care pentru o mâncare şi-a vândut dreptul de întâi născut.",
+            "Ştiţi că mai pe urmă, când a vrut să capete binecuvântarea, n-a fost primit, pentru că, măcar că o cerea cu lacrimi, n-a putut s-o schimbe.",
+            "Voi nu v-aţi apropiat de un munte care se putea atinge şi care era cuprins de foc, nici de negură, nici de întuneric, nici de furtună,",
+            "nici de sunetul de trâmbiţă, nici de glasul care vorbea în aşa fel că cei ce l-au auzit au cerut să nu li se mai vorbească",
+            "(pentru că nu puteau suferi porunca aceasta: „Chiar un dobitoc, dacă se va atinge de munte, să fie ucis cu pietre sau străpuns cu săgeata.”",
+            "Şi priveliştea aceea era aşa de înfricoşătoare încât Moise a zis: „Sunt îngrozit şi tremur!”).",
+            "Ci v-aţi apropiat de muntele Sionului, de cetatea Dumnezeului celui viu, Ierusalimul ceresc, de zecile de mii, de adunarea în sărbătoare a îngerilor,",
+            "de Biserica celor întâi născuţi, care sunt scrişi în ceruri, de Dumnezeu, Judecătorul tuturor, de duhurile celor neprihăniţi, făcuţi desăvârşiţi,",
+            "de Isus, Mijlocitorul legământului celui nou, şi de sângele stropirii, care vorbeşte mai bine decât sângele lui Abel.",
+            "Luaţi seama ca nu cumva să nu voiţi să ascultaţi pe Cel ce vă vorbeşte! Căci dacă n-au scăpat cei ce n-au vrut să asculte pe Cel ce vorbea pe pământ, cu atât mai mult nu vom scăpa noi dacă ne întoarcem de la Cel ce vorbeşte din ceruri,",
+            "al cărui glas a clătinat atunci pământul şi care acum a făcut făgăduinţa aceasta: „Voi mai clătina încă o dată nu numai pământul, ci şi cerul.”",
+            "Cuvintele acestea, „încă o dată”, arată că schimbarea lucrurilor clătinate, adică a lucrurilor făcute, este făcută tocmai ca să rămână lucrurile care nu se clatină.",
+            "Fiindcă am primit dar o împărăţie care nu se poate clătina, să ne arătăm mulţumitori şi să aducem astfel lui Dumnezeu o închinare plăcută, cu evlavie şi cu frică,",
+            "fiindcă Dumnezeul nostru este „un foc mistuitor”."
         ]
     ]
 }

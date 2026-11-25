@@ -555,5 +555,220 @@ export const chapters = {
             "După ce a sfârşit Isus cuvântările acestea, noroadele au rămas uimite de învăţătura Lui;",
             "căci El îi învăţa ca unul care avea putere, nu cum îi învăţau cărturarii lor."
         ]
+    ],
+    '1 Petru': [
+        [
+            "Petru, apostol al lui Isus Hristos, către aleşii care trăiesc ca străini, împrăştiaţi prin Pont, Galatia, Capadocia, Asia şi Bitinia,",
+            "după ştiinţa mai dinainte a lui Dumnezeu Tatăl, prin sfinţirea lucrată de Duhul, spre ascultarea şi stropirea cu sângele lui Isus Hristos: Harul şi pacea să vă fie înmulţite!",
+            "Binecuvântat să fie Dumnezeu, Tatăl Domnului nostru Isus Hristos, care, după îndurarea Sa cea mare, ne-a născut din nou, prin învierea lui Isus Hristos din morţi, la o nădejde vie",
+            "şi la o moştenire nestricăcioasă şi neîntinată şi care nu se poate veşteji, păstrată în ceruri pentru voi.",
+            "Voi sunteţi păziţi de puterea lui Dumnezeu prin credinţă pentru mântuirea gata să fie descoperită în vremurile de apoi!",
+            "În ea voi vă bucuraţi mult, măcar că acum, dacă trebuie, sunteţi întristaţi pentru puţină vreme prin felurite încercări,",
+            "pentru ca încercarea credinţei voastre, cu mult mai scumpă decât aurul care piere şi care totuşi este încercat prin foc, să aibă ca urmare lauda, slava şi cinstea, la arătarea lui Isus Hristos,",
+            "pe care voi Îl iubiţi fără să-L fi văzut, credeţi în El fără să-L vedeţi şi vă bucuraţi cu o bucurie negrăită şi strălucită,",
+            "pentru că veţi dobândi, ca sfârşit al credinţei voastre, mântuirea sufletelor voastre.",
+            "Prorocii, care au prorocit despre harul care vă era păstrat vouă, au făcut din mântuirea aceasta ţinta cercetărilor şi căutării lor stăruitoare.",
+            "Ei cercetau să vadă ce vreme şi ce împrejurări avea în vedere Duhul lui Hristos, care era în ei, când vestea mai dinainte patimile lui Hristos şi slava de care aveau să fie urmate.",
+            "Lor le-a fost descoperit că nu pentru ei înşişi, ci pentru voi spuneau ei aceste lucruri pe care vi le-au vestit acum cei ce v-au propovăduit Evanghelia prin Duhul Sfânt trimis din cer şi în care chiar îngerii doresc să privească.",
+            "De aceea, încingeţi-vă coapsele minţii voastre, fiţi treji şi puneţi-vă toată nădejdea în harul care vă va fi adus la arătarea lui Isus Hristos.",
+            "Ca nişte copii ascultători, nu vă lăsaţi târâţi în poftele pe care le aveaţi altădată, când eraţi în neştiinţă.",
+            "Ci, după cum Cel ce v-a chemat este sfânt, fiţi şi voi sfinţi în toată purtarea voastră.",
+            "Căci este scris: „Fiţi sfinţi, căci Eu sunt sfânt.”",
+            "Şi dacă chemaţi ca Tată pe Cel ce judecă fără părtinire pe fiecare după faptele lui, purtaţi-vă cu frică în timpul pribegiei voastre;",
+            "căci ştiţi că nu cu lucruri pieritoare, cu argint sau cu aur, aţi fost răscumpăraţi din felul deşert de vieţuire pe care-l moşteniserăţi de la părinţii voştri,",
+            "ci cu sângele scump al lui Hristos, Mielul fără cusur şi fără prihană.",
+            "El a fost cunoscut mai înainte de întemeierea lumii şi a fost arătat la sfârşitul vremurilor pentru voi,",
+            "care, prin El, sunteţi credincioşi în Dumnezeu, care L-a înviat din morţi şi I-a dat slavă, pentru ca credinţa şi nădejdea voastră să fie în Dumnezeu.",
+            "Deci, ca unii care, prin ascultarea de adevăr, v-aţi curăţit sufletele prin Duhul ca să aveţi o dragoste de fraţi neprefăcută, iubiţi-vă cu căldură unii pe alţii din toată inima,",
+            "fiindcă aţi fost născuţi din nou nu dintr-o sămânţă care poate putrezi, ci dintr-una care nu poate putrezi, prin Cuvântul lui Dumnezeu, care este viu şi care rămâne în veac.",
+            "Căci orice făptură este ca iarba şi toată slava ei, ca floarea ierbii. Iarba se usucă şi floarea cade jos,",
+            "dar Cuvântul Domnului rămâne în veac. Şi acesta este Cuvântul care v-a fost propovăduit prin Evanghelie."
+        ],
+        [
+            "Lepădaţi dar orice răutate, orice vicleşug, orice fel de prefăcătorie, de pizmă şi de clevetire",
+            "şi, ca nişte prunci născuţi de curând, să doriţi laptele duhovnicesc şi curat, pentru ca prin el să creşteţi spre mântuire,",
+            "dacă aţi gustat în adevăr că bun este Domnul.",
+            "Apropiaţi-vă de El, piatra vie, lepădată de oameni, dar aleasă şi scumpă înaintea lui Dumnezeu.",
+            "Şi voi, ca nişte pietre vii, sunteţi zidiţi ca să fiţi o casă duhovnicească, o preoţie sfântă, şi să aduceţi jertfe duhovniceşti plăcute lui Dumnezeu, prin Isus Hristos.",
+            "Căci este scris în Scriptură: „Iată că pun în Sion o piatră din capul unghiului, aleasă, scumpă; şi cine se încrede în El nu va fi dat de ruşine.”",
+            "Cinstea aceasta este dar pentru voi care aţi crezut! Dar pentru cei necredincioşi, „Piatra pe care au lepădat-o zidarii a ajuns să fie pusă în capul unghiului”",
+            "şi „o piatră de poticnire şi o stâncă de cădere”. Ei se lovesc de ea, pentru că n-au crezut Cuvântul, şi la aceasta sunt rânduiţi.",
+            "Voi însă sunteţi o seminţie aleasă, o preoţie împărătească, un neam sfânt, un popor pe care Dumnezeu Şi l-a câştigat ca să fie al Lui, ca să vestiţi puterile minunate ale Celui ce v-a chemat din întuneric la lumina Sa minunată;",
+            "pe voi, care odinioară nu eraţi un popor, dar acum sunteţi poporul lui Dumnezeu; pe voi, care nu căpătaserăţi îndurare, dar acum aţi căpătat îndurare.",
+            "Preaiubiţilor, vă sfătuiesc, ca pe nişte străini şi călători, să vă feriţi de poftele firii pământeşti care se războiesc cu sufletul.",
+            "Să aveţi o purtare bună în mijlocul neamurilor, pentru ca, în ceea ce vă vorbesc de rău ca pe nişte făcători de rele, prin faptele voastre bune pe care le văd, să slăvească pe Dumnezeu în ziua cercetării.",
+            "Fiţi supuşi oricărei stăpâniri omeneşti, pentru Domnul: atât împăratului, ca înalt stăpânitor,",
+            "cât şi dregătorilor, ca unii care sunt trimişi de el să pedepsească pe făcătorii de rele şi să laude pe cei ce fac bine.",
+            "Căci voia lui Dumnezeu este ca, făcând ce este bine, să astupaţi gura oamenilor neştiutori şi proşti.",
+            "Purtaţi-vă ca nişte oameni slobozi, fără să faceţi din slobozenia aceasta o haină a răutăţii, ci ca nişte robi ai lui Dumnezeu.",
+            "Cinstiţi pe toţi oamenii; iubiţi pe fraţi; temeţi-vă de Dumnezeu; daţi cinste împăratului!",
+            "Slugilor, fiţi supuse stăpânilor voştri cu toată frica, nu numai celor ce sunt buni şi blânzi, ci şi celor greu de mulţumit.",
+            "Căci este un lucru plăcut dacă cineva, pentru cugetul lui faţă de Dumnezeu, suferă întristare şi suferă pe nedrept.",
+            "În adevăr, ce fală este să suferiţi cu răbdare să fiţi pălmuiţi când aţi făcut rău? Dar dacă suferiţi cu răbdare, când aţi făcut ce este bine, lucrul acesta este plăcut lui Dumnezeu.",
+            "Şi la aceasta aţi fost chemaţi, fiindcă şi Hristos a suferit pentru voi şi v-a lăsat o pildă, ca să călcaţi pe urmele Lui.",
+            "„El n-a făcut păcat şi în gura Lui nu s-a găsit vicleşug.”",
+            "Când era batjocorit, nu răspundea cu batjocuri şi, când era chinuit, nu ameninţa, ci Se supunea dreptului Judecător.",
+            "El a purtat păcatele noastre în trupul Său pe lemn, pentru ca noi, fiind morţi faţă de păcate, să trăim pentru neprihănire; prin rănile Lui aţi fost vindecaţi.",
+            "Căci eraţi ca nişte oi rătăcite. Dar acum v-aţi întors la Păstorul şi Episcopul1 sufletelor voastre."
+        ],
+        [
+            "Tot astfel, nevestelor, fiţi supuse şi voi bărbaţilor voştri; pentru ca, dacă unii nu ascultă Cuvântul, să fie câştigaţi fără cuvânt, prin purtarea nevestelor lor,",
+            "când vă vor vedea felul vostru de trai: curat şi în temere.",
+            "Podoaba voastră să nu fie podoaba de afară, care stă în împletitura părului, în purtarea de scule de aur sau în îmbrăcarea hainelor,",
+            "ci să fie omul ascuns al inimii, în curăţia nepieritoare a unui duh blând şi liniştit, care este de mare preţ înaintea lui Dumnezeu.",
+            "Astfel se împodobeau odinioară sfintele femei, care nădăjduiau în Dumnezeu şi erau supuse bărbaţilor lor;",
+            "ca Sara, care asculta pe Avraam şi-l numea „domnul ei”. Fiicele ei v-aţi făcut voi, dacă faceţi binele fără să vă temeţi de ceva.",
+            "Bărbaţilor, purtaţi-vă şi voi, la rândul vostru, cu înţelepciune cu nevestele voastre, dând cinste femeii ca unui vas mai slab, ca unele care vor moşteni împreună cu voi harul vieţii, ca să nu fie împiedicate rugăciunile voastre.",
+            "Încolo, toţi să fiţi cu aceleaşi gânduri, simţind cu alţii, iubind ca fraţii, miloşi, smeriţi.",
+            "Nu întoarceţi rău pentru rău, nici ocară pentru ocară; dimpotrivă, binecuvântaţi, căci la aceasta aţi fost chemaţi: să moşteniţi binecuvântarea.",
+            "„Căci cine iubeşte viaţa şi vrea să vadă zile bune să-şi înfrâneze limba de la rău şi buzele de la cuvinte înşelătoare.",
+            "Să se depărteze de rău şi să facă binele, să caute pacea şi s-o urmărească.",
+            "Căci ochii Domnului sunt peste cei neprihăniţi şi urechile Lui iau aminte la rugăciunile lor. Dar Faţa Domnului este împotriva celor ce fac răul.”",
+            "Şi cine vă va face rău, dacă sunteţi plini de râvnă pentru bine?",
+            "Chiar dacă aveţi de suferit pentru neprihănire, ferice de voi! „N-aveţi nicio teamă de ei şi nu vă tulburaţi!",
+            "Ci sfinţiţi în inimile voastre pe Hristos ca Domn.” Fiţi totdeauna gata să răspundeţi oricui vă cere socoteală de nădejdea care este în voi, dar cu blândeţe şi teamă,",
+            "având un cuget curat, pentru ca cei ce bârfesc purtarea voastră bună în Hristos să rămână de ruşine tocmai în lucrurile în care vă vorbesc de rău.",
+            "Căci este mai bine, dacă aşa este voia lui Dumnezeu, să suferiţi pentru că faceţi binele decât pentru că faceţi răul!",
+            "Hristos, de asemenea, a suferit o dată pentru păcate, El, Cel neprihănit, pentru cei nelegiuiţi, ca să ne aducă la Dumnezeu. El a fost omorât în trup, dar a fost înviat în duh,",
+            "în care S-a dus să propovăduiască duhurilor din închisoare,",
+            "care fuseseră răzvrătite odinioară, când îndelunga răbdare a lui Dumnezeu era în aşteptare, în zilele lui Noe, când se făcea corabia în care au fost scăpate prin apă un mic număr de suflete, şi anume opt.",
+            "Icoana aceasta închipuitoare vă mântuieşte acum pe voi, şi anume botezul, care nu este o curăţire de întinăciunile trupeşti, ci mărturia unui cuget curat înaintea lui Dumnezeu, prin învierea lui Isus Hristos,",
+            "care stă la dreapta lui Dumnezeu după ce S-a înălţat la cer şi Şi-a supus îngerii, stăpânirile şi puterile.",
+            "Astfel dar, fiindcă Hristos a pătimit în trup, înarmaţi-vă şi voi cu acelaşi fel de gândire. Căci Cel ce a pătimit în trup a sfârşit-o cu păcatul;",
+            "pentru ca, în vremea care-i mai rămâne de trăit în trup, să nu mai trăiască după poftele oamenilor, ci după voia lui Dumnezeu.",
+            "Ajunge, în adevăr, că în trecut aţi făcut voia neamurilor şi aţi trăit în desfrânări, în pofte, în beţii, în ospeţe, în chefuri şi în slujiri idoleşti neîngăduite.",
+            "De aceea se miră ei că nu alergaţi împreună cu ei la acelaşi potop de desfrâu şi vă batjocoresc.",
+            "Dar au să dea socoteală înaintea Celui ce este gata să judece viii şi morţii.",
+            "Căci tocmai în vederea aceasta a fost vestită Evanghelia şi celor morţi, pentru ca să fie judecaţi ca oameni în trup, dar să trăiască după Dumnezeu în duh."
+        ],
+        [
+            "Sfârşitul tuturor lucrurilor este aproape. Fiţi înţelepţi dar şi vegheaţi în vederea rugăciunii.",
+            "Mai presus de toate, să aveţi o dragoste fierbinte unii pentru alţii, căci dragostea acoperă o sumedenie de păcate.",
+            "Fiţi primitori de oaspeţi între voi, fără cârtire.",
+            "Ca nişte buni ispravnici ai harului felurit al lui Dumnezeu, fiecare din voi să slujească altora după darul pe care l-a primit.",
+            "Dacă vorbeşte cineva, să vorbească cuvintele lui Dumnezeu. Dacă slujeşte cineva, să slujească după puterea pe care i-o dă Dumnezeu, pentru ca în toate lucrurile să fie slăvit Dumnezeu prin Isus Hristos, ale căruia sunt slava şi puterea în vecii vecilor! Amin.",
+            "Preaiubiţilor, nu vă miraţi de încercarea de foc din mijlocul vostru, care a venit peste voi ca să vă încerce, ca de ceva ciudat, care a dat peste voi,",
+            "dimpotrivă, bucuraţi-vă, întrucât aveţi parte de patimile lui Hristos, ca să vă bucuraţi şi să vă veseliţi şi la arătarea slavei Lui.",
+            "Dacă sunteţi batjocoriţi pentru Numele lui Hristos, ferice de voi! Fiindcă Duhul slavei, Duhul lui Dumnezeu, Se odihneşte peste voi.",
+            "Nimeni din voi să nu sufere ca ucigaş sau ca hoţ sau ca făcător de rele sau ca unul care se amestecă în treburile altuia.",
+            "Dimpotrivă, dacă suferă pentru că este creştin, să nu-i fie ruşine, ci să proslăvească pe Dumnezeu pentru numele acesta.",
+            "Căci suntem în clipa când judecata stă să înceapă de la casa lui Dumnezeu. Şi, dacă începe cu noi, care va fi sfârşitul celor ce nu ascultă de Evanghelia lui Dumnezeu?",
+            "Şi, dacă cel neprihănit scapă cu greu, ce se va face cel nelegiuit şi cel păcătos?",
+            "Aşa că cei ce suferă după voia lui Dumnezeu să-şi încredinţeze sufletele credinciosului Ziditor şi să facă ce este bine.",
+            "Sfătuiesc pe prezbiterii1 dintre voi, eu, care sunt un prezbiter ca şi ei, un martor al patimilor lui Hristos şi părtaş al slavei care va fi descoperită:",
+            "Păstoriţi turma lui Dumnezeu, care este sub paza voastră, nu de silă, ci de bunăvoie, după voia lui Dumnezeu; nu pentru un câştig mârşav, ci cu lepădare de sine;",
+            "nu ca şi cum aţi stăpâni peste cei ce v-au căzut la împărţeală, ci făcându-vă pilde turmei.",
+            "Şi, când Se va arăta Păstorul cel mare, veţi căpăta cununa care nu se poate veşteji, a slavei.",
+            "Tot aşa şi voi, tinerilor, fiţi supuşi celor bătrâni. Şi toţi, în legăturile voastre, să fiţi împodobiţi cu smerenie. Căci „Dumnezeu stă împotriva celor mândri, dar celor smeriţi le dă har”.",
+            "Smeriţi-vă dar sub mâna tare a lui Dumnezeu, pentru ca, la vremea Lui, El să vă înalţe.",
+            "Şi aruncaţi asupra Lui toate îngrijorările voastre, căci El Însuşi îngrijeşte de voi.",
+            "Fiţi treji şi vegheaţi! Pentru că potrivnicul vostru, diavolul, dă târcoale ca un leu care răcneşte şi caută pe cine să înghită.",
+            "Împotriviţi-vă lui tari în credinţă, ştiind că şi fraţii voştri în lume trec prin aceleaşi suferinţe ca voi.",
+            "Dumnezeul oricărui har, care v-a chemat în Hristos Isus la slava Sa veşnică, după ce veţi suferi puţină vreme, vă va desăvârşi, vă va întări, vă va da putere şi vă va face neclintiţi.",
+            "Ale Lui să fie slava şi puterea în vecii vecilor! Amin.",
+            "V-am scris aceste puţine rânduri prin Silvan, care cred că este un frate credincios, ca să vă sfătuiesc şi să vă adeveresc că adevăratul har al lui Dumnezeu este harul acesta de care v-aţi alipit.",
+            "Biserica aleasă cu voi, care este în Babilon, vă trimite sănătate. Tot aşa şi Marcu, fiul meu.",
+            "Spuneţi-vă sănătate unii altora cu o sărutare de dragoste! Pacea să fie cu voi, cu toţi, care sunteţi în Hristos Isus! Amin."
+        ]
+    ],
+    '2 Petru': [
+        [
+            "Simon1 Petru, rob şi apostol al lui Isus Hristos, către cei ce au căpătat o credinţă de acelaşi preţ cu a noastră, prin dreptatea Dumnezeului şi Mântuitorului nostru Isus Hristos:",
+            "Harul şi pacea să vă fie înmulţite prin cunoaşterea lui Dumnezeu şi a Domnului nostru Isus Hristos!",
+            "Dumnezeiasca Lui putere ne-a dăruit tot ce priveşte viaţa şi evlavia, prin cunoaşterea Celui ce ne-a chemat prin slava şi puterea Lui,",
+            "prin care El ne-a dat făgăduinţele Lui nespus de mari şi scumpe, ca prin ele să vă faceţi părtaşi firii dumnezeieşti, după ce aţi fugit de stricăciunea care este în lume prin pofte.",
+            "De aceea, daţi-vă şi voi toate silinţele ca să uniţi cu credinţa voastră fapta; cu fapta, cunoştinţa;",
+            "cu cunoştinţa, înfrânarea; cu înfrânarea, răbdarea; cu răbdarea, evlavia;",
+            "cu evlavia, dragostea de fraţi; cu dragostea de fraţi, iubirea de oameni.",
+            "Căci, dacă aveţi din belşug aceste lucruri în voi, ele nu vă vor lăsa să fiţi nici leneşi, nici neroditori în ceea ce priveşte deplina cunoştinţă a Domnului nostru Isus Hristos.",
+            "Dar cine nu are aceste lucruri este orb, umblă cu ochii închişi şi a uitat că a fost curăţit de vechile lui păcate.",
+            "De aceea, fraţilor, căutaţi cu atât mai mult să vă întăriţi chemarea şi alegerea voastră, căci, dacă faceţi lucrul acesta, nu veţi aluneca niciodată.",
+            "În adevăr, în chipul acesta vi se va da din belşug intrare în Împărăţia veşnică a Domnului şi Mântuitorului nostru Isus Hristos.",
+            "De aceea voi fi gata să vă aduc totdeauna aminte de lucrurile acestea, măcar că le ştiţi şi sunteţi tari în adevărul pe care-l aveţi.",
+            "Dar socotesc că este drept, cât voi mai fi în cortul acesta, să vă ţin treji aducându-vă aminte,",
+            "căci ştiu că dezbrăcarea de cortul meu va veni deodată, după cum mi-a arătat Domnul nostru Isus Hristos.",
+            "Îmi voi da osteneala dar ca, şi după moartea mea, să vă puteţi aduce totdeauna aminte de aceste lucruri.",
+            "În adevăr, v-am făcut cunoscute puterea şi venirea Domnului nostru Isus Hristos nu întemeindu-ne pe nişte basme meşteşugit alcătuite, ci ca unii care am văzut noi înşine, cu ochii noştri, mărirea Lui.",
+            "Căci El a primit de la Dumnezeu Tatăl cinste şi slavă, atunci când, din slava minunată, s-a auzit deasupra Lui un glas care zicea: „Acesta este Fiul Meu preaiubit, în care Îmi găsesc plăcerea.”",
+            "Şi noi înşine am auzit acest glas venind din cer, când eram cu El pe muntele cel sfânt.",
+            "Şi avem cuvântul prorociei făcut şi mai tare, la care bine faceţi că luaţi aminte, ca la o lumină care străluceşte într-un loc întunecos, până se va crăpa de ziuă şi va răsări luceafărul de dimineaţă în inimile voastre.",
+            "Fiindcă, mai întâi de toate, să ştiţi că nicio prorocie din Scriptură nu se tâlcuieşte singură.",
+            "Căci nicio prorocie n-a fost adusă prin voia omului; ci oamenii au vorbit de la Dumnezeu, mânaţi de Duhul Sfânt."
+        ],
+        [
+            "În norod s-au ridicat şi proroci mincinoşi, cum şi între voi vor fi învăţători mincinoşi, care vor strecura pe furiş erezii nimicitoare, se vor lepăda de Stăpânul care i-a răscumpărat şi vor face să cadă asupra lor o pierzare năprasnică.",
+            "Mulţi îi vor urma în destrăbălările lor. Şi, din pricina lor, calea adevărului va fi vorbită de rău.",
+            "În lăcomia lor vor căuta ca, prin cuvântări înşelătoare, să aibă un câştig de la voi. Dar osânda îi paşte de multă vreme şi pierzarea lor nu dormitează.",
+            "Căci dacă n-a cruţat Dumnezeu pe îngerii care au păcătuit, ci i-a aruncat în adânc, unde stau înconjuraţi de întuneric, legaţi cu lanţuri şi păstraţi pentru judecată;",
+            "dacă n-a cruţat El lumea veche, ci a scăpat pe Noe, acest propovăduitor al neprihănirii, împreună cu alţi şapte inşi, când a trimis potopul peste o lume de nelegiuiţi;",
+            "dacă a osândit El la pieire şi a prefăcut în cenuşă cetăţile Sodoma şi Gomora, ca să slujească de pildă celor ce vor trăi în nelegiuire,",
+            "şi dacă a scăpat pe neprihănitul Lot, care era foarte întristat de viaţa destrăbălată a acestor stricaţi",
+            "(căci neprihănitul acesta care locuia în mijlocul lor îşi chinuia în toate zilele sufletul lui neprihănit din pricina celor ce vedea şi auzea din faptele lor nelegiuite),",
+            "înseamnă că Domnul ştie să izbăvească din încercare pe oamenii cucernici şi să păstreze pe cei nelegiuiţi ca să fie pedepsiţi în ziua judecăţii:",
+            "mai ales pe cei ce, în pofta lor necurată, umblă poftind trupul altuia şi dispreţuiesc stăpânirea. Ca nişte îndrăzneţi şi încăpăţânaţi ce sunt, ei nu se tem să batjocorească dregătoriile,",
+            "pe când îngerii, care sunt mai mari în tărie şi putere, nu aduc înaintea Domnului nicio judecată batjocoritoare împotriva lor.",
+            "Dar aceştia, ca nişte dobitoace fără minte, din fire sortite să fie prinse şi nimicite, batjocorind ce nu cunosc, vor pieri în însăşi stricăciunea lor",
+            "şi îşi vor lua astfel plata cuvenită pentru nelegiuirea lor. Fericirea lor este să trăiască în plăceri ziua-n amiaza mare. Ca nişte întinaţi şi spurcaţi, se pun pe chefuit la mesele lor de dragoste, când ospătează împreună cu voi.",
+            "Le scapără ochii de preacurvie şi nu se satură de păcătuit. Momesc sufletele nestatornice, au inima deprinsă la lăcomie, sunt nişte blestemaţi!",
+            "După ce au părăsit calea cea dreaptă, au rătăcit şi au urmat calea lui Balaam, fiul lui Bosor, care a iubit plata fărădelegii.",
+            "Dar a fost mustrat aspru pentru călcarea lui de lege: o măgăriţă necuvântătoare, care a început să vorbească cu glas omenesc, a pus frâu nebuniei prorocului.",
+            "Oamenii aceştia sunt nişte fântâni fără apă, nişte nori alungaţi de furtună: lor le este păstrată negura întunericului.",
+            "Ei vorbesc cu trufie lucruri de nimic, momesc cu poftele cărnii şi cu desfrânări pe cei ce de-abia au scăpat de cei ce trăiesc în rătăcire.",
+            "Le făgăduiesc slobozenia, în timp ce ei înşişi sunt robi ai stricăciunii. Căci fiecare este robul lucrului de care este biruit.",
+            "În adevăr, dacă, după ce au scăpat de întinăciunile lumii, prin cunoaşterea Domnului şi Mântuitorului nostru Isus Hristos, se încurcă iarăşi şi sunt biruiţi de ele, starea lor de pe urmă se face mai rea decât cea dintâi.",
+            "Ar fi fost mai bine pentru ei să nu fi cunoscut calea neprihănirii decât, după ce au cunoscut-o, să se întoarcă de la porunca sfântă care le fusese dată.",
+            "Cu ei s-a întâmplat ce spune zicala adevărată: „Câinele s-a întors la ce vărsase” şi „scroafa spălată s-a întors să se tăvălească iarăşi în mocirlă”."
+        ],
+        [
+            "Preaiubiţilor, aceasta este a doua epistolă pe care v-o scriu. În amândouă, caut să vă trezesc mintea sănătoasă prin înştiinţări,",
+            "ca să vă fac să vă aduceţi aminte de lucrurile vestite mai dinainte de sfinţii proroci şi de porunca Domnului şi Mântuitorului nostru, dată prin apostolii voştri.",
+            "Înainte de toate, să ştiţi că în zilele din urmă vor veni batjocoritori plini de batjocuri, care vor trăi după poftele lor",
+            "şi vor zice: „Unde este făgăduinţa venirii Lui? Căci de când au adormit părinţii noştri, toate rămân aşa cum erau de la începutul zidirii!”",
+            "Căci înadins se fac că nu ştiu că odinioară erau ceruri şi un pământ scos prin Cuvântul lui Dumnezeu din apă şi cu ajutorul apei",
+            "şi că lumea de atunci a pierit tot prin ele, înecată de apă.",
+            "Iar cerurile şi pământul de acum sunt păzite şi păstrate, prin acelaşi Cuvânt, pentru focul din ziua de judecată şi de pieire a oamenilor nelegiuiţi.",
+            "Dar, preaiubiţilor, să nu uitaţi un lucru: că, pentru Domnul, o zi este ca o mie de ani, şi o mie de ani sunt ca o zi.",
+            "Domnul nu întârzie în împlinirea făgăduinţei Lui, cum cred unii, ci are o îndelungă răbdare pentru voi şi doreşte ca niciunul să nu piară, ci toţi să vină la pocăinţă.",
+            "Ziua Domnului însă va veni ca un hoţ. În ziua aceea, cerurile vor trece cu trosnet, trupurile cereşti se vor topi de mare căldură şi pământul, cu tot ce este pe el, va arde.",
+            "Deci, fiindcă toate aceste lucruri au să se strice, ce fel de oameni ar trebui să fiţi voi, printr-o purtare sfântă şi evlavioasă,",
+            "aşteptând şi grăbind venirea zilei lui Dumnezeu, în care cerurile aprinse vor pieri şi trupurile cereşti se vor topi de căldura focului?",
+            "Dar noi, după făgăduinţa Lui, aşteptăm ceruri noi şi un pământ nou, în care va locui neprihănirea.",
+            "De aceea, preaiubiţilor, fiindcă aşteptaţi aceste lucruri, siliţi-vă să fiţi găsiţi înaintea Lui fără prihană, fără vină şi în pace.",
+            "Să credeţi că îndelunga răbdare a Domnului nostru este mântuire, cum v-a scris şi preaiubitul nostru frate Pavel, după înţelepciunea dată lui,",
+            "ca şi în toate epistolele lui, când vorbeşte despre lucrurile acestea. În ele sunt unele lucruri greu de înţeles, pe care cei neştiutori şi nestatornici le răstălmăcesc ca şi pe celelalte Scripturi, spre pierzarea lor.",
+            "Voi deci, preaiubiţilor, ştiind mai dinainte aceste lucruri, păziţi-vă, ca nu cumva să vă lăsaţi târâţi de rătăcirea acestor nelegiuiţi şi să vă pierdeţi tăria,",
+            "ci creşteţi în harul şi în cunoştinţa Domnului şi Mântuitorului nostru Isus Hristos. A Lui să fie slava acum şi în ziua veşniciei. Amin."
+        ]
     ]
 }
+
+/**
+ * Referințe capitol:verset pentru porțiunile care nu urmează capitolele biblice.
+ * Aliniate 1:1 cu `chapters[carte]`.
+ * @param {[number, number, number][]} parts
+ * @returns {string[]}
+ */
+function verseRange(parts) {
+    /** @type {string[]} */
+    const refs = [];
+    for (const [chapter, from, to] of parts) {
+        for (let verse = from; verse <= to; verse++) {
+            refs.push(chapter + ':' + verse);
+        }
+    }
+    return refs;
+}
+
+export const verseRefs = {
+    '1 Petru': [
+        verseRange([[1, 1, 25]]),
+        verseRange([[2, 1, 25]]),
+        verseRange([[3, 1, 22], [4, 1, 6]]),
+        verseRange([[4, 7, 19], [5, 1, 14]])
+    ],
+    '2 Petru': [
+        verseRange([[1, 1, 21]]),
+        verseRange([[2, 1, 22]]),
+        verseRange([[3, 1, 18]])
+    ]
+};

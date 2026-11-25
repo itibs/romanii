@@ -1,6 +1,6 @@
 <script>
     import SequentialTraining from '/src/components/SequentialTraining.svelte';
-    import {chapters} from '/src/data/verses_izbanda';
+    import {chapters, verseRefs} from '/src/data/verses_izbanda';
 
     let bookName = 'Predica de pe munte'
     let start = {
@@ -17,6 +17,6 @@
         <option value={name}>{name}</option>
     {/each}
 </select>
-<SequentialTraining bookName={bookName} chapters={chapters[bookName]} start={start}/>
+<SequentialTraining bookName={bookName} chapters={chapters[bookName]} verseRefs={verseRefs[bookName] || null} start={start}/>
 <br><br>
 <a href="/randomverses">Versete aleatoare</a>

@@ -10,9 +10,16 @@
     import { comparePace } from '/src/lib/recordComparison.js';
     import VersePaceFlash from '/src/components/VersePaceFlash.svelte';
     import { listenForResetChapterShortcut, RESET_CHAPTER_SHORTCUT_HINT } from '/src/lib/resetChapterShortcut.js';
+    import { portionLabel, wholeChapterNumber } from '/src/data/verses_izbanda.js';
 
     export let bookName;
     export let chapters;
+    /**
+     * Optional biblical refs aligned with `chapters` (e.g. "4:7").
+     * Used when a portion crosses chapter boundaries.
+     * @type {string[][] | null}
+     */
+    export let verseRefs = null;
     export let useRollingSumVerseIdx;
     export let competitiveMode = false;
     export let showVersePace = false;
@@ -91,7 +98,8 @@
         crtChapter,
         start.verse,
         rollingSumVerseIdx,
-        !!useRollingSumVerseIdx
+        !!useRollingSumVerseIdx,
+        displayRefs
     );
     $: leadInText = leadInInfo ? leadInInfo.text : '';
     $: leadInLabel = leadInInfo ? leadInInfo.label : '';
@@ -123,16 +131,42 @@
     $: previousRuns = (($runHistoryStore || {})[round] || []);
     let sessionKey = '';
 
-    $: chapterVerseLabels = crtChapter.map((_, i) => String(rollingSumVerseIdx + i + 1));
+    // Whole chapters use the normal "Capitolul N" labels. Refs stay only where
+    // a portion crosses chapters, so the verse on screen can show 3:22 then 4:1.
+    $: displayRefs = verseRefs
+        ? verseRefs.map((refs, i) =>
+              refs && chapters[i] && refs.length === chapters[i].length && !wholeChapterNumber(refs)
+                  ? refs
+                  : null
+          )
+        : null;
+    $: chapterRefs = displayRefs && displayRefs[chapterIdx] ? displayRefs[chapterIdx] : null;
+    $: currentChapterNumber =
+        (verseRefs && verseRefs[chapterIdx] && wholeChapterNumber(verseRefs[chapterIdx])) ||
+        String(chapterIdx + 1);
+    $: hasSplitPortion = !!(displayRefs && displayRefs.some((refs) => refs && refs.length));
+    $: chapterVerseLabels = chapterRefs
+        ? chapterRefs
+        : crtChapter.map((_, i) => String(rollingSumVerseIdx + i + 1));
+    $: writtenFrom = Math.max(start.verse, 1) - 1;
+    $: writtenLabels = chapterRefs
+        ? chapterRefs
+              .slice(writtenFrom, verseIdx)
+              .concat(verseIdx < sessionLimit ? [chapterRefs[verseIdx] || ''] : [])
+        : null;
     $: chapterVerseWordCounts = crtChapter.map((v) => countWords(v));
     $: rangeStartLabel = chapterVerseLabels[start.verse - 1] || String(start.verse);
     $: rangeEndLabel = chapterVerseLabels[rangeEndVerse - 1] || String(rangeEndVerse);
     $: rangeRound = 'range:' + bookName + ':' + (chapterIdx + 1) + ':' + start.verse + '-' + rangeEndVerse;
     $: rangeVerseLabels = chapterVerseLabels.slice(start.verse - 1, rangeEndVerse);
     $: rangeVerseWordCounts = chapterVerseWordCounts.slice(start.verse - 1, rangeEndVerse);
-    $: rangeHistoryTitle = rangeStartLabel === rangeEndLabel
-        ? 'Istoric — ' + bookName + ', capitolul ' + (chapterIdx + 1) + ', versetul ' + rangeStartLabel
-        : 'Istoric — ' + bookName + ', capitolul ' + (chapterIdx + 1) + ', versetele ' + rangeStartLabel + '–' + rangeEndLabel;
+    $: rangeHistoryTitle = chapterRefs
+        ? rangeStartLabel === rangeEndLabel
+            ? 'Istoric — ' + bookName + ' ' + rangeStartLabel
+            : 'Istoric — ' + bookName + ' ' + rangeStartLabel + '–' + rangeEndLabel
+        : rangeStartLabel === rangeEndLabel
+            ? 'Istoric — ' + bookName + ', capitolul ' + currentChapterNumber + ', versetul ' + rangeStartLabel
+            : 'Istoric — ' + bookName + ', capitolul ' + currentChapterNumber + ', versetele ' + rangeStartLabel + '–' + rangeEndLabel;
     $: crtVerse = leadInPhase
         ? leadInText
         : (verseIdx >= 0 && verseIdx < sessionLimit && verseIdx < crtChapter.length ? crtChapter[verseIdx] : '');
@@ -181,9 +215,17 @@
         crtVerse = leadInPhase
             ? leadInText
             : (verseIdx >= 0 && verseIdx < sessionLimit && verseIdx < crtChapter.length ? crtChapter[verseIdx] : '');
+        const from = Math.max(start.verse, 1) - 1;
+        const partial = verseIdx < sessionLimit;
         rangeWritten = leadInPhase
             ? []
-            : crtChapter.slice(Math.max(start.verse, 1) - 1, verseIdx).concat(verseIdx < sessionLimit ? [discoveredVerseText] : []);
+            : crtChapter.slice(from, verseIdx).concat(partial ? [discoveredVerseText] : []);
+        // verseIdx is updated in this same flush, after the reactive label
+        // slice has already run. Recompute here so the written line shows the
+        // biblical ref of the verse actually on screen.
+        writtenLabels = !chapterRefs || leadInPhase
+            ? null
+            : chapterRefs.slice(from, verseIdx).concat(partial ? [chapterRefs[verseIdx] || ''] : []);
     }
 
     $: if (!timerStarted && competitiveMode && discoveredVerseText.length > 0) {
@@ -256,20 +298,24 @@
      * @param {number} startVerse
      * @param {number} rollingSum
      * @param {boolean} rolling
+     * @param {string[][] | null} refs
      * @returns {{ text: string, label: string } | null}
      */
-    function computeLeadIn(allChapters, idx, chapter, startVerse, rollingSum, rolling) {
+    function computeLeadIn(allChapters, idx, chapter, startVerse, rollingSum, rolling, refs) {
         if (!chapter || chapter.length === 0 || startVerse < 1) return null;
         if (startVerse > 1) {
             const text = chapter[startVerse - 2];
             if (!text) return null;
-            return { text, label: 'versetul ' + (rollingSum + startVerse - 1) };
+            const custom = refs && refs[idx] && refs[idx][startVerse - 2];
+            return { text, label: custom || 'versetul ' + (rollingSum + startVerse - 1) };
         }
         if (idx <= 0 || !allChapters || !allChapters[idx - 1] || !allChapters[idx - 1].length) {
             return null;
         }
         const prev = allChapters[idx - 1];
         const text = prev[prev.length - 1];
+        const custom = refs && refs[idx - 1] && refs[idx - 1][prev.length - 1];
+        if (custom) return { text, label: custom };
         if (rolling) {
             return { text, label: 'versetul ' + rollingSum };
         }
@@ -361,7 +407,13 @@
 </script>
 
 <div bind:this={practiceAnchor}>
-<h2>{bookName} - Capitolul {chapterIdx+1}</h2>
+<h2>
+    {#if chapterRefs}
+        {bookName} {chapterRefs[0]}–{chapterRefs[chapterRefs.length - 1]}
+    {:else}
+        {bookName} - Capitolul {currentChapterNumber}
+    {/if}
+</h2>
 {#if leadInPhase}
     <p class="range-note">Verset anterior (netimed): {leadInLabel}. Cronometrul pornește abia la intervalul ales.</p>
     <WrittenText verses={[discoveredVerseText]} showVerseNumbers={false}></WrittenText>
@@ -370,16 +422,20 @@
         <p class="range-note">Verset anterior (netimed): {leadInLabel}</p>
         <WrittenText verses={[leadInText]} showVerseNumbers={false}></WrittenText>
     {/if}
-    <WrittenText startIdx={rollingSumVerseIdx+start.verse} verses={rangeWritten}></WrittenText>
+    <WrittenText startIdx={rollingSumVerseIdx+start.verse} verses={rangeWritten} labels={writtenLabels}></WrittenText>
 {/if}
 {#if competitiveMode && showVersePace && (previousRuns.length > 0 || paceFlash)}
     <VersePaceFlash flash={paceFlash} />
 {/if}
 <br>
-{#if rangeActive && crtVerse && !leadInPhase}
+{#if crtVerse && !leadInPhase && (rangeActive || chapterRefs)}
     <h3>
-        Versetul {chapterVerseLabels[verseIdx] || verseIdx + 1}
-        {#if rangeTimerOn}
+        {#if chapterRefs}
+            {chapterRefs[verseIdx] || verseIdx + 1}
+        {:else}
+            Versetul {chapterVerseLabels[verseIdx] || verseIdx + 1}
+        {/if}
+        {#if rangeActive && rangeTimerOn}
             — {elapsedTime.toFixed(2)}s
         {/if}
     </h3>
@@ -399,14 +455,14 @@
 </div>
 <br>
 <br>
-<h3>Alege capitolul</h3>
+<h3>{hasSplitPortion ? 'Alege porțiunea' : 'Alege capitolul'}</h3>
 <table>
     <tbody>
         <tr>
         {#each chapters as chapter, i}
             <td>
                 <button on:click={jumpToChapter(i)}>
-                    {i+1}
+                    {portionLabel(verseRefs && verseRefs[i], i + 1)}
                 </button>
             </td>
         {/each}
@@ -417,9 +473,15 @@
     <p>
         {#if rangeTiming}De la versetul{:else}Începând cu versetul{/if}
         <input class="verse-number" type="number" min="1" max={chapterLength || 1} bind:value={startVerseInput}>
+        {#if chapterRefs && chapterRefs[start.verse - 1]}
+            <span class="verse-ref">({chapterRefs[start.verse - 1]})</span>
+        {/if}
         {#if rangeTiming}
             până la versetul
             <input class="verse-number" type="number" min="1" max={chapterLength || 1} bind:value={endVerseInput}>
+            {#if chapterRefs && chapterRefs[rangeEndVerse - 1]}
+                <span class="verse-ref">({chapterRefs[rangeEndVerse - 1]})</span>
+            {/if}
         {/if}
     </p>
     <label class="range-option">
@@ -469,7 +531,9 @@
 {#if competitiveMode && round}
     <RunHistory
         round={round}
-        title={`Istoric pentru ${bookName} - Capitolul ${chapterIdx + 1}`}
+        title={chapterRefs
+            ? `Istoric pentru ${bookName} ${chapterRefs[0]}–${chapterRefs[chapterRefs.length - 1]}`
+            : `Istoric pentru ${bookName} - Capitolul ${currentChapterNumber}`}
         verseLabels={chapterVerseLabels}
         verseWordCounts={chapterVerseWordCounts}
         highlightRunId={lastSavedRunId}
@@ -489,13 +553,16 @@
     />
 {/if}
 <button on:click={jumpToChapter(chapterIdx)} title={RESET_CHAPTER_SHORTCUT_HINT}>
-    {rangeActive ? 'Reia intervalul' : 'Resetează capitolul'}
+    {rangeActive ? 'Reia intervalul' : chapterRefs ? 'Resetează porțiunea' : 'Resetează capitolul'}
 </button>
 ({RESET_CHAPTER_SHORTCUT_HINT})
 
 <style>
     .verse-number {
         width: 4.5rem;
+    }
+    .verse-ref {
+        color: #555;
     }
     .range-option {
         display: block;
@@ -506,7 +573,8 @@
         max-width: 42rem;
         margin: 4px 0 8px;
     }
-    :global(body.dark-mode) .range-note {
+    :global(body.dark-mode) .range-note,
+    :global(body.dark-mode) .verse-ref {
         color: #9aa6b4;
     }
 </style>

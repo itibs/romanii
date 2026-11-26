@@ -10,7 +10,7 @@
     let bookEntries = Object.entries(chapters)
 </script>
 
-<h1>Izbanda</h1>
+<h1>Izbânda</h1>
 <label for="books">Cartea:</label>
 <select bind:value={bookName}>
     {#each bookEntries as [name, chapter]}

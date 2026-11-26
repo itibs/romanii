@@ -2,7 +2,7 @@
     import SequentialTraining from '/src/components/SequentialTraining.svelte';
     import {chapters, verseRefs} from '/src/data/verses_izbanda';
 
-    let bookName = 'Predica de pe munte'
+    let bookName = '1 Petru'
     let start = {
         chapter: 1,
         verse: 1

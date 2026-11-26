@@ -1,5 +1,6 @@
 <script>
     import DarkThemeButton from '/src/components/DarkThemeButton.svelte';
+    import { installControlFontSize } from '/src/lib/inputZoom.js';
     import { onMount } from 'svelte';
 
     onMount(() => {
@@ -8,6 +9,7 @@
         if (currentHour >= 22 || currentHour <= 7) {
             window.document.body.classList.add('dark-mode');
         }
+        return installControlFontSize();
     });
 </script>
 
@@ -16,6 +18,25 @@
 <DarkThemeButton />
 
 <style>
+    /*
+      iOS zooms a focused field whose font is under 16px. The user-agent
+      size for inputs is smaller than that, so pin text fields to 16px.
+      The verse field raises this further when a desktop layout is shrunk
+      onto a phone (see --control-font-size).
+    */
+    :global(input),
+    :global(textarea),
+    :global(select) {
+        font-size: 16px;
+    }
+
+    :global(input),
+    :global(textarea),
+    :global(select),
+    :global(button) {
+        touch-action: manipulation;
+    }
+
     :global(body) {
         transition: background-color 0.3s;
     }

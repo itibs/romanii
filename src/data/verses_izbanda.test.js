@@ -2,7 +2,7 @@ import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 import { chapters, portionLabel, verseRefs } from './verses_izbanda.js';
 
-describe('1 și 2 Petru în Izbandă', () => {
+describe('1 și 2 Petru pentru Izbandă', () => {
 	it('împarte cărțile pe porțiunile din schema de lectură', () => {
 		assert.deepEqual(
 			chapters['1 Petru'].map((portion) => portion.length),
@@ -73,7 +73,7 @@ describe('1 și 2 Petru în Izbandă', () => {
 		assert.match(chapters['2 Petru'][2][17], /A Lui să fie slava acum şi în ziua veşniciei/);
 	});
 
-	it('nu schimbă cărțile care erau deja în Izbandă', () => {
+	it('nu schimbă cărțile care erau deja pentru Izbandă', () => {
 		assert.deepEqual(
 			Object.keys(chapters),
 			['Galateni', 'Efeseni', 'Iacov', 'Predica de pe munte', '1 Petru', '2 Petru']

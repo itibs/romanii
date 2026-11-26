@@ -10,6 +10,7 @@
     import { comparePace } from '/src/lib/recordComparison.js';
     import VersePaceFlash from '/src/components/VersePaceFlash.svelte';
     import { listenForResetChapterShortcut, RESET_CHAPTER_SHORTCUT_HINT } from '/src/lib/resetChapterShortcut.js';
+    import { portionLabel, wholeChapterNumber } from '/src/data/verses_izbanda.js';
 
     export let bookName;
     export let chapters;
@@ -98,7 +99,7 @@
         start.verse,
         rollingSumVerseIdx,
         !!useRollingSumVerseIdx,
-        verseRefs
+        displayRefs
     );
     $: leadInText = leadInInfo ? leadInInfo.text : '';
     $: leadInLabel = leadInInfo ? leadInInfo.label : '';
@@ -130,10 +131,20 @@
     $: previousRuns = (($runHistoryStore || {})[round] || []);
     let sessionKey = '';
 
-    $: chapterRefs =
-        verseRefs && verseRefs[chapterIdx] && verseRefs[chapterIdx].length === crtChapter.length
-            ? verseRefs[chapterIdx]
-            : null;
+    // Whole chapters use the normal "Capitolul N" labels. Refs stay only where
+    // a portion crosses chapters, so the verse on screen can show 3:22 then 4:1.
+    $: displayRefs = verseRefs
+        ? verseRefs.map((refs, i) =>
+              refs && chapters[i] && refs.length === chapters[i].length && !wholeChapterNumber(refs)
+                  ? refs
+                  : null
+          )
+        : null;
+    $: chapterRefs = displayRefs && displayRefs[chapterIdx] ? displayRefs[chapterIdx] : null;
+    $: currentChapterNumber =
+        (verseRefs && verseRefs[chapterIdx] && wholeChapterNumber(verseRefs[chapterIdx])) ||
+        String(chapterIdx + 1);
+    $: hasSplitPortion = !!(displayRefs && displayRefs.some((refs) => refs && refs.length));
     $: chapterVerseLabels = chapterRefs
         ? chapterRefs
         : crtChapter.map((_, i) => String(rollingSumVerseIdx + i + 1));
@@ -154,8 +165,8 @@
             ? 'Istoric — ' + bookName + ' ' + rangeStartLabel
             : 'Istoric — ' + bookName + ' ' + rangeStartLabel + '–' + rangeEndLabel
         : rangeStartLabel === rangeEndLabel
-            ? 'Istoric — ' + bookName + ', capitolul ' + (chapterIdx + 1) + ', versetul ' + rangeStartLabel
-            : 'Istoric — ' + bookName + ', capitolul ' + (chapterIdx + 1) + ', versetele ' + rangeStartLabel + '–' + rangeEndLabel;
+            ? 'Istoric — ' + bookName + ', capitolul ' + currentChapterNumber + ', versetul ' + rangeStartLabel
+            : 'Istoric — ' + bookName + ', capitolul ' + currentChapterNumber + ', versetele ' + rangeStartLabel + '–' + rangeEndLabel;
     $: crtVerse = leadInPhase
         ? leadInText
         : (verseIdx >= 0 && verseIdx < sessionLimit && verseIdx < crtChapter.length ? crtChapter[verseIdx] : '');
@@ -400,7 +411,7 @@
     {#if chapterRefs}
         {bookName} {chapterRefs[0]}–{chapterRefs[chapterRefs.length - 1]}
     {:else}
-        {bookName} - Capitolul {chapterIdx + 1}
+        {bookName} - Capitolul {currentChapterNumber}
     {/if}
 </h2>
 {#if leadInPhase}
@@ -444,18 +455,14 @@
 </div>
 <br>
 <br>
-<h3>{verseRefs ? 'Alege porțiunea' : 'Alege capitolul'}</h3>
+<h3>{hasSplitPortion ? 'Alege porțiunea' : 'Alege capitolul'}</h3>
 <table>
     <tbody>
         <tr>
         {#each chapters as chapter, i}
             <td>
                 <button on:click={jumpToChapter(i)}>
-                    {#if verseRefs && verseRefs[i] && verseRefs[i].length}
-                        {verseRefs[i][0]}–{verseRefs[i][verseRefs[i].length - 1]}
-                    {:else}
-                        {i+1}
-                    {/if}
+                    {portionLabel(verseRefs && verseRefs[i], i + 1)}
                 </button>
             </td>
         {/each}
@@ -526,7 +533,7 @@
         round={round}
         title={chapterRefs
             ? `Istoric pentru ${bookName} ${chapterRefs[0]}–${chapterRefs[chapterRefs.length - 1]}`
-            : `Istoric pentru ${bookName} - Capitolul ${chapterIdx + 1}`}
+            : `Istoric pentru ${bookName} - Capitolul ${currentChapterNumber}`}
         verseLabels={chapterVerseLabels}
         verseWordCounts={chapterVerseWordCounts}
         highlightRunId={lastSavedRunId}
@@ -546,7 +553,7 @@
     />
 {/if}
 <button on:click={jumpToChapter(chapterIdx)} title={RESET_CHAPTER_SHORTCUT_HINT}>
-    {rangeActive ? 'Reia intervalul' : verseRefs ? 'Resetează porțiunea' : 'Resetează capitolul'}
+    {rangeActive ? 'Reia intervalul' : chapterRefs ? 'Resetează porțiunea' : 'Resetează capitolul'}
 </button>
 ({RESET_CHAPTER_SHORTCUT_HINT})
 

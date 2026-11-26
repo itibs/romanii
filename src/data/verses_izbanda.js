@@ -772,3 +772,32 @@ export const verseRefs = {
         verseRange([[3, 1, 18]])
     ]
 };
+
+/**
+ * Chapter number when every ref is that chapter, verses 1..n in order.
+ * Empty when the portion starts mid-chapter or crosses into another one.
+ * @param {string[] | null | undefined} refs
+ * @returns {string}
+ */
+export function wholeChapterNumber(refs) {
+    if (!refs || refs.length === 0) return '';
+    const chapter = refs[0].split(':')[0];
+    for (let i = 0; i < refs.length; i++) {
+        if (refs[i] !== chapter + ':' + (i + 1)) return '';
+    }
+    return chapter;
+}
+
+/**
+ * Button label: the chapter number, or a verse range when it is not one chapter.
+ * @param {string[] | null | undefined} refs
+ * @param {number | string} fallback
+ */
+export function portionLabel(refs, fallback) {
+    const chapter = wholeChapterNumber(refs);
+    if (chapter) return chapter;
+    if (refs && refs.length) {
+        return refs.length === 1 ? refs[0] : refs[0] + '–' + refs[refs.length - 1];
+    }
+    return String(fallback);
+}

@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
-import { chapters, verseRefs } from './verses_izbanda.js';
+import { chapters, portionLabel, verseRefs } from './verses_izbanda.js';
 
 describe('1 și 2 Petru în Izbandă', () => {
 	it('împarte cărțile pe porțiunile din schema de lectură', () => {
@@ -40,6 +40,18 @@ describe('1 și 2 Petru în Izbandă', () => {
 		assert.equal(verseRefs['2 Petru'][0][0], '1:1');
 		assert.equal(verseRefs['2 Petru'][0][20], '1:21');
 		assert.equal(verseRefs['2 Petru'][2][17], '3:18');
+	});
+
+	it('arată numărul capitolului când porțiunea este capitolul întreg', () => {
+		assert.deepEqual(
+			verseRefs['1 Petru'].map((refs, i) => portionLabel(refs, i + 1)),
+			['1', '2', '3:1–4:6', '4:7–5:14']
+		);
+		assert.deepEqual(
+			verseRefs['2 Petru'].map((refs, i) => portionLabel(refs, i + 1)),
+			['1', '2', '3']
+		);
+		assert.equal(portionLabel(null, 4), '4');
 	});
 
 	it('ține textul corect la trecerea dintre capitole', () => {
